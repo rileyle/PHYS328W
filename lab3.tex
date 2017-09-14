@@ -63,7 +63,7 @@ This lab relies heavily on Section~\ref{sec:AC} of the notes.
   the frequency dependence of the gain $|V_{out}|/|V_{in}|$. 
 
   \emph{See ``Application examples'' $\rightarrow$ ``Taking simple
-    measurements'' $\rightarrow$ ``Meausuring two signals'' in the
+    measurements'' $\rightarrow$ ``Measuring two signals'' in the
     User Manual for your oscilloscope.}
 
 \item Once you have a sense of the behavior of the circuit, measure
@@ -83,13 +83,21 @@ This lab relies heavily on Section~\ref{sec:AC} of the notes.
   which the transmitted \emph{power} is half of the
   incident power, which corresponds to a gain of $|V_{in}|/|V_{out}| =
   1/\sqrt{2}$.
+
+\item Enter your data into a spreadsheet, and create voltage gain
+  vs. frequency and phase angle vs. frequency plots.
 \end{enumerate}
 
 \subsection*{Calculations}
 
-In your log book, derive expressions for the gain, phase angle, and 
-3~dB point of the circuit, and calculate the 3~dB point. You may find
-Section~\ref{sec:AC} of the notes helpful.
+\begin{itemize}
+\item In your log book, derive expressions for the gain, phase angle,
+  and 3~dB point of the circuit, and calculate the 3~dB point. You may
+  find Section~\ref{sec:acvdiv} of the notes helpful.
+
+\item Add theoretical curves to the plots of measured voltage gain
+  vs. frequency and phase angle vs. frequency in your spreadsheet.
+\end{itemize}
 
 \subsection*{Simulations}
 
@@ -101,8 +109,12 @@ Section~\ref{sec:AC} of the notes helpful.
 
 \item Place a voltage probe in the schematic to measure $V_{out}$.
 
-\item Run the simulation.
-
+\item Run the simulation. You should automatically see a plot of
+  $V_{out}$ vs. frequency in the simulation results. Right-click on
+  the trace and select \texttt{Copy to Clipboard}, and then paste the
+  simulated data into your spreadsheet and add a simulated curve to
+  your voltage gain vs. frequency plot.
+  
 \item Click on the \includegraphics{PSpiceAD_DefineMeasurement.png}
   button and set up a 3~dB point calculation. Use either
   \verb+Cutoff_Lowpass_3dB()+ or \verb+Cutoff_Highpass_3dB()+,
