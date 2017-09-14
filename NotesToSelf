@@ -1,0 +1,43 @@
+Lab 1
+
+  Go over the syllabus, and make sure you have at least one Windows
+  laptop per group for OrCAD Capture (or you'll need to work out a
+  solution with tech support).
+
+  Measurements
+
+    They very likely won't be comfortable with the breadboard or the
+    DMM. Spell things out for the whole group. Explain with a sketch
+    on the board how to plug the pot into the breadboard and connect
+    the center pin with R1 and R2.
+
+    There's no danger here, except that they could blow the fuse in or
+    damage their prototyping board if they connect the 5 V supply
+    directly to ground with a jumper wire. So don't do
+    that. Connecting them with a resistor is fine, because the
+    resistor keeps the current under control.
+
+    Explain that they don't need to worry about blowing a fuse when
+    making V and R measurements with the DMM, because the output
+    resistance of the DMM is huge for these measurements. (With
+    current measurements, you have to be careful.)
+
+Calculations
+
+    Give a mini lecture on the equivalent resistance -> supply current
+    -> current division method of resistor network analysis.
+
+Lab 2
+
+Calculations
+
+    They may not remember the Kirchhoff's rules lab at all. Go over
+    the rules briefly at the start of lab.
+
+Simulations
+
+    If they don't reach the simulations by 2:45, shift gears and get
+    them working on that so that they can get up and running with
+    OrCAD Capture.
+ 
+Lab 3
