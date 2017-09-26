@@ -29,7 +29,7 @@
 
 \section*{\COURSE\ Lab \LABNUM\ : \TITLE}
 
-This lab relies heavily on Section~\ref{sec:AC} of the notes.
+This assignment relies on Section~\ref{sec:AC} of the notes.
 
 \subsection*{Experiments}
 
@@ -66,6 +66,16 @@ This lab relies heavily on Section~\ref{sec:AC} of the notes.
     measurements'' $\rightarrow$ ``Measuring two signals'' in the
     User Manual for your oscilloscope.}
 
+\item Center both oscilloscope traces vertically, so that they share
+  the same vertical zero point.
+  \begin{itemize}
+  \item On the Channel 1 and Channel 2 menus, switch the coupling to
+    ground (GND), and center the traces vertically on the central grid
+    line.
+  \item Switch the coupling of both channels to \texttt{AC} to remove
+    any DC offsets.
+  \end{itemize}
+  
 \item Once you have a sense of the behavior of the circuit, measure
   $V_{in}$, $V_{out}$, and the phase angle (really, you'll be
   measuring $\Delta t$) at at least 10 frequencies that span the range
@@ -76,12 +86,13 @@ This lab relies heavily on Section~\ref{sec:AC} of the notes.
 
   \emph{To set up automated amplitude measurements, see ``Reference''
     $\rightarrow$ ``Measure'' in the User Manual for your
-    oscilloscope, and for help measuring $\Delta t$, see ``Application
-    examples'' $\rightarrow$ ``Taking Cursor Measurements.''}
+    oscilloscope, and for help measuring $\Delta t$ with the cursors,
+    see ``Application examples'' $\rightarrow$ ``Taking Cursor
+    Measurements.''}
 
 \item Measure the 3~dB point of the circuit --- the point at
   which the transmitted \emph{power} is half of the
-  incident power, which corresponds to a gain of $|V_{in}|/|V_{out}| =
+  incident power, which corresponds to a gain of $|V_{out}|/|V_{in}| =
   1/\sqrt{2}$.
 
 \item Enter your data into a spreadsheet, and create voltage gain

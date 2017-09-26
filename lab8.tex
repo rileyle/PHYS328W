@@ -29,9 +29,7 @@
 
 \section*{\COURSE\ Lab \LABNUM\ : \TITLE}
 
-This lab relies heavily on Section~\ref{sec:commonemitter} of the notes.
-
-\subsection*{Design}
+This assignment relies on Section~\ref{sec:commonemitter} of the notes.
 
 \begin{figure}[ht]
   \begin{center}
@@ -41,40 +39,59 @@ This lab relies heavily on Section~\ref{sec:commonemitter} of the notes.
   \end{center}
 \end{figure}
 
-Use the design process described in Section~\ref{sec:commonemitter} of
-the notes to select resistors $R_1$, $R_2$, $R_E$, and $R_C$ and
-coupling capacitors $C_1$ and $C_2$. Assume that we will use the
-amplifier with signal frequencies above 100~Hz.
+\subsection*{Design}
 
-\subsection*{Simulation}
+Select resistor and capacitor values for the AC coupled common emitter
+amplifier shown in Figure~\ref{fig:commonemittercircuit}, following the
+process described in Section~\ref{sec:commonemitter} of the notes.
+Design your amplifier to meet the following specifications, within
+about 10\%, using available resistors and capacitors.
+\begin{center}
+\begin{tabular}{rc}
+ Quiescent current & $I_C = 1$~mA \\
+      Voltage gain & $A_v = -20$ \\
+      Output range & $-5~\mathrm{V} \leq V_{out} \leq 5~\mathrm{V}$ \\
+Signal frequencies & $f > 100$~Hz \\
+\end{tabular}
+\end{center}
+Do all of your design calculations in your log book.
 
-Simulate your design, and verify that it behaves as advertized. Use a
-WHAT KIND OF sweep analysis to ...
-\begin{enumerate}
-\item Find the 3~dB point of the amplifier, and
-  modify your design if it does not pass signals in the desired
-  frequency range.
-
-\item Determine the voltage gain $A_v$ of the amplifier for
-  frequencies significantly above the 3~dB point, and compare your
-  result with the prediction of Equation~\ref{eq:commonemittergain} of
-  the notes.
-\end{enumerate}
-
-
-
-    
 \subsection*{Experiment}
 
 \begin{enumerate}
-\item 
+\item Collect the resistors and capacitors you need, and measure their
+  values with a DMM.
+  
+\item Build the circuit you designed. If possible, use the transistor
+  you studied in Lab~7.
+
+\item Measure the quiescent collector current $I_C$, collector
+  voltage $V_C$, base voltage $V_B$, and emitter voltage $V_E$, and
+  compare them to what you expect based on your design calculations.
+  
+\item Use the function generator to supply a sinusoidal input signal
+  $V_{in}$. Set the amplitude of the input signal to give a 1~V
+  amplitude $V_{out}$.
+
+\item Measure the voltage gain $A_v$ at several frequencies from 10~Hz
+  to 1~MHz, concentrating your points in the low-frequency range where
+  $A_v$ changes.
+
+\item Determine the 3~dB point of the amplifier.
 \end{enumerate}
 
 \subsection*{Products}
 
 Upload to Canvas a brief \LaTeX\ report in which you ...
 \begin{itemize}
-\item 
+\item Include as a figure your $A_v$ vs. frequency plot.
+
+\item Comment on the agreement between your design and measured values
+  of the quiescent $I_C$, $V_C$, $V_B$, $V_E$, and the 3~dB point
+  of the amplifier.
+
+\item Include as a figure an image of the design calculations from
+  your log book.
 \end{itemize}
 
 \end{document}

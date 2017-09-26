@@ -32,6 +32,8 @@
 \section{DC Circuits}
 
 \subsection{Ohm's Law and Ohmic Devices}
+\label{sec:ohm}
+
 The current flowing through an \textbf{Ohmic device} is directly
 proportional to the potential difference $V$ between its terminals,
 \begin{equation}
@@ -261,6 +263,8 @@ devices --- resistors, inductors, and capacitors.
         resistance.}
     \end{enumerate}
   } }
+
+\newpage
 
 \section{AC Circuits}
 \label{sec:AC}
@@ -494,11 +498,11 @@ $V_{out}/V_{in}$. It follows from Equation~\ref{eq:vdivout}
 A series RLC circuit is shown in Figure~\ref{fig:rlccircuit}. We will
 treat this as a voltage divider between the series inductor-capacitor
 pair and the resistor. The resistor is by itself in the upper part of
-the divider, so $Z_1 = R$. The inductor and capacitor are connected in
+the divider, so $Z_2 = R$. The inductor and capacitor are connected in
 series, so we combine their reactances as we would series resistances
 (Equation~\ref{eq:Rseries})
 \begin{equation}
-  Z_2 = j \left( \omega L - \frac{1}{\omega C} \right)
+  Z_1 = j \left( \omega L - \frac{1}{\omega C} \right)
 \end{equation}
 
 Equation~\ref{eq:gain} becomes
@@ -607,7 +611,10 @@ inductor (\underline{VI}L). This gives a negative phase
 angle. \emph{Which of these situations is illustrated in panel (a) of
   Figure~\ref{fig:rlcscope}?}
 
+\newpage
+
 \section{Diodes}
+\label{sec:diodes}
 
 \begin{figure}[ht]
   \begin{center}
@@ -660,6 +667,8 @@ in lab have forward voltage drops of about 0.7~V, reverse
 breakdown voltages of 100-1000 V, and leakage currents on the order of
 $10^{-8}$~A.
 
+\newpage
+
 \section{Transistors}
 \label{sec:transistors}
 
@@ -702,18 +711,20 @@ stay in the the ``on'' state.
 
 \subsubsection*{Transistor On (Saturation)}
 
-When a transistor is operating in \textbf{saturation}, the collector
-current $I_C$ is greater than the current flowing from the base to the
-collector $I_B$ by a factor $h_{FE}$, which is on the order of 100 and
-depends on temperature,
+In a bipolar junction transistor, the diode drop across the
+collector-base junction is smaller than that of the base-emitter
+junction.  This means that when a transistor is operating in
+\textbf{saturation}, the voltage drop from collector to emitter
+$V_{CE}$ is smaller than $V_{BE}$.  For a standard silicon transistor
+in saturation, $V_{CE} \approx 0.25$~V.
+
+In saturation, the collector current $I_C$ is greater than the current
+flowing from the base to the collector $I_B$ by a factor $h_{FE}$,
+which is on the order of 100 and depends on temperature,
 \begin{equation}
   I_C = h_{FE} I_B
   \label{eq:hfe}
 \end{equation}
-In a standard silicon diode, the diode drop across the collector-base
-junction is smaller than that of the base-emitter junction. In saturation,
-this means that the voltage drop from collector to emitter $V_{CE}$ is
-smaller than $V_{BE}$ ($\approx 0.25$~V). 
 
 \subsubsection*{Transistor Off}
 
@@ -769,6 +780,7 @@ In the active region, the $V_{BE}$ vs. $I_C$ curve has a small,
 nonzero slope, which manifests itself as a small emitter resistance,
 \begin{equation}
   r_e = \frac{d V_{BE}}{d I_C} = \frac{kT/e}{I_C}
+\label{eq:emitterresistance}
 \end{equation}
 which at room temperature is $(25~\Omega)/I_C[\mathrm{mA}]$.
 
@@ -899,9 +911,9 @@ Figure~\ref{fig:emitterfollower}.
     down the quiescent current $R_1 || R_2 \approx h_{FE} R_E/ 10$. 
   \end{enumerate}
 
-\item The capacitors $C_1$ and $C_2$ are coupling capacitors, removing
-  DC components from the input and output signals. They, along with
-  the resistors in the input and output stages, act as high-pass
+\item The capacitors $C_1$ and $C_2$ are coupling capacitors that
+  remove DC components from the input and output signals. They, along
+  with the resistors in the input and output stages, act as high-pass 
   filters. Their values are chosen such that they do not filter out
   frequencies of interest.
 \end{enumerate}
@@ -928,40 +940,204 @@ It has a voltage gain given by
 
 \subsubsection*{Design}
 
-\begin{itemize}
+\begin{enumerate}
 \item The collector resistor $R_C$ is chosen to center the collector
   voltage between ground and $V_S$ at the desired quiescent current.
 
-\item The emitter resistor $R_E$ improves the stability of the
-  quiescent bias voltage. If $R_E$ is removed, variations in the small,
-  current-dependent resistance of the base-emitter junction lead to
-  instability in the gain. The collector resistance and the desired
-  gain determine the emitter resistance. 
+\item The emitter resistor $R_E$ is chosen to give the desired voltage
+  gain (Equation~\ref{eq:commonemittergain}).
 
-\item Once $V_E$ is established, set the values of the input bias
-  resistors $R_1$ and $R_2$.
+  \emph{Keep in mind that the emitter resistance $r_e$ in series with
+    $R_E$ acts to reduce the measured voltage gain relative to the
+    prediction of Equation~\ref{eq:commonemittergain}. The emitter
+    resistance can be estimated using
+    Equation~\ref{eq:emitterresistance} with the quiescent collector
+    current.}
+
+\item The bias resistor $R_b$ is set to place the quiescent emitter
+  voltage at about 1~V.
+
+  \emph{This greatly reduces the influence of the
+    temperature-dependent emitter resistance $r_e$ on the stability of
+    the quiescent base-emitter voltage $V_{BE}$, which must be kept in
+    the active region of the transistor.}
+
+\item The bypass capacitor $C_b$ is chosen to give very small
+  reactance at signal frequencies, thus shorting out the bias resistor
+  so that only $R_E + r_e$ remain, yielding the desired voltage gain.
+
+\item Once the emitter voltage $V_E$ is established, set the values of
+  the input bias resistors $R_1$ and $R_2$.
   \begin{enumerate}
   \item Their ratio $R_1/R_2$ must place $V_{BE}$ in the active region
     of the transistor ($V_B \approx V_E + 0.6~\mathrm{V}$).
 
   \item Their parallel resistance must be small compared with that
     presented by the base-emitter junction so that they do not drag 
-    down the quiescent current $R_1 || R_2 \approx h_{FE} R_E/ 10$. 
+    down the quiescent current
+    $R_1 || R_2 \approx h_{FE} (R_E + R_b)/10$.
   \end{enumerate}
 
 \item The values of the coupling capacitors $C_1$ and $C_2$ are chosen
-  so that they allow frequencies of interest to pass through.
+  so that they allow frequencies of interest to pass through. The
+  input coupling capacitor $C_1$ and $R_1||R_2$ act as a
+  high-pass filter on the input. Similarly, $C_2$ and $R_C||(R_E +
+  R_b)$ act as a high-pass filter on the output. 
+\end{enumerate}
 
-\item To maximize gain at signal frequencies without losing the bias
-  stability provided by the emitter resistor $R_E$, an optional bypass
-  capacitor $C_E$, is chosen to present a small reactance at signal
-  frequencies.
-\end{itemize}
+\newpage
 
-\section{Operational Amplifiers}
+\section{Operational Amplifiers (Op Amps)}
 \label{sec:opamps}
 
-%===============================================================================
+\begin{figure}[ht]
+  \begin{center}
+    \scalebox{0.7}{
+      \includegraphics{opamp_model.eps}
+    }
+    \caption{(a) Schematic symbol of an operational amplifier, and
+      (b) a circuit model of an op amp.}
+    \label{fig:opampmodel}
+  \end{center}
+\end{figure}
+
+We considered simple transistor amplifiers in
+Sections~\ref{sec:emitterfollower} and \ref{sec:commonemitter}.
+Amplifier circuits with nice properties --- high gain and 
+high input impedance, for example --- packaged as integrated circuits
+(ICs), are called \textbf{operational amplifiers} or op amps. They are
+called ``operational'' amplifiers, because they can be used to perform
+arithmetic operations like addition, subtraction, multiplication with
+signals. In fact, op amps can also be used to integrate and
+differentiate signals.
+
+The schematic symbol for an op amp is shown in panel (a)
+of Figure~\ref{fig:opampmodel}. A circuit model of an op amp is shown
+in panel (b) of Figure~\ref{fig:opampmodel}. The output voltage of the
+op amp is linearly proportional to the voltage difference between the
+inverting and non-inverting input terminals $V_+ - V_-$ by a factor of
+the gain $A$. However, the output voltage is limited to the range
+$-V_S \leq V_{out} \leq V_S$, where $V_S$ is the supply voltage. The
+range $-V_S < V_{out} < V_S$ is often called the \textbf{linear region}
+of the amplifier, and when the output swings to $V_S$ or $-V_S$, the
+op amp is said to be \textbf{saturated}. The output voltages of the
+transistor amplifiers described in Sections~\ref{sec:emitterfollower} and
+\ref{sec:commonemitter} are similarly limited by the supply voltage.
+
+An ideal op amp has infinite gain ($A = \infty$), infinite input
+resistance ( $R_{in} = \infty$), and zero output resistance
+($R_{out} = 0$). You should use these assumptions to analyze op amp
+circuits. A consequence of the assumption of infinite gain is that, if
+the output voltage is within the finite linear region, we must have
+$V_+ = V_-$. A real op amp has a gain in the range $10^3$-$10^5$,
+depending on the type, and hence actually maintains a very small
+difference in input terminal voltages when operating in its linear
+region. For most applications, we can get away with assuming
+$V_+ \approx V_-$.
+
+We will use two operational amplifiers in our laboratory exercises,
+the \texttt{LM741}, a general purpose bipolar junction transistor
+(BJT) based amplifier with a typical input resistance of 2 M$\Omega $,
+and the \texttt{LF411}, with field effect transistors (FETs) at the
+inputs giving a much larger input resistance ($10^{12}~\Omega$).
+Detailed data sheets for these devices are available for dowload from
+the Texas Instruments web site (\url{www.ti.com}). Of the two, the
+\texttt{LF411} comes closest to satisfying the assumptions associated
+with ideal op amp behavior. It costs more than the \texttt{LM741}
+(\$1.30 vs. \$0.73 as of fall 2017). 
+
+\vspace{12 pt}
+\noindent
+\fbox{\parbox{\linewidth-5\fboxsep}{
+    \textbf{Basic Op Amp Behavior}
+    \begin{itemize}
+    \item $R_{in} = \infty,~A = \infty,~R_{out} = 0$
+    \item \textbf{Linear region:} $V_+ = V_-,~-V_S < V_{out} < V_S$
+    \item \textbf{Saturation:} $V_+ > V_-~~\Longrightarrow~~V_{out} = V_S$
+      ~~~or~~~ $V_+ < V_-~~\Longrightarrow~~V_{out} = -V_S$
+    \end{itemize}
+  }
+}
+
+\subsection{Application: Inverting Amplifier}
+\label{sec:invertingamp}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{invertingamp.eps}
+    \caption{Schematic of an op amp based inverting amplifier.}
+    \label{fig:invertingamp}
+  \end{center}
+\end{figure}
+
+An op amp based inverting amplifer with voltage gain
+\begin{equation}
+  A_v = -\frac{R_f}{R_1}
+  \label{eq:invampgain}
+\end{equation}
+is shown in Figure~\ref{fig:invertingamp}. The input resistance is
+$R_1$, and its output resistance is $R_{oa}||R_f$, where $R_{oa}$ is
+the output resistance of the op amp.
+
+\emph{The inverting amplifier has the advantage of low noise due to
+  the lower input impedance, relative to a non-inverting amplifier. It
+  also has a relatively fast \textbf{slew rate}, the maximum rate of
+  change of the signal.}
+
+\subsubsection*{Design}
+\begin{enumerate}
+\item The value of $R_{in}$ is chosen to give the desired input
+  impedance (which is $R_{in}$).
+
+\item The ratio $R_f/R_{in}$ is fixed by the desired voltage gain
+  (Equation~\ref{fig:invertingamp}).
+\end{enumerate}
+
+\subsection{Application: Non-inverting Amplifier}
+\label{sec:noninvertingamp}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{noninvertingamp.eps}
+    \caption{Schematic of an op amp based non-inverting amplifier.}
+    \label{fig:noninvertingamp}
+  \end{center}
+\end{figure}
+
+An op amp based non-inverting amplifer with voltage gain
+\begin{equation}
+  A_v = 1 + \frac{R_f}{R_1}
+  \label{eq:noninvampgain}
+\end{equation}
+is shown in Figure~\ref{fig:noninvertingamp}. The input resistance of
+the amplifier is that of the op amp. The output resistance is
+$R_{oa}||(R_1 + R_f)$, where $R_{oa}$ is the output resistance of the
+op amp.
+
+\emph{The non-inverting amplifier has the advantages of the op amp
+  itself, large input impedance and small output impedance. It has the
+  disadvantage that it is susceptible to positive feedback to the
+  non-inverting input from via $R_f$.}
+
+\subsubsection*{Design}
+\begin{enumerate}
+\item The ratio $R_f/R_1$ is fixed by the desired voltage gain
+  (Equation~\ref{fig:noninvertingamp}).
+
+\item The absolute values of $R_f$ and $R_1$ are chosen to be large enough
+  that the amplifier does not draw too much power and low enough that
+  noise is not a problem. (The 10~k$\Omega$ - 500~k$\Omega$ range is
+  reasonable.)
+\end{enumerate}
+
+\subsection{Application: Voltage Follower/Buffer}
+\label{sec:vfollower}
+
+\subsection{Application: Summing Amplifier}
+\label{sec:summingamp}
+
+
+%===========================================================================
 
 \newpage
 \appendix
