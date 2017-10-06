@@ -13,7 +13,7 @@
 
 \newcommand{\COURSE}{PHYS328W}
 \newcommand{\LABNUM}{6}
-\newcommand{\TITLE}{Diode Envelope Detector}
+\newcommand{\TITLE}{Transistor Behavior}
 \markright{\COURSE~Lab \LABNUM\ : \TITLE}
 
 \setlength{\textwidth} {6.5 true in}
@@ -29,132 +29,158 @@
 
 \section*{\COURSE\ Lab \LABNUM\ : \TITLE}
 
+This assignment relies on Section~\ref{sec:transistors} of the notes.
+
 \subsection*{Experiments}
 
-\begin{figure}[h]
-\centering
-\includegraphics{demodulator.eps}
-\caption{An band-pass filter driving a diode envelope
-  detector in the dashed rectangle.}
-\label{fig:demodulator}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{ebersmollcircuit.eps}
+    \caption{Schematic of the circuit you will use in lab to
+      test the Ebers-Moll equation in the active region of an NPN
+      BJT.}
+    \label{fig:ebersmollcircuitlab}
+  \end{center}
 \end{figure}
 
-The circuit in Figure~\ref{fig:demodulator} (with the function
-generator standing in for the antenna) is the first three stages of a
-simple AM radio reciever (antenna, tuner, and demodulator). AM stands
-for \textbf{amplitude modulation}. AM radio broadcasts are transmitted
-at a fixed frequency, and the information is encoded as variations in
-the amplitude of the carrier signal. In the United States, Radio
-stations in the AM band are assigned carrier frequencies in the
-535-1705~kHz range
-\footnote{United States Frequency Allocation Chart,
-  \url{https://www.ntia.doc.gov/files/ntia/publications/january_2016_spectrum_wall_chart.pdf},
-  National Telecommunications and Information Administration
-  (2016).}
-at 10~kHz intervals
-\footnote{NRSC-G100-A Bandwidth Options for Analog AM Broadcasters,
-  \url{http://www.nrscstandards.org/sg/NRSC-G100-A.pdf},
-  National Radio Systems Committee (2012)}.
-In order to distinguish stations, an AM 
-radio reciever must have a tuner with a bandwidth $\leq$10~kHz.  To
-recover the information in the signal from an AM station, usually an
-audio signal in the 100~Hz - 20 kHz range, a \textbf{demodulator} is
-used to produce a signal proportional to the amplitude of the carrier
-signal. A \texttt{diode envelope detector}, shown in the dashed box in
-Figure~\ref{fig:demodulator} is a simple demodulator.
-
 \begin{enumerate}
-\item Construct the circuit in Figure~\ref{fig:demodulator} with the
-  same $R_1$, $C_1$ and $L$ that you used in Lab 5, $C_2 = 100$~pF,
-  $R_2 = 470$~k$\Omega$, and the \texttt{1N5711} small-signal Schottky
-  diode. Use the function generator as your AC voltage source.
+\item Make sure the power switch on your prototyping board is off.
 
-\item Drive the circuit at its resonant frequency with a sinusoidal
-  signal, and display the output voltage of the tuner and the output
-  voltage of the envelope detector together on the oscilloscope.
+\item Find 100~$\Omega$ and 1~k$\Omega$ resistors, a 10~k$\Omega$ pot,
+  and a \texttt{2N3904} NPN transistor.
+
+\item Measure the resistances of the 100~$\Omega$ and 1~k$\Omega$
+  resistors with a DMM.
   
-\item Focusing just on the output voltage of the RLC tuner (the input
-  to the envelope detector), measure the resonant frequency and the
-  3~dB band width of the tuner, and make note of any changes due to
-  the presence of the envelope detector. 
+\item Construct the circuit shown in
+  Figure~\ref{fig:ebersmollcircuitlab}. 
 
-\item Measure the amplitude of the input signal $|V_{in}|$ (the output
-  of the tuner) and the size of the output signal of the envelope
-  detector $|V_{out}|$.
+\item Use the DMM to confirm which direction to turn the pot to
+  increase/decrease the resistance. This depends on how the pot is
+  oriented on the prototyping board relative to the rest of the
+  circuit.
+  
+\item Turn the pot all the way down so that the transistor will start
+  in the ``off'' state, and turn on the power to your prototyping 
+  board.
+
+\item Use the DMM to set the positive variable supply voltage to
+  15~V.
+
+  \emph{Do not trust the voltage displayed on the prototyping board.}
+
+\item While monitoring the voltage drop across the 100~$\Omega$
+  collector resistor, slowly turn up the pot, collecting several sets
+  of $I_C$, $I_E$, and $V_{BE}$ measurements in the range over which
+  $I_C$ and $I_E$ vary.
+  \begin{itemize}
+  \item Use Ohm's law to determine $I_C$ and $I_E$ from the measured
+    voltage drops across the collector and emitter resistors and their
+    measured resistances.
+  \item Note that $V_{BE}$ is \emph{not} the potential difference
+    between the base and ground. The DMM probe placement is
+    illustrated in Figure~\ref{fig:ebersmollcircuitlab}.
+  \item Map the ``off'' and active states of the transistor. 
+  \end{itemize}
+  \emph{If the emitter potential is held above that of the base, the
+    transistor will no longer be able to operate as advertised. You
+    should see this happen very close to the top of the range of the
+    pot.}
+
+\item Plot $\ln(I_C)$ vs. $V_{BE}$, compare it with the behavior
+  predicted by the Ebers-Moll equation (Equation~\ref{eq:ebersmoll} in
+  the notes).
+
+\item If the Ebers-Moll equation appears to be a reasonable model,
+  determine values of the leakage current $I_o$ and the temperature by
+  fitting a line to the portion of your $\ln(I_C)$ vs. $V_{BE}$ graph
+  in the active region. 
+
+\item In your spreadsheet, calculate the base current $I_B = I_E -
+  I_C$ at each value of $V_{BE}$.
+  
+\item Determine $h_{FE}$ values from your $I_B$ and $I_C$ values, and
+  make a graph of $h_{FE}$ vs. $V_{BE}$.
 \end{enumerate}
 
 \subsection*{Simulations}
 
-\subsubsection*{Comparison with Experiment}
+\emph{Do not expect more than qualitative agreement between simulation
+and measurement. There is variation among transistors of the same
+make/model, so the PSpice model parameters are only representative. It
+is enlightening to see how much variation we see between the transistors
+studied by different lab groups.}
+
 \begin{enumerate}
-\item Construct the circuit shown in Figure~\ref{fig:demodulator}
-  using measured resistor, inductor, and capacitor values.
+\item Construct the circuit shown in
+  Figure~\ref{fig:ebersmollcircuitlab}. For the transistor, click on
+  \texttt{Place -> Part ...}, type Q2N3904 into the search bar, and
+  select \texttt{Q2N3904/BIPOLAR}.
 
-\item We need to use the specific PSpice model of the \texttt{1N5711}
-  small-signal Schottky diode in this circuit. A model of this diode
-  is included in the \texttt{OrCAD Capture} libraries. We need to add
-  this to the schematic instead of a standard diode:
+\item Set up a parameter you can use in a DC sweep analysis to vary
+  the pot.
   \begin{itemize}
-  \item Click the \includegraphics{OrCAD_AddPart.png} button in the
-    tool bar on the right (or \texttt{Place -> Add Part ...}).
+    \item Click on \texttt{Place -> Part ...}, enter \texttt{PARAM} into
+      the search bar, and place it anywhere on your schematic.
 
-  \item The \texttt{Place Part} panel will open up on the right. In
-    the \texttt{Libraries} list, select \texttt{DIODE}.
-
-  \item Type D1N5711 into the \texttt{Part} search bar. Click on
-    \texttt{D1N5711/DIODE} in the \texttt{Part List}, and hit the 
-    \includegraphics{OrCAD_AddPart.png} button at the upper right of
-    the \texttt{Place Part} panel (or press \texttt{Enter}) to place
-    the diode in the schematic. 
+    \item Double-click on \texttt{PARAMETERS:} in the schematic, and
+      click on the \texttt{New Property ...} button. Name the property
+      psetvariable, and set its value to 0.5. Check the
+      \texttt{Display} box, and select \texttt{Name and Value} under
+      \texttt{Display Format}.
+    \item Change the value of the \texttt{SET} parameter of the pot to
+      \verb+{psetvariable}+ (the curly braces are important).
   \end{itemize}
 
-\item Set up a transient analysis over a large time scale relative to
-  the 1~MHz source frequency --- say 100~$\mu$s. In order to avoid
-  aliasing, set the maximum step size to 0.01~$\mu$s so that 100
-  points are plotted per period.
+\item Create a new simulation profile, and set the \texttt{Analysis
+  Type} to \texttt{DC Sweep}. Select \texttt{Global parameter} under
+  \texttt{Sweep Variable}, and set the parameter name to
+  \texttt{psetvariable}. Select \texttt{Linear} under \texttt{Sweep
+    Type}, and set \texttt{Start Value}, \texttt{End Value}, and
+  \texttt{Increment} to 0, 1, and 0.01.
 
-\item As you did for the actual circuit, measure the amplitude of the
-  input signal $|V_{in}|$ (the output of the tuner) and the size of
-  the output signal of the envelope detector $|V_{out}|$.
+\item In the schematic, place a current probe to measure the collector
+  current $I_C$.
 
-\item Set up the same AC sweep analysis you used in Lab 4, and
-  determine the band width of the tuner.
-\end{enumerate}
+\item Make note of the names of the points at which you measure
+  $V_{BE}$ by hovering the pointer over them.
 
-\subsubsection*{Demodulation of an Amplitude-modulated Signal}
-  \begin{figure}[h]
-  \centering
-  \scalebox{0.5}{
-    \includegraphics{amplitudemod.png}
-    }
-  \caption{A 1~MHz sinusoidal source with 1~kHz amplitude modulation.}
-  \label{fig:amplitudemod}
-  \end{figure}
-\begin{enumerate}
-\item Make a new project, copy your existing schematic into it, and
-  add a multiplier device and a second sinusoidal voltage source to
-  make an amplitude-modulated source as shown in
-  Figure~\ref{fig:amplitudemod}. To place a multiplier, use the
-  \includegraphics{OrCAD_AddPart.png} button, select \texttt{ABM} in
-  the \texttt{Libraries} panel, and select the \texttt{MULT} part in
-  the \texttt{Part} panel.
+\item Run the simulation.
 
-\item Run a transient analysis over two periods of the 1~kHz amplitude
-  modulation and measure the amplitudes $|V_{in}|$ and $|V_{out}|$.
-
+\item In the \texttt{PSpice A/D Lite} window, you will find a plot of
+  the current vs. the pot setting. Instead, set up a plot of
+  $\ln(I_C)$ vs. $V_{BE}$.
+  \begin{enumerate}
+  \item Double-click on the horizontal axis, and click on the
+    \texttt{Axis Variable ...} button. In the \texttt{Trace
+      Expression:} entry box, enter the base voltage minus the emitter
+    voltage, using the names you found in the schematic.
+  \item Right-click and select \texttt{Add Trace}. In the \texttt{Trace
+      Expression:} entry box, enter \texttt{LN(ABS(I(R2)))}. (If the
+    current displayed automatically is something other than
+    \texttt{I(R2)}, use that in the expression instead.)
+  \item So that you don't lose this setup the next time you run the
+    simulation, edit the simulation profile, and select the
+    \texttt{Last Plot} radio button on the \texttt{Probe Window} tab.
+  \item Right click on the trace, and select \texttt{Copy to
+    Clipboard}. Paste the data into your spreadsheet, and add it to
+    your $\ln(I_c)$ vs. $V_{BE}$ graph.
+  \end{enumerate}
 \end{enumerate}
 
 \subsection*{Products}
 
-Upload to Canvas a brief \LaTeX\ report in which you ...
+Upload to Canvas a brief \LaTeX\ report in which you comment on ...
 \begin{itemize}
-\item Compare the bandwidth measurements of the RLC filter with no
-  load (Lab 4) and driving the diode envelope detector. Comment on any
-  discrepancies between measurements and simulations.
-
-\item Include as a figures measured and simulated plots of $V_{in}$
-  and $V_{out}$ vs. time with unmodulated and amplitude-modulated
-  input signals.
+  \item the degree to which your measurements in the active region are
+    compatible with the Ebers-Moll equation,
+  \item the dependence (if any) of the current gain $h_{FE}$ on
+    $V_{BE}$, and
+  \item the level of agreement between your simulation and
+    measurements.
 \end{itemize}
+Include as figures your graphs of $\ln(I_C)$ vs. $V_{BE}$ and $h_{FE}$
+vs. $V_{BE}$. Report the values of $I_o$ and $T$ you determined for
+your transistor.
 
 \end{document}
