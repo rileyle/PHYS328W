@@ -89,6 +89,14 @@ automotive charging systems.
   Figure~\ref{fig:bridgerectifier} using standard PSpice diodes
   and a 10~k$\Omega$ load resistor.
 
+\item Use a ``cheater plug'' (three-prong to two prong adapter) to
+  float the function generator so that your circuit is only grounded
+  at the output.
+
+  \emph{Grounding at the input as well would ground both terminals of
+    the lower-left diode in Figure~\ref{fig:bridgerectifier},
+    effectively removing it from the circuit.}
+  
 \item Set up a transient analysis over a couple of periods of the
   input signal, and set the maximum step size so that 100
   points are plotted per period.
