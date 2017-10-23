@@ -64,10 +64,8 @@ This assignment relies on Section~\ref{sec:transistors} of the notes.
   in the ``off'' state, and turn on the power to your prototyping 
   board.
 
-\item Use the DMM to set the positive variable supply voltage to
-  15~V.
-
-  \emph{Do not trust the voltage displayed on the prototyping board.}
+\item Turn on the prototyping board, and set the positive variable
+  supply voltage to 15~V.
 
 \item While monitoring the voltage drop across the 100~$\Omega$
   collector resistor, slowly turn up the pot, collecting several sets
@@ -117,12 +115,27 @@ studied by different lab groups.}
   \texttt{Place -> Part ...}, type Q2N3904 into the search bar, and
   select \texttt{Q2N3904/BIPOLAR}.
 
+  If the part does not show up in the \texttt{Part List} panel, you
+  need to add a library. Click the \includegraphics{OrCAD_AddLib.png}
+  button in the \texttt{Libraries} panel, select the file
+  \texttt{bipolar.olb}, and click \texttt{Open}. Then, select the
+  \texttt{BIPOLAR} library in the \texttt{Libraries} panel, and try
+  searching for \texttt{Q2N3904/BIPOLAR} again.
+  
 \item Set up a parameter you can use in a DC sweep analysis to vary
   the pot.
   \begin{itemize}
     \item Click on \texttt{Place -> Part ...}, enter \texttt{PARAM} into
       the search bar, and place it anywhere on your schematic.
 
+      If the \texttt{PARAM} part does not show up in the
+      \texttt{Part List} panel, you need to add a library. Click the
+      \includegraphics{OrCAD_AddLib.png} button in the
+      \texttt{Libraries} panel, select the file \texttt{special.olb}, 
+      and click \texttt{Open}. Then, select  the \texttt{SPECIAL}
+      library in the \texttt{Libraries} panel, and try searching for
+      \texttt{PARAM} again. 
+      
     \item Double-click on \texttt{PARAMETERS:} in the schematic, and
       click on the \texttt{New Property ...} button. Name the property
       psetvariable, and set its value to 0.5. Check the
