@@ -1,6 +1,6 @@
 
 all: p328_notes.pdf
-	echo "Labs : done."
+	echo "notes : done."
 
 %.pdf : %.tex
 	pdflatex $*.tex
@@ -8,4 +8,4 @@ all: p328_notes.pdf
 
 clean:
 	rm -f *.dvi *.aux *.log *.out *.pdf
-	echo "Labs : clean.";echo
+	echo "notes : clean.";echo
