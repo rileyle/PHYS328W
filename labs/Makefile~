@@ -1,0 +1,2 @@
+all:
+	cp *.ipynb ../assets/notebooks/
