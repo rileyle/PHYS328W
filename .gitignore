@@ -3,3 +3,8 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+*.out
+*.aux
+*.log
+*-eps-converted-to.pdf
+
