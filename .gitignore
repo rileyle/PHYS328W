@@ -3,5 +3,5 @@
 *.aux
 *.dvi
 *.ps
-*.pdf
 *~
+*-eps-converted-to.pdf
