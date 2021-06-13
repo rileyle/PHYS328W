@@ -5,7 +5,6 @@ all: p328_notes.pdf
 %.pdf : %.tex
 	pdflatex $*.tex
 	pdflatex $*.tex
-	cp p328_notes.pdf ../assets/pdf
 
 clean:
 	rm -f *.dvi *.aux *.log *.out *.pdf

@@ -1,5 +1,4 @@
 all:
-	cp *.ipynb                ../assets/notebooks/
 	cp thevenincircuit.svg    ../assets/img
 	cp rcvdividers.svg        ../assets/img
 	cp rlcparallel.svg        ../assets/img
