@@ -1,24 +1,14 @@
 @import "fonts";
 /*@import "rouge-github";*/
 
-/* Modified for dark mode. (See https://css-tricks.com/dark-modes-with-css/) */
-
 body {
-  background-color: #181818;
-  padding:50px;
-  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#cccccc;
-  font-weight:400;
+    background-color: #fff;
+    padding:50px;
+    font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#393939;
+    font-weight:400;
 }
-@media screen and (prefers-color-scheme: light) {
-    body {
-	background-color: #fff;
-	padding:50px;
-	font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:#727272;
-	font-weight:400;
-    }
-}
+
 
 h1, h2, h3, h4, h5, h6 {
     margin:0 0 20px;
@@ -37,28 +27,20 @@ h1 {
     font-size:28px;
 }
 
-@media screen and (prefers-color-scheme: light) {
-    h2 {
-	color:#393939;
-    }
+
+h1, h2 {
+    color:#222;
 }
 
-@media screen and (prefers-color-scheme: light) {
-    h3, h4, h5, h6 {
-	color:#494949;
-    }
+h3, h4, h5, h6 {
+    color:#393939;
 }
 
 b, strong {
-  color:#aaaaaa;
-  font-weight:700;
+    color:#222;
+    font-weight:700;
 }
-@media screen and (prefers-color-scheme: light) {
-    b, strong {
-	color:#222;
-	font-weight:700;
-    }
-}
+
 
 a, a b, a strong {
   color:#267CB9;
@@ -71,26 +53,14 @@ a:hover, a:focus {
 }
 
 a small {
-  font-size:11px;
-  color:#aaaaaa;
-  margin-top:-0.3em;
-  display:block;
+    font-size:11px;
+    color:#777;
+    margin-top:-0.3em;
+    display:block;
 }
 
 a:hover small {
-  color:#aaaaaa;
-}
-@media screen and (prefers-color-scheme: light) {
-    a small {
-	font-size:11px;
-	color:#777;
-	margin-top:-0.3em;
-	display:block;
-    }
-
-    a:hover small {
-	color:#777;
-    }
+    color:#777;
 }
 
 .wrapper {
@@ -110,33 +80,24 @@ code, pre {
   color:#aaaaaa;
 }
 
-pre {
-  padding:8px 15px;
-  background: #0a0a0a;
-  border-radius:5px;
-  border:1px solid #aaaaaa;
-  overflow-x: auto;
+blockquote {
+    border-left:1px solid #e5e5e5;
+    margin:0;
+    padding:0 0 0 20px;
+    font-style:italic;
 }
-@media screen and (prefers-color-scheme: light) {
-    blockquote {
-	border-left:1px solid #e5e5e5;
-	margin:0;
-	padding:0 0 0 20px;
-	font-style:italic;
-    }
 
-    code, pre {
-	font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-	color:#333;
-    }
+code, pre {
+    font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+    color:#333;
+}
 
-    pre {
-	padding:8px 15px;
-	background: #f8f8f8;
-	border-radius:5px;
-	border:1px solid #e5e5e5;
-	overflow-x: auto;
-    }
+pre {
+    padding:8px 15px;
+    background: #f8f8f8;
+    border-radius:5px;
+    border:1px solid #e5e5e5;
+    overflow-x: auto;
 }
 
 table {
@@ -161,16 +122,6 @@ th {
 
 img {
   max-width:100%;
-}
-
-@media (prefers-color-scheme: dark) {
-  img {
-    opacity: .75;
-    transition: opacity .5s ease-in-out;
-  }
-  img:hover {
-    opacity: 1;
-  }
 }
 
 kbd {
