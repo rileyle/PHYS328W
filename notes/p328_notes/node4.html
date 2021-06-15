@@ -1,0 +1,745 @@
+---
+
+title: PHYS328 Notes
+
+layout: single
+
+style: single
+
+---
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>4 Transistors</TITLE>
+<META NAME="description" CONTENT="4 Transistors">
+<META NAME="keywords" CONTENT="p328_notes">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="../../assets/css/single.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation">
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   <BR>
+<B> Next:</B> <A
+ HREF="node5.html">5 Operational Amplifiers (Op</A>
+<B>Up:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<B> Previous:</B> <A
+ HREF="node3.html">3 Diodes</A>
+<BR> <P>
+</DIV>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html87"
+  HREF="node4.html#SECTION00041000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Transistor Behavior</A>
+<UL>
+<LI><A ID="tex2html88"
+  HREF="node4.html#SECTION00041100000000000000">Active Region</A>
+<LI><A ID="tex2html89"
+  HREF="node4.html#SECTION00041200000000000000">Transistor On (Saturation)</A>
+<LI><A ID="tex2html90"
+  HREF="node4.html#SECTION00041300000000000000">Transistor Off</A>
+</UL>
+<BR>
+<LI><A ID="tex2html91"
+  HREF="node4.html#SECTION00042000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Application: Transistor Switch</A>
+<UL>
+<LI><A ID="tex2html92"
+  HREF="node4.html#SECTION00042100000000000000">Design</A>
+</UL>
+<BR>
+<LI><A ID="tex2html93"
+  HREF="node4.html#SECTION00043000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Application: Emitter Follower</A>
+<UL>
+<LI><A ID="tex2html94"
+  HREF="node4.html#SECTION00043100000000000000">Design</A>
+</UL>
+<BR>
+<LI><A ID="tex2html95"
+  HREF="node4.html#SECTION00044000000000000000"><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Application: Common Emitter Amplifier</A>
+<UL>
+<LI><A ID="tex2html96"
+  HREF="node4.html#SECTION00044100000000000000">Design</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00040000000000000000"></A>
+<A ID="sec:transistors"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN> Transistors
+</H1>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:transistors"></A><A ID="448"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 10:</STRONG>
+Schematic symbols for (a) NPN and (b) PNP bipolar junction
+      transistors with labels on the collector (C), base (B), and
+      emitter (E). (c) The plastic TO-92 transistor package we will use
+      in lab with pins labeled.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img113.svg"
+ ALT="\includegraphics{transistors.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+A <SPAN  CLASS="textbf">transistor</SPAN> is an <SPAN  CLASS="textbf">active device</SPAN>, meaning that it
+enables the control of a current by an input signal. There are several
+different types of transistors, each suited to different
+applications. Here, we will focus on
+<SPAN  CLASS="textbf">bipolar junction transistors</SPAN> (BJTs).
+Transistors have three terminals called the <SPAN  CLASS="textbf">emitter</SPAN>, the
+<SPAN  CLASS="textbf">collector</SPAN>, and the <SPAN  CLASS="textbf">base</SPAN>. A BJT consists of two
+p-type &ndash; n-type junctions, like those in a diode. In an NPN
+transistor, the base is p-type semiconductor, and the emitter and
+collector are n-type. In a PNP transistor, the polarities are
+reversed. 
+
+<P>
+Schematic symbols for BJTs and an illustration of the ordering of the
+pins on the transistors we will use in lab are shown in
+Figure&nbsp;<A HREF="#fig:transistors">10</A>. The arrows on the schematic symbols
+indicate the direction of the collector current <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN>.
+
+<P>
+
+<H2><A ID="SECTION00041000000000000000">
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN> Transistor Behavior</A>
+</H2>
+
+<P>
+Transistors operate in one of three states, which we will refer to
+here as &ldquo;off&rdquo;, &ldquo;on&rdquo; (also &ldquo;saturation&rdquo;), and the &ldquo;active
+region.&rdquo; In amplifiers, transistors operate in the active region. In
+digital and switching applications, transistors rapidly transition
+between &ldquo;off&rdquo; and &ldquo;on&rdquo; states. Transistors in voltage regulators
+stay in the the &ldquo;on&rdquo; state.
+
+<P>
+
+<H3><A ID="SECTION00041100000000000000">
+Active Region</A>
+</H3>
+
+<P>
+The <SPAN  CLASS="textbf">Ebers-Moll equation</SPAN> describes the relationship between
+the collector current <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN> and the voltage drop from base to emitter
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> by 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+I_C = I_o \left( e^{\frac{V_{BE}}{kT/e}} - 1 \right)
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:ebersmoll"></A><IMG STYLE="height: 5.12ex; vertical-align: -2.01ex; " SRC="img116.svg"
+ ALT="$\displaystyle I_C = I_o \left( e^{\frac{V_{BE}}{kT/e}} - 1 \right)
+$"> 
+
+(<SPAN CLASS="arabic">29</SPAN>)
+</DIV>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img117.svg"
+ ALT="$I_o$"></SPAN> is the reverse leakage current from the emitter to the
+base, <!-- MATH
+ $e = 1.6 \times 10^{-19}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.28ex; vertical-align: -0.29ex; " SRC="img118.svg"
+ ALT="$e = 1.6 \times 10^{-19}$"></SPAN>&nbsp;C is the elementary unit of charge,
+<!-- MATH
+ $k = 1.38 \times 10^{-23}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.28ex; vertical-align: -0.29ex; " SRC="img119.svg"
+ ALT="$k = 1.38 \times 10^{-23}$"></SPAN>&nbsp;J/K is the Boltzmann constant, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img96.svg"
+ ALT="$T$"></SPAN> is the
+absolute temperature (in Kelvin). With typical doping levels, the
+leakage current arising from the &ldquo;intrinsic&rdquo; behavior of the pure
+semiconductor is very small, and the second term (-<SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img117.svg"
+ ALT="$I_o$"></SPAN>) is
+negligible, giving a simple exponential dependence of <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN> on
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN>.
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:ebersmollcircuit"></A><A ID="474"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 11:</STRONG>
+Schematic of the circuit you will use in lab to
+      test the Ebers-Moll equation in the active region of an NPN
+      BJT.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img120.svg"
+ ALT="\includegraphics{ebersmollcircuit.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+This current-voltage relationship is the same as for the diode,
+plotted qualitatively in Figure&nbsp;<A HREF="node3.html#fig:diodevi">9</A>. We usually operate
+diodes in <SPAN  CLASS="textbf">saturation</SPAN>, at the forward voltage drop (<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img121.svg"
+ ALT="$\approx
+0.7$"></SPAN>&nbsp;V for silicon pn junctions). In some applications, like the
+transistor switch described in Section&nbsp;<A HREF="#sec:transistorswitch">4.2</A>, we
+operate transistors in the same way. Below saturation in the
+<SPAN  CLASS="textbf">active region</SPAN>, we need the Ebers-Moll equation to model
+transistor behavior. The schematic of the circuit you will use in lab
+to investigate the Ebers-Moll equation is shown in
+Figure&nbsp;<A HREF="#fig:ebersmollcircuit">11</A>. The variable resistor enables you
+to adjust <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> from 0&nbsp;V to saturation. The 100&nbsp;<SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img122.svg"
+ ALT="$\Omega$"></SPAN> resistor
+gives you a way to determine the collector current <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN> from a
+voltage measurement, and the 1&nbsp;k<SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img122.svg"
+ ALT="$\Omega$"></SPAN> resistor keeps the collector
+and emitter currents under control to protect the transistor.
+
+<P>
+In the active region, the <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> vs. <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN> curve has a small,
+nonzero slope, which manifests itself as a small emitter resistance,
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+r_e = \frac{d V_{BE}}{d I_C} = \frac{kT/e}{I_C}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:emitterresistance"></A><IMG STYLE="height: 5.31ex; vertical-align: -2.01ex; " SRC="img123.svg"
+ ALT="$\displaystyle r_e = \frac{d V_{BE}}{d I_C} = \frac{kT/e}{I_C}
+$"> 
+
+(<SPAN CLASS="arabic">30</SPAN>)
+</DIV>
+which at room temperature is <!-- MATH
+ $(25~\Omega)/I_C[\mathrm{mA}]$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img124.svg"
+ ALT="$(25~\Omega)/I_C[\mathrm{mA}]$"></SPAN>.
+
+<P>
+
+<H3><A ID="SECTION00041200000000000000">
+Transistor On (Saturation)</A>
+</H3>
+
+<P>
+In a bipolar junction transistor, the diode drop across the
+collector-base junction is smaller than that of the base-emitter
+junction.  This means that when a transistor is operating in
+<SPAN  CLASS="textbf">saturation</SPAN>, the voltage drop from collector to emitter
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img125.svg"
+ ALT="$V_{CE}$"></SPAN> is smaller than <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN>.  For a standard silicon transistor
+in saturation, <!-- MATH
+ $V_{CE} \approx 0.25$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img126.svg"
+ ALT="$V_{CE} \approx 0.25$"></SPAN>&nbsp;V.
+
+<P>
+In saturation, the collector current <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN> is greater than the current
+flowing from the base to the collector <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img127.svg"
+ ALT="$I_B$"></SPAN> by a factor <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img128.svg"
+ ALT="$h_{FE}$"></SPAN>,
+which is on the order of 100 and depends on temperature,
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+I_C = h_{FE} I_B
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:hfe"></A><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img129.svg"
+ ALT="$\displaystyle I_C = h_{FE} I_B
+$"> 
+
+(<SPAN CLASS="arabic">31</SPAN>)
+</DIV>
+
+<P>
+
+<H3><A ID="SECTION00041300000000000000">
+Transistor Off</A>
+</H3>
+
+<P>
+When <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> is significantly below 0.7&nbsp;V, the exponential in
+Equation&nbsp;<A HREF="#eq:ebersmoll">29</A> is orders of magnitude smaller than its
+saturation value, and the collector and emitter currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN> and
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img130.svg"
+ ALT="$I_E$"></SPAN> are effectively turned off. 
+
+<P>
+For a given transistor, there are maximum rated values of <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN>,
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img127.svg"
+ ALT="$I_B$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img125.svg"
+ ALT="$V_{CE}$"></SPAN>. If these values are exceeded, the transistor will
+fail. You might wonder, given the exponential relationship between
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> and the collector current <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img114.svg"
+ ALT="$I_C$"></SPAN> of
+Equation&nbsp;<A HREF="#eq:ebersmoll">29</A>, what keeps the current from growing
+beyond a safe level and destroying the transistor. When we operate a
+transistor in saturation, where the exponential really takes off,
+other devices in the circuit must limit the current, and we don't need
+to think about where we are on the exponential curve. The same is true
+for diodes.
+
+<P>
+<BR>
+<BR>
+
+<!-- MATH
+ $\fbox{\parbox{\linewidth-5\fboxsep}{
+    \textbf{Basic Transistor Behavior}
+    \begin{itemize}
+    \item In order for a transistor to function, make $V_C > V_E$, and
+      keep $I_B$, $I_C$, and $V_{CE}$\  below the rated maximum
+      values of the transistor.
+    \item \textbf{On:} In saturation, $V_{BE} \approx 0.7$~V,
+      $V_{CE} \approx 0.25$~V, and $I_C = h_{FE} I_B$, where
+      $h_{FE} \approx 100$.
+    \item \textbf{Off:} If $V_{BE} < 0.7$~V (significantly),
+      $I_C \approx 0$.
+    \item \textbf{Active Region:} $V_{BE}$\  is between ``off'' and
+      saturation. The collector current is governed by the Ebers-Moll
+      equation (Equation~\ref{eq:ebersmoll}). The emitter resistance
+      at room temperature is $r_e = (25~\Omega)/I_C[\mathrm{mA}]$.
+    \end{itemize}
+  }
+}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 32.42ex; vertical-align: -15.71ex; " SRC="img131.svg"
+ ALT="% latex2html id marker 1838
+\fbox{\parbox{\linewidth-5\fboxsep}{
+\textbf{Basic...
+... at room temperature is $r_e = (25~\Omega)/I_C[\mathrm{mA}]$.
+\end{itemize} }
+}"></SPAN>
+
+<P>
+
+<H2><A ID="SECTION00042000000000000000"></A>
+<A ID="sec:transistorswitch"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN> Application: Transistor Switch
+</H2>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:transistorswitch"></A><A ID="531"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 12:</STRONG>
+Schematic of a transistor switch circuit in which a small
+      base current is used to deliver a larger current to a load.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img132.svg"
+ ALT="\includegraphics{transistorswitch.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The circuit shown in Figure&nbsp;<A HREF="#fig:transistorswitch">12</A> implements a
+transistor as a switch controlling power delivered to the load
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img133.svg"
+ ALT="$R_L$"></SPAN>.  Closing the mechanical switch drives a current from
+the base to the emitter.  With a proper choice of <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img134.svg"
+ ALT="$R_B$"></SPAN>, the base
+current is large enough to saturate the transistor, bringing the base
+voltage to <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img121.svg"
+ ALT="$\approx
+0.7$"></SPAN>&nbsp;V.  The collector current produces a voltage
+drop across <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img133.svg"
+ ALT="$R_L$"></SPAN> of <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img135.svg"
+ ALT="$\approx V_S$"></SPAN>. The collector voltage is very close to
+the emitter (<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$\approx 0.25$"></SPAN>&nbsp;V), and the right branch of the circuit
+behaves as if the collector is grounded. Opening the switch
+brings <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> significantly below 0.7&nbsp;V, and the transistor shuts
+off power to the load.
+
+<P>
+What the point of this? Why not dispense with the transistor, and put
+the switch in series with the load, as is the case with household
+wiring? In applications in which the control switch is far away from a
+load that draws a large current, it is safer to run small 
+control currents over long distances and keep the large currents close
+to the load.
+
+<P>
+
+<H3><A ID="SECTION00042100000000000000">
+Design</A>
+</H3>
+
+<P>
+
+<OL>
+<LI>Set the supply voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img137.svg"
+ ALT="$V_S$"></SPAN> to provide the current required by
+  the load. The transistor will operate in saturation, so the
+  collector-emitter voltage drop will be only <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.10ex; " SRC="img136.svg"
+ ALT="$\approx 0.25$"></SPAN>&nbsp;V, and
+  the remainder of <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img137.svg"
+ ALT="$V_S$"></SPAN> will drive the load.
+
+<P>
+</LI>
+<LI>Choose a transistor rated to handle the required base current
+  and power drawn by the load.
+
+<P>
+</LI>
+<LI>Set the value of <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img134.svg"
+ ALT="$R_B$"></SPAN> to keep the transistor in saturation
+  while delivering the maximum desired current under all
+  circumstances. Given possible variations in <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img133.svg"
+ ALT="$R_L$"></SPAN> and the range
+  of <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img128.svg"
+ ALT="$h_{FE}$"></SPAN> among the make/model of transistor used (see the data
+  sheet from the manufacturer), it is generally good to use a generous
+  base current (<!-- MATH
+ $\approx 10~I_C/h_{fe}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img138.svg"
+ ALT="$\approx 10~I_C/h_{fe}$"></SPAN>).
+
+<P>
+<SPAN  CLASS="textit">As long as the supply voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img137.svg"
+ ALT="$V_S$"></SPAN> is appropriate to the
+    load, the load resistance will limit the current, so it does no
+    harm to deliver a larger base current than is absolutely required,
+    as long as it does not exceed the rated maximum base current.</SPAN>
+</LI>
+</OL>
+
+<P>
+
+<H2><A ID="SECTION00043000000000000000"></A>
+<A ID="sec:emitterfollower"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN> Application: Emitter Follower
+</H2>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:emitterfollower"></A><A ID="548"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 13:</STRONG>
+Schematic of an AC coupled emitter follower.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img139.svg"
+ ALT="\includegraphics{emitterfollower.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+An <SPAN  CLASS="textbf">emitter follower</SPAN> is a power amplifier. It has a
+voltage gain of <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img140.svg"
+ ALT="$A_v \approx 1$"></SPAN> and a large current gain. It is useful
+in applications in which a load that draws high power is driven by a
+small signal &mdash; audio amplifiers, for example.
+The schematic of an AC coupled emitter follower is shown in
+Figure&nbsp;<A HREF="#fig:emitterfollower">13</A>. 
+
+<P>
+
+<H3><A ID="SECTION00043100000000000000">
+Design</A>
+</H3>
+
+<P>
+
+<OL>
+<LI>The emitter voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img141.svg"
+ ALT="$V_E$"></SPAN> is limited between ground and the
+  source voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img137.svg"
+ ALT="$V_S$"></SPAN>. Choose an emitter resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img142.svg"
+ ALT="$R_E$"></SPAN> to center
+  the quiescent<A ID="tex2html15"
+  HREF="footnode.html#foot1014"><SUP><SPAN CLASS="arabic">2</SPAN></SUP></A>  emitter voltage in this range, at the average current
+  drawn by the load. Centering <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img141.svg"
+ ALT="$V_E$"></SPAN> allows the output signal vary in
+  a symmetrical range.
+
+<P>
+</LI>
+<LI>Once <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img141.svg"
+ ALT="$V_E$"></SPAN> is established, set the values of the input bias
+  resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img26.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img28.svg"
+ ALT="$R_2$"></SPAN>.
+  
+<OL>
+<LI>Their ratio <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img143.svg"
+ ALT="$R_1/R_2$"></SPAN> must place <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> in the active region
+    of the transistor (<!-- MATH
+ $V_B \approx V_E + 0.6~\mathrm{V}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img144.svg"
+ ALT="$V_B \approx V_E + 0.6~\mathrm{V}$"></SPAN>).
+
+<P>
+</LI>
+<LI>Their parallel resistance must be small compared with that
+    presented by the base-emitter junction so that they do not drag 
+    down the quiescent current <!-- MATH
+ $R_1 || R_2 \approx h_{FE} R_E/ 10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img145.svg"
+ ALT="$R_1 \vert\vert R_2 \approx h_{FE} R_E/ 10$"></SPAN>. 
+  
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI>The capacitors <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img146.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img147.svg"
+ ALT="$C_2$"></SPAN> are coupling capacitors that
+  remove DC components from the input and output signals. They, along
+  with the resistors in the input and output stages, act as high-pass 
+  filters. Their values are chosen such that they do not filter out
+  frequencies of interest.
+</LI>
+</OL>
+
+<P>
+
+<H2><A ID="SECTION00044000000000000000"></A>
+<A ID="sec:commonemitter"></A>
+<BR>
+<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN> Application: Common Emitter Amplifier
+</H2>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:commonemitter"></A><A ID="568"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 14:</STRONG>
+Schematic of an AC coupled common emitter amplifier.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img148.svg"
+ ALT="\includegraphics{commonemitter.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+A <SPAN  CLASS="textbf">common emitter amplifier</SPAN> is an inverting voltage
+amplifier. The schematic of an AC coupled common emitter amplifier is
+shown in Figure&nbsp;<A HREF="#fig:commonemitter">14</A>.
+It has a voltage gain given by
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+A_v = -\frac{R_C}{R_E}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:commonemittergain"></A><IMG STYLE="height: 5.18ex; vertical-align: -2.01ex; " SRC="img149.svg"
+ ALT="$\displaystyle A_v = -\frac{R_C}{R_E}
+$"> 
+
+(<SPAN CLASS="arabic">32</SPAN>)
+</DIV>
+
+<P>
+
+<H3><A ID="SECTION00044100000000000000">
+Design</A>
+</H3>
+
+<P>
+
+<OL>
+<LI>The collector resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img150.svg"
+ ALT="$R_C$"></SPAN> is chosen to center the collector
+  voltage between ground and <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img137.svg"
+ ALT="$V_S$"></SPAN> at the desired quiescent current.
+
+<P>
+</LI>
+<LI>The emitter resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img142.svg"
+ ALT="$R_E$"></SPAN> is chosen to give the desired voltage
+  gain (Equation&nbsp;<A HREF="#eq:commonemittergain">32</A>).
+
+<P>
+<SPAN  CLASS="textit">Keep in mind that the emitter resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.44ex; " SRC="img151.svg"
+ ALT="$r_e$"></SPAN> in series with
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img142.svg"
+ ALT="$R_E$"></SPAN> acts to reduce the measured voltage gain relative to the
+    prediction of Equation&nbsp;<A HREF="#eq:commonemittergain">32</A>. The emitter
+    resistance can be estimated using
+    Equation&nbsp;<A HREF="#eq:emitterresistance">30</A> with the quiescent collector
+    current.</SPAN>
+
+<P>
+</LI>
+<LI>The bias resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img152.svg"
+ ALT="$R_b$"></SPAN> is set to place the quiescent emitter
+  voltage at about 1&nbsp;V.
+
+<P>
+<SPAN  CLASS="textit">This greatly reduces the influence of the
+    temperature-dependent (and very small) emitter resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.44ex; " SRC="img151.svg"
+ ALT="$r_e$"></SPAN> on
+    the stability of the quiescent base-emitter voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN>,
+    which must be kept in the active region of the transistor.</SPAN>
+
+<P>
+</LI>
+<LI>The bypass capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img153.svg"
+ ALT="$C_b$"></SPAN> is chosen to give very small
+  capacitive reactance (<!-- MATH
+ $\approx \frac{R_b}{10}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.09ex; vertical-align: -0.88ex; " SRC="img154.svg"
+ ALT="$\approx \frac{R_b}{10}$"></SPAN> at the lowest signal 
+  frequency, thus shorting out the bias resistor so that only <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img155.svg"
+ ALT="$R_E +
+r_e$"></SPAN> remain, yielding the desired voltage gain.
+
+<P>
+</LI>
+<LI>Once the emitter voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img141.svg"
+ ALT="$V_E$"></SPAN> is established, set the values of
+  the input bias resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img26.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img28.svg"
+ ALT="$R_2$"></SPAN>.
+  
+<OL>
+<LI>Their ratio <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img143.svg"
+ ALT="$R_1/R_2$"></SPAN> must place <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img115.svg"
+ ALT="$V_{BE}$"></SPAN> in the active region
+    of the transistor (<!-- MATH
+ $V_B \approx V_E + 0.6~\mathrm{V}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img144.svg"
+ ALT="$V_B \approx V_E + 0.6~\mathrm{V}$"></SPAN>).
+
+<P>
+</LI>
+<LI>Their parallel resistance must be small compared with that
+    presented by the base-emitter junction so that they do not drag 
+    down the quiescent current
+    <!-- MATH
+ $R_1 || R_2 \approx h_{FE} (R_E + R_b)/10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img156.svg"
+ ALT="$R_1 \vert\vert R_2 \approx h_{FE} (R_E + R_b)/10$"></SPAN>.
+  
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI>The values of the coupling capacitors <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img146.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img147.svg"
+ ALT="$C_2$"></SPAN> are chosen
+  so that they allow frequencies of interest to pass through. The
+  input coupling capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img146.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img157.svg"
+ ALT="$R_1\vert\vert R_2$"></SPAN> act as a
+  high-pass filter on the input. Similarly, <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img147.svg"
+ ALT="$C_2$"></SPAN> and <!-- MATH
+ $R_C||(R_E +
+  R_b)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img158.svg"
+ ALT="$R_C\vert\vert(R_E +
+R_b)$"></SPAN> act as a high-pass filter on the output. 
+</LI>
+</OL>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   <BR>
+<B> Next:</B> <A
+ HREF="node5.html">5 Operational Amplifiers (Op</A>
+<B>Up:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<B> Previous:</B> <A
+ HREF="node3.html">3 Diodes</A>
+</DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Lew Riley <BR>
+2021-06-14</I>
+</ADDRESS>
+</BODY>
+</HTML>

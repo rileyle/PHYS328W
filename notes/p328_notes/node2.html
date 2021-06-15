@@ -1,0 +1,957 @@
+---
+
+title: PHYS328 Notes
+
+layout: single
+
+style: single
+
+---
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>2 AC Circuits</TITLE>
+<META NAME="description" CONTENT="2 AC Circuits">
+<META NAME="keywords" CONTENT="p328_notes">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="../../assets/css/single.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation">
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   <BR>
+<B> Next:</B> <A
+ HREF="node3.html">3 Diodes</A>
+<B>Up:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<B> Previous:</B> <A
+ HREF="node1.html">1 DC Circuits</A>
+<BR> <P>
+</DIV>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html81"
+  HREF="node2.html#SECTION00021000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Resistance, Reactance, and Impedance: the Complex Number 
+  Representation</A>
+<LI><A ID="tex2html82"
+  HREF="node2.html#SECTION00022000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Phasor Analysis</A>
+<LI><A ID="tex2html83"
+  HREF="node2.html#SECTION00023000000000000000"><SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">3</SPAN> AC Voltage Dividers</A>
+<UL>
+<LI><A ID="tex2html84"
+  HREF="node2.html#SECTION00023100000000000000">Phase Angle</A>
+<LI><A ID="tex2html85"
+  HREF="node2.html#SECTION00023200000000000000">Voltage Gain</A>
+<LI><A ID="tex2html86"
+  HREF="node2.html#SECTION00023300000000000000">Example: Series RLC Circuit</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00020000000000000000"></A>
+<A ID="sec:AC"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN> AC Circuits
+</H1>
+
+<P>
+Alternating current (AC) circuits involve potential differences and
+currents which vary periodically &mdash; often sinusoidally &mdash; with time.
+The time-dependent response of an AC circuit to a sinusoidal driving
+signal consists of a transient component that dies off due to
+resistive losses, and a sinusoidal steady-state component. We will
+focus on the steady-state behavior of the AC circuits we consider.
+
+<P>
+
+<H2><A ID="SECTION00021000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN> Resistance, Reactance, and Impedance: the Complex Number 
+  Representation</A>
+</H2>
+
+<P>
+When driven by a sinusoidal signal, the resulting currents through and
+potential differences across capacitors, inductors, and resistors are
+all sinusoidal as well, but with different, <SPAN  CLASS="textit">constant</SPAN>, phase
+relationships to each other.
+
+<P>
+<BR>
+<BR>
+
+<!-- MATH
+ $\fbox{\parbox{\linewidth-5\fboxsep}{
+    \textbf{CIVIL}\\
+\par
+The mnemonic CIVIL can be used to
+    remember that the voltage across a capacitor lags $\pi/2$\  (half a
+    period of oscillation) behind the current (C\underline{IV}), and the
+    voltage across an inductor leads the current by $\pi/2$
+    (\underline{VI}L). The voltage across a resistor is always in phase
+    with the current.
+  }
+}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 14.85ex; vertical-align: -6.89ex; " SRC="img41.svg"
+ ALT="\fbox{\parbox{\linewidth-5\fboxsep}{
+\textbf{CIVIL}\\
+\par
+The mnemonic CIVIL ...
+...{VI}L). The voltage across a resistor is always in phase
+with the current.
+}
+}"></SPAN>
+<BR>
+<BR>
+
+<P>
+Ohm's law (Equation&nbsp;<A HREF="node1.html#eq:Ohm">1</A>) gives the full relationship between
+current and voltage for a resistor. Capacitors and inductors are also
+linear devices, but they impede the flow of current in the circuit
+by temporarily storing energy in magnetic and electric fields instead
+of by dissipating energy. We refer to these non-dissipative devices as
+reactive devices, and we define quantities analogous to resistance
+and which play the same role as resistance in a generalized version of
+Ohm's law. The <SPAN  CLASS="textbf">inductive reactance</SPAN> is given by
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+X_L = j \omega L
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:xl"></A><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img42.svg"
+ ALT="$\displaystyle X_L = j \omega L
+$"> 
+
+(<SPAN CLASS="arabic">9</SPAN>)
+</DIV>
+where, <!-- MATH
+ $\omega = 2 \pi f$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img43.svg"
+ ALT="$\omega = 2 \pi f$"></SPAN> is the driving frequency, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img44.svg"
+ ALT="$L$"></SPAN> is the
+inductance. In an electronics context,  <SPAN CLASS="MATH"><IMG STYLE="height: 2.16ex; vertical-align: -0.54ex; " SRC="img45.svg"
+ ALT="$j$"></SPAN> is typically used to
+represent <SPAN CLASS="MATH"><IMG STYLE="height: 2.54ex; vertical-align: -0.49ex; " SRC="img46.svg"
+ ALT="$\sqrt{-1}$"></SPAN> instead of <SPAN CLASS="MATH"><IMG STYLE="height: 1.73ex; vertical-align: -0.10ex; " SRC="img47.svg"
+ ALT="$i$"></SPAN> to avoid confusion with
+current. The <SPAN  CLASS="textbf">capacitive reactance</SPAN> 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+X_C = -\frac{j}{\omega C}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:xc"></A><IMG STYLE="height: 4.78ex; vertical-align: -1.65ex; " SRC="img48.svg"
+ ALT="$\displaystyle X_C = -\frac{j}{\omega C}
+$"> 
+
+(<SPAN CLASS="arabic">10</SPAN>)
+</DIV>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img49.svg"
+ ALT="$C$"></SPAN> is the capacitance. The factors of <SPAN CLASS="MATH"><IMG STYLE="height: 2.16ex; vertical-align: -0.54ex; " SRC="img45.svg"
+ ALT="$j$"></SPAN> account for the
+relative phases of the voltages and currents. Here, we are taking
+advantage of the fact that the phase relationships between the
+positive and negative imaginary axes and the real axis of the complex
+plane map onto those between signals in inductors, capacitors, and
+resistors, respectively.
+
+<P>
+Any network of linear devices &mdash;  inductors, resistors, and
+capacitors &mdash; present a <SPAN  CLASS="textit">complex</SPAN> <SPAN  CLASS="textbf">impedance</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img50.svg"
+ ALT="$Z$"></SPAN> to the
+flow of current. The total impedance can be found by combining the
+<SPAN  CLASS="textit">real</SPAN> resistances and <SPAN  CLASS="textit">imaginary</SPAN> reactances in the circuit
+in the same way that we determined equivalent resistance in
+Section&nbsp;<A HREF="node1.html#sec:serpar">1.2</A>. The inductive and capacitive reactances and
+hence the total impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img50.svg"
+ ALT="$Z$"></SPAN> are frequency-dependent. In the
+low-frequency limit, capacitors dominate the impedance, while in the
+high-frequency limit, inductors dominate.
+
+<P>
+
+<H2><A ID="SECTION00022000000000000000">
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">2</SPAN> Phasor Analysis</A>
+</H2>
+
+<P>
+We use complex numbers to represent impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img50.svg"
+ ALT="$Z$"></SPAN> and complex
+functions to represent voltage and current as a bookkeeping
+tool that simplifies the mathematics involved in circuit
+analysis. The real-valued observable voltage and current are obtained
+by  taking the real part of the complex voltage and current functions.
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+v(t) &=& Re(V \, e^{\,j\omega t + \phi_v}) = V \cos(\omega t + \phi_v)\\
+  \nonumber
+  i(t) &=& Re(I \, e^{\,j\omega t + \phi_i}) = I \cos(\omega t + \phi_i)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img51.svg"
+ ALT="$\displaystyle v(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.83ex; vertical-align: -0.67ex; " SRC="img52.svg"
+ ALT="$\displaystyle Re(V \, e^{\,j\omega t + \phi_v}) = V \cos(\omega t + \phi_v)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img53.svg"
+ ALT="$\displaystyle i(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.83ex; vertical-align: -0.67ex; " SRC="img54.svg"
+ ALT="$\displaystyle Re(I \, e^{\,j\omega t + \phi_i}) = I \cos(\omega t + \phi_i)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+In many cases, we are only interested in the amplitudes <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$V$"></SPAN> and
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$I$"></SPAN>. In cases in which we do care about the phase, we typically
+consider either <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img55.svg"
+ ALT="$\phi_i$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img56.svg"
+ ALT="$\phi_v$"></SPAN> to be zero and keep track of the
+relative phase.
+
+<P>
+The fact that complex voltage and current functions share an identical
+time-dependent factor <!-- MATH
+ $e^{j \omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.14ex; vertical-align: -0.10ex; " SRC="img57.svg"
+ ALT="$e^{j \omega t}$"></SPAN>, which cancels out of
+equations that relate them, it is convenient to analyze AC circuits
+using <SPAN  CLASS="textbf">phasors</SPAN>,
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\mathbf{V} &=& V \, e^{\,j \phi_v}\\
+  \nonumber
+  \mathbf{I} &=& I \, e^{\,j \phi_i}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img58.svg"
+ ALT="$\displaystyle \mathbf{V}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.27ex; vertical-align: -0.10ex; " SRC="img59.svg"
+ ALT="$\displaystyle V \, e^{\,j \phi_v}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img60.svg"
+ ALT="$\displaystyle \mathbf{I}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.27ex; vertical-align: -0.10ex; " SRC="img61.svg"
+ ALT="$\displaystyle I \, e^{\,j \phi_i}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We can express the real voltage and current functions in terms of
+phasors as
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+v(t) &=& Re(\mathbf{V} \, e^{\,j\omega t})\\
+  \nonumber
+  i(t) &=& Re(\mathbf{I} \, e^{\,j\omega t})
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img51.svg"
+ ALT="$\displaystyle v(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.81ex; vertical-align: -0.67ex; " SRC="img62.svg"
+ ALT="$\displaystyle Re(\mathbf{V} \, e^{\,j\omega t})$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img53.svg"
+ ALT="$\displaystyle i(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.81ex; vertical-align: -0.67ex; " SRC="img63.svg"
+ ALT="$\displaystyle Re(\mathbf{I} \, e^{\,j\omega t})$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and the generalized version of Ohm's law becomes
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\mathbf{I} = \frac{\mathbf{V}}{Z}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:genohmphasor"></A><IMG STYLE="height: 4.82ex; vertical-align: -1.65ex; " SRC="img64.svg"
+ ALT="$\displaystyle \mathbf{I} = \frac{\mathbf{V}}{Z}
+$"> 
+
+(<SPAN CLASS="arabic">14</SPAN>)
+</DIV>
+
+<P>
+The power in a component or network of components is given by
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\mathbf{P} = \mathbf{I^*V} = IV \, e^{\,j(\phi_v - \phi_i)}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:complexpower"></A><IMG STYLE="height: 2.36ex; vertical-align: -0.10ex; " SRC="img65.svg"
+ ALT="$\displaystyle \mathbf{P} = \mathbf{I^*V} = IV \, e^{\,j(\phi_v - \phi_i)}
+$"> 
+
+(<SPAN CLASS="arabic">15</SPAN>)
+</DIV>
+The real part of the power is the power dissipated in resistors. The
+imaginary part is the <SPAN  CLASS="textbf">reactive power</SPAN> stored in capacitors and
+inductors. Typically, we are interested in the average power
+dissipated
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left< P \right> = \frac{IV}{2} \cos(\phi_v - \phi_i)
+                   = \frac{V^2}{2Z} \cos(\phi_v - \phi_i)
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:rpower"></A><IMG STYLE="height: 5.15ex; vertical-align: -1.65ex; " SRC="img66.svg"
+ ALT="$\displaystyle \left&lt; P \right&gt; = \frac{IV}{2} \cos(\phi_v - \phi_i)
+= \frac{V^2}{2Z} \cos(\phi_v - \phi_i)
+$"> 
+
+(<SPAN CLASS="arabic">16</SPAN>)
+</DIV>
+The factor of 1/2 is the average value of <!-- MATH
+ $\cos^2(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.65ex; vertical-align: -0.67ex; " SRC="img67.svg"
+ ALT="$\cos^2(\omega t)$"></SPAN> &mdash;
+Equation&nbsp;<A HREF="#eq:rpower">16</A> gives the root mean square power.
+
+<P>
+Notice that if the relative phase <!-- MATH
+ $\phi_v - \phi_i$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img68.svg"
+ ALT="$\phi_v - \phi_i$"></SPAN> is either <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img69.svg"
+ ALT="$\pi/2$"></SPAN>
+or <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img70.svg"
+ ALT="$-\pi/2$"></SPAN>, no power is dissipated. These relative phases are only
+possible if the impedance has no real part meaning there is no
+resistance present.
+
+<P>
+<BR>
+<BR>
+
+<!-- MATH
+ $\fbox{\parbox{\linewidth-5\fboxsep}{
+    \textbf{Phasor Analysis}
+    \begin{itemize}
+    \item Equivalent impedance calculations work the same way as
+      equivalent resistance calculations (Equations~\ref{eq:Rseries}
+      and \ref{eq:Rparallel}).
+    \item Kirchhoff's rules work for phasors $\mathbf{V}$\  and
+      $\mathbf{I}$.
+    \item Th\'{e}venin's theorem applies to AC circuits containing
+      only linear components. The Th\'{e}venin voltage and impedance
+      are found via the process outlined in Section~\ref{sec:thevenin}
+      with impedance in place of resistance.
+    \end{itemize}
+  }
+}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 27.66ex; vertical-align: -13.32ex; " SRC="img71.svg"
+ ALT="% latex2html id marker 1724
+\fbox{\parbox{\linewidth-5\fboxsep}{
+\textbf{Phaso...
+...on~\ref{sec:thevenin}
+with impedance in place of resistance.
+\end{itemize} }
+}"></SPAN>
+
+<P>
+
+<H2><A ID="SECTION00023000000000000000"></A>
+<A ID="sec:acvdiv"></A>
+<BR>
+<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">3</SPAN> AC Voltage Dividers
+</H2>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:acvdivider"></A><A ID="246"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 5:</STRONG>
+AC voltage divider between two linear devices, or networks of
+      linear devices, with complex impedances <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img1.svg"
+ ALT="$Z_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img2.svg"
+ ALT="$Z_2$"></SPAN>.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img72.svg"
+ ALT="\includegraphics{acvdivider.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The AC voltage divider circuit shown in Figure&nbsp;<A HREF="#fig:acvdivider">5</A>
+consists of two linear devices, which can be networks of linear
+devices, with complex impedances <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img1.svg"
+ ALT="$Z_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img2.svg"
+ ALT="$Z_2$"></SPAN>. This is a series
+circuit, so the current <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img73.svg"
+ ALT="$\mathbf{I}$"></SPAN> flowing through all three
+components is the same.
+
+<P>
+The loop rule equation
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\mathbf{V_{in}} - \mathbf{I} Z_1 - \mathbf{I} Z_2 = 0
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img74.svg"
+ ALT="$\displaystyle \mathbf{V_{in}} - \mathbf{I} Z_1 - \mathbf{I} Z_2 = 0
+$"> 
+
+(<SPAN CLASS="arabic">17</SPAN>)
+</DIV>
+and the generalized Ohm's law for <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img2.svg"
+ ALT="$Z_2$"></SPAN>
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\mathbf{V_{out}} = \mathbf{I} Z_2
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img75.svg"
+ ALT="$\displaystyle \mathbf{V_{out}} = \mathbf{I} Z_2
+$"> 
+
+(<SPAN CLASS="arabic">18</SPAN>)
+</DIV>
+combine to give
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\mathbf{V_{out}} = \frac{Z_2}{Z_1 + Z_2} \mathbf{V_{in}}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:vdivout"></A><IMG STYLE="height: 5.15ex; vertical-align: -1.98ex; " SRC="img76.svg"
+ ALT="$\displaystyle \mathbf{V_{out}} = \frac{Z_2}{Z_1 + Z_2} \mathbf{V_{in}}
+$"> 
+
+(<SPAN CLASS="arabic">19</SPAN>)
+</DIV>
+
+<P>
+The real-valued amplitude of the output signal is the
+magnitude of the phasor <!-- MATH
+ $\mathbf{V_{out}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img77.svg"
+ ALT="$\mathbf{V_{out}}$"></SPAN>,
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+V_{out} = \sqrt{\mathbf{V_{out}^* V_{out}}}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:vdivamp"></A><IMG STYLE="height: 3.97ex; vertical-align: -1.23ex; " SRC="img78.svg"
+ ALT="$\displaystyle V_{out} = \sqrt{\mathbf{V_{out}^* V_{out}}}
+$"> 
+
+(<SPAN CLASS="arabic">20</SPAN>)
+</DIV>
+
+<P>
+
+<H3><A ID="SECTION00023100000000000000">
+Phase Angle</A>
+</H3>
+
+<P>
+The phase difference <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img5.svg"
+ ALT="$\phi $"></SPAN> between <!-- MATH
+ $\mathbf{V_{out}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img77.svg"
+ ALT="$\mathbf{V_{out}}$"></SPAN> and
+<!-- MATH
+ $\mathbf{V_{in}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img79.svg"
+ ALT="$\mathbf{V_{in}}$"></SPAN> is the <SPAN  CLASS="textbf">phase angle</SPAN> between these complex
+numbers in the complex plane. Since we are only looking for the 
+<SPAN  CLASS="textit">difference</SPAN>, we are free to set the complex phase of <!-- MATH
+ $\mathbf{V_{in}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img79.svg"
+ ALT="$\mathbf{V_{in}}$"></SPAN>
+to zero. This makes it easier to see that the only contribution to the
+complex phase in Equation&nbsp;<A HREF="#eq:vdivout">19</A> comes from the impedances,
+and that the phase angle of <!-- MATH
+ $\mathbf{V_{out}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img77.svg"
+ ALT="$\mathbf{V_{out}}$"></SPAN> relative to
+<!-- MATH
+ $\mathbf{V_{in}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img79.svg"
+ ALT="$\mathbf{V_{in}}$"></SPAN> is determined by the real and imaginary parts of the
+impedance ratio,
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\tan \phi = \frac{ Im \left( \frac{Z_2}{Z_1 + Z_2} \right) }
+                   { Re \left( \frac{Z_2}{Z_1 + Z_2} \right) }
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:vdivphase"></A><IMG STYLE="height: 8.15ex; vertical-align: -3.53ex; " SRC="img80.svg"
+ ALT="$\displaystyle \tan \phi = \frac{ Im \left( \frac{Z_2}{Z_1 + Z_2} \right) }
+{ Re \left( \frac{Z_2}{Z_1 + Z_2} \right) }
+$"> 
+
+(<SPAN CLASS="arabic">21</SPAN>)
+</DIV>
+
+<P>
+<BLOCKQUOTE>
+<SPAN  CLASS="textit">Note: The phase angle of an AC circuit is sometimes defined
+    as the phase difference between <!-- MATH
+ $\mathbf{V_{in}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img79.svg"
+ ALT="$\mathbf{V_{in}}$"></SPAN> and
+    <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img73.svg"
+ ALT="$\mathbf{I}$"></SPAN>, but we will Eq.&nbsp;<A HREF="#eq:vdivphase">21</A>, and these
+    definitions are not in general equivalent.</SPAN>
+
+</BLOCKQUOTE>
+
+<P>
+
+<H3><A ID="SECTION00023200000000000000">
+Voltage Gain</A>
+</H3>
+
+<P>
+The <SPAN  CLASS="textbf">voltage gain</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img81.svg"
+ ALT="$A_V$"></SPAN> of the circuit is the ratio
+<!-- MATH
+ $V_{out}/V_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img4.svg"
+ ALT="$V_{out}/V_{in}$"></SPAN>. It follows from Equation&nbsp;<A HREF="#eq:vdivout">19</A>
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+A_V = \frac{V_{out}}{V_{in}} = \frac{|\mathbf{V_{out}}|}{|\mathbf{V_{in}}|}
+                             = \left| \frac{Z_2}{Z_1 + Z_2} \right|
+                             = \sqrt{ \left( \frac{Z_2}{Z_1 + Z_2} \right)^*
+                                      \left( \frac{Z_2}{Z_1 + Z_2} \right) }
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:gain"></A><IMG STYLE="height: 6.43ex; vertical-align: -2.33ex; " SRC="img82.svg"
+ ALT="$\displaystyle A_V = \frac{V_{out}}{V_{in}} = \frac{\vert\mathbf{V_{out}}\vert}{...
+...\left( \frac{Z_2}{Z_1 + Z_2} \right)^*
+\left( \frac{Z_2}{Z_1 + Z_2} \right) }
+$"> 
+
+(<SPAN CLASS="arabic">22</SPAN>)
+</DIV>
+We sometimes refer to the &ldquo;3&nbsp;dB point(s)&rdquo; of a circuit. These are
+driving frequencies at which the <SPAN  CLASS="textit">power</SPAN> gain is <SPAN CLASS="MATH"><IMG STYLE="height: 2.94ex; vertical-align: -0.88ex; " SRC="img83.svg"
+ ALT="$\frac{1}{2}$"></SPAN>,
+which corresponds to voltage gain <!-- MATH
+ $A_v = \frac{1}{\sqrt{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.44ex; vertical-align: -1.38ex; " SRC="img84.svg"
+ ALT="$A_v = \frac{1}{\sqrt{2}}$"></SPAN> (see
+Appendix&nbsp;<A HREF="node6.html#sec:dB">A</A>).
+
+<P>
+
+<H3><A ID="SECTION00023300000000000000">
+Example: Series RLC Circuit</A>
+</H3>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:rlccircuit"></A><A ID="324"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 6:</STRONG>
+A series RLC circuit as an AC voltage divider.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img85.svg"
+ ALT="\includegraphics{rlccircuit.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+A series RLC circuit is shown in Figure&nbsp;<A HREF="#fig:rlccircuit">6</A>. We will
+treat this as a voltage divider between the series inductor-capacitor
+pair and the resistor. The resistor is by itself in the lower part of
+the divider, so <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img86.svg"
+ ALT="$Z_2 = R$"></SPAN>. The inductor and capacitor are connected in
+series, so we combine their reactances as we would series resistances
+(Equation&nbsp;<A HREF="node1.html#eq:Rseries">3</A>)
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Z_1 = j \left( \omega L - \frac{1}{\omega C} \right)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.12ex; vertical-align: -2.01ex; " SRC="img87.svg"
+ ALT="$\displaystyle Z_1 = j \left( \omega L - \frac{1}{\omega C} \right)
+$"> 
+
+(<SPAN CLASS="arabic">23</SPAN>)
+</DIV>
+
+<P>
+Equation&nbsp;<A HREF="#eq:gain">22</A> becomes
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{V_{out}}{V_{in}} = \sqrt{\frac{R^2}{R^2 + (\omega L - 1/\omega C)^2}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.43ex; vertical-align: -2.41ex; " SRC="img88.svg"
+ ALT="$\displaystyle \frac{V_{out}}{V_{in}} = \sqrt{\frac{R^2}{R^2 + (\omega L - 1/\omega C)^2}}
+$"> 
+
+(<SPAN CLASS="arabic">24</SPAN>)
+</DIV>
+To evaluate the phase angle, it is helpful to put the
+impedance ratio in Equation&nbsp;<A HREF="#eq:vdivamp">20</A> in <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img89.svg"
+ ALT="$a + jb$"></SPAN> form by
+multiplying the numerator and denominator by the complex conjugate of
+the denominator
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{Z_2}{Z_1 + Z_2}
+  = \frac{R}{R + j \left( \omega L - \frac{1}{\omega C} \right)}
+  = \frac{R^2 - j R \left( \omega L - \frac{1}{\omega C} \right)}
+         {R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 8.57ex; vertical-align: -3.95ex; " SRC="img90.svg"
+ ALT="$\displaystyle \frac{Z_2}{Z_1 + Z_2}
+= \frac{R}{R + j \left( \omega L - \frac{1...
+...{1}{\omega C} \right)}
+{R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}
+$"> 
+
+(<SPAN CLASS="arabic">25</SPAN>)
+</DIV>
+which, with Equation&nbsp;<A HREF="#eq:vdivphase">21</A>, gives
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\tan \phi = \frac{\frac{1}{\omega C} - \omega L}{R}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.32ex; vertical-align: -1.65ex; " SRC="img91.svg"
+ ALT="$\displaystyle \tan \phi = \frac{\frac{1}{\omega C} - \omega L}{R}
+$"> 
+
+(<SPAN CLASS="arabic">26</SPAN>)
+</DIV>
+
+<P>
+Figure&nbsp;<A HREF="#fig:rlcscope">7</A> illustrates the
+potential differences across the resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img92.svg"
+ ALT="$v_{out}(t)$"></SPAN> and the AC
+voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img93.svg"
+ ALT="$v_{in}(t)$"></SPAN> as they would appear on an oscilloscope. 
+The phase angle <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img5.svg"
+ ALT="$\phi $"></SPAN> is proportional to the time difference <!-- MATH
+ $\Delta t =
+t_{V_{out}} - t_{V_{in}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.40ex; vertical-align: -0.75ex; " SRC="img94.svg"
+ ALT="$\Delta t =
+t_{V_{out}} - t_{V_{in}}$"></SPAN> between the two signals, illustrated in
+panel (a) of the figure, as 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\Delta t = \frac{\phi}{\omega} = \frac{\phi}{2 \pi f} = \frac{\phi}{2 \pi} T
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:deltatphi"></A><IMG STYLE="height: 4.82ex; vertical-align: -1.65ex; " SRC="img95.svg"
+ ALT="$\displaystyle \Delta t = \frac{\phi}{\omega} = \frac{\phi}{2 \pi f} = \frac{\phi}{2 \pi} T
+$"> 
+
+(<SPAN CLASS="arabic">27</SPAN>)
+</DIV>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img96.svg"
+ ALT="$T$"></SPAN> is the period of oscillation of the input signal.
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:rlcscope"></A><A ID="1003"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 7:</STRONG>
+Oscilloscope displays of the potential differences across the
+      resistor and AC power source in the series RLC voltage divider shown in 
+      Figure&nbsp;<A HREF="#fig:rlccircuit">6</A>. Panels (a) and (b) show the potential
+      vs. time and X-Y mode displays for the circuit at a non-resonant
+      driving frequency. Panels (c) and (d) show the same displays at the
+      resonant frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.51ex; vertical-align: -0.44ex; " SRC="img3.svg"
+ ALT="$\omega _o$"></SPAN> of the circuit.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<!-- MATH
+ $\scalebox{0.45}{
+      \includegraphics{rlcnr.eps}
+    }$
+ -->
+<IMG STYLE=""
+ SRC="img97.svg"
+ ALT="\scalebox{0.45}{
+\includegraphics{rlcnr.eps}
+}">
+    <BR>
+<BR>
+    <!-- MATH
+ $\scalebox{0.45}{
+      \includegraphics{rlcres.eps}
+    }$
+ -->
+<IMG STYLE=""
+ SRC="img98.svg"
+ ALT="\scalebox{0.45}{
+\includegraphics{rlcres.eps}
+}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:rlcvphi"></A><A ID="1006"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 8:</STRONG>
+Frequency response &mdash; (a) gain <!-- MATH
+ $V_{out}/V_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img4.svg"
+ ALT="$V_{out}/V_{in}$"></SPAN> and (b)
+      phase angle <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img5.svg"
+ ALT="$\phi $"></SPAN> &mdash; of the series RLC voltage divider shown in 
+      Figure&nbsp;<A HREF="#fig:rlccircuit">6</A>. Note that frequency is on a log scale 
+      in both plots.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<!-- MATH
+ $\scalebox{0.45}{
+      \includegraphics{rlc_vout.eps}
+    }$
+ -->
+<IMG STYLE=""
+ SRC="img99.svg"
+ ALT="\scalebox{0.45}{
+\includegraphics{rlc_vout.eps}
+}">
+     
+    <!-- MATH
+ $\scalebox{0.45}{
+      \includegraphics{rlc_phi.eps}
+    }$
+ -->
+<IMG STYLE=""
+ SRC="img100.svg"
+ ALT="\scalebox{0.45}{
+\includegraphics{rlc_phi.eps}
+}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+There is a special frequency, called the <SPAN  CLASS="textbf">resonant frequency</SPAN>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.51ex; vertical-align: -0.44ex; " SRC="img3.svg"
+ ALT="$\omega _o$"></SPAN> of the circuit, at which 
+the impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img1.svg"
+ ALT="$Z_1$"></SPAN> of the inductor-capacitor pair goes to zero, the
+current <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$I$"></SPAN> is maximal, <!-- MATH
+ $V_{out} = V_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img101.svg"
+ ALT="$V_{out} = V_{in}$"></SPAN> and the phase angle
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img5.svg"
+ ALT="$\phi $"></SPAN> is zero. Combining Equations&nbsp;<A HREF="#eq:xl">9</A> and <A HREF="#eq:xc">10</A> to
+find the the frequency at which the capacitive and inductive
+reactances <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img102.svg"
+ ALT="$X_L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img103.svg"
+ ALT="$X_C$"></SPAN> have equal magnitudes and cancel out,
+yields  
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_o = \frac{1}{\sqrt{LC}}
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:rlcomega"></A><IMG STYLE="height: 5.25ex; vertical-align: -2.17ex; " SRC="img104.svg"
+ ALT="$\displaystyle \omega_o = \frac{1}{\sqrt{LC}}
+$"> 
+
+(<SPAN CLASS="arabic">28</SPAN>)
+</DIV>
+Panels (c) and (d) of Figure&nbsp;<A HREF="#fig:rlcscope">7</A> illustrate the
+potential differences across the resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img92.svg"
+ ALT="$v_{out}(t)$"></SPAN> and the AC
+source <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img93.svg"
+ ALT="$v_{in}(t)$"></SPAN> at resonance. The plots show <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img105.svg"
+ ALT="$V_{out}$"></SPAN> slightly
+less than <SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img106.svg"
+ ALT="$V_{in}$"></SPAN> at resonance due to the internal resistance of a
+non-ideal inductor.
+
+<P>
+Figure&nbsp;<A HREF="#fig:rlcvphi">8</A> illustrates the frequency response of the
+circuit. The <SPAN  CLASS="textbf">voltage gain</SPAN> <!-- MATH
+ $A_V = V_{out}/V_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img107.svg"
+ ALT="$A_V = V_{out}/V_{in}$"></SPAN> is plotted
+in panel (a) and the phase angle <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img5.svg"
+ ALT="$\phi $"></SPAN> is plotted in panel (b). This
+circuit acts as a <SPAN  CLASS="textbf">band pass filter</SPAN>. It transmits the input
+signal in a range of frequencies. The phase angle plot shows that the
+impedance is dominated by the capacitor at low frequencies and by the
+inductor at high frequencies as we would expect based on the frequency
+dependence of the respective reactances (Equations&nbsp;<A HREF="#eq:xl">9</A> and 
+<A HREF="#eq:xc">10</A>).
+
+<P>
+We can also make sense of the qualitative behavior of the phase angle
+using the CIVIL mnemonic. At low frequencies, where the capacitor
+dominates, we expect the current to lead the voltage across the
+capacitor (C<SPAN ID="txt419">IV</SPAN>). In this circuit, <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.44ex; " SRC="img108.svg"
+ ALT="$v_{out}$"></SPAN> is the voltage
+across the resistor, which is in phase with the current, so we expect
+a positive phase angle at low frequencies. At high frequencies, the
+inductor dominates, and the current lags behind the voltage across the
+inductor (<SPAN ID="txt421">VI</SPAN>L). This gives a negative phase
+angle. <SPAN  CLASS="textit">Which of these situations is illustrated in panel (a) of
+  Figure&nbsp;<A HREF="#fig:rlcscope">7</A>?</SPAN>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   <BR>
+<B> Next:</B> <A
+ HREF="node3.html">3 Diodes</A>
+<B>Up:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<B> Previous:</B> <A
+ HREF="node1.html">1 DC Circuits</A>
+</DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Lew Riley <BR>
+2021-06-14</I>
+</ADDRESS>
+</BODY>
+</HTML>

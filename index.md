@@ -7,6 +7,6 @@
 - [Lab 5](labs/PHYS328_Lab5.ipynb)
 - [Lab 6](labs/PHYS328_Lab6.ipynb)
 
-### [Notes](notes/p328_notes.pdf)
+### Notes [[PDF](notes/p328_notes.pdf)][<A HREF="/notes/p328_notes/p328_notes.html" target="_blank">HTML</A>]
 
-### [Reference Sheet](ref/p328_ref.pdf)
+### Reference Sheet [[PDF](ref/p328_ref.pdf)]

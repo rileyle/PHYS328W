@@ -1,0 +1,559 @@
+---
+
+title: PHYS328 Notes
+
+layout: single
+
+style: single
+
+---
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>1 DC Circuits</TITLE>
+<META NAME="description" CONTENT="1 DC Circuits">
+<META NAME="keywords" CONTENT="p328_notes">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="../../assets/css/single.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="p328_notes.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation">
+<A
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   <BR>
+<B> Next:</B> <A
+ HREF="node2.html">2 AC Circuits</A>
+<B>Up:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<B> Previous:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<BR> <P>
+</DIV>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html76"
+  HREF="node1.html#SECTION00011000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> Ohm's Law and Ohmic Devices</A>
+<LI><A ID="tex2html77"
+  HREF="node1.html#SECTION00012000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> Resistors in Series and Parallel</A>
+<LI><A ID="tex2html78"
+  HREF="node1.html#SECTION00013000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN> Resistor Network Analysis</A>
+<LI><A ID="tex2html79"
+  HREF="node1.html#SECTION00014000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">4</SPAN> Kirchhoff's Rules</A>
+<LI><A ID="tex2html80"
+  HREF="node1.html#SECTION00015000000000000000"><SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">5</SPAN> Thévenin's Theorem</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A ID="SECTION00010000000000000000">
+<SPAN CLASS="arabic">1</SPAN> DC Circuits</A>
+</H1>
+
+<P>
+
+<H2><A ID="SECTION00011000000000000000"></A>
+<A ID="sec:ohm"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN> Ohm's Law and Ohmic Devices
+</H2>
+
+<P>
+The potential difference <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$V$"></SPAN> between the terminals of an <SPAN  CLASS="textbf">Ohmic
+device</SPAN> is directly proportional to the current <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$I$"></SPAN> flowing through it,
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+V=IR
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:Ohm"></A><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img8.svg"
+ ALT="$\displaystyle V=IR
+$"> 
+
+(<SPAN CLASS="arabic">1</SPAN>)
+</DIV>
+The constant of proportionality <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img9.svg"
+ ALT="$R$"></SPAN> is called the <SPAN  CLASS="textbf">resistance</SPAN>
+of the device. Equation&nbsp;<A HREF="#eq:Ohm">1</A> is known as <SPAN  CLASS="textbf">Ohm's
+Law</SPAN>. Ohmic devices called <SPAN  CLASS="textbf">resistors</SPAN> are ubiquitous in
+electronic circuits. When current flows through a resistor, power is
+dissipated in the form of heat and light. The power dissipated in a
+resistor given by
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+P_\mathrm{diss} = I^2 R = \frac{V^2}{R}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.15ex; vertical-align: -1.65ex; " SRC="img10.svg"
+ ALT="$\displaystyle P_\mathrm{diss} = I^2 R = \frac{V^2}{R}
+$"> 
+
+(<SPAN CLASS="arabic">2</SPAN>)
+</DIV>
+
+<P>
+<SPAN  CLASS="textbf">Non-ohmic</SPAN> devices do not follow the linear voltage-current
+relationship of Ohm's law. Examples include diodes, thermistors,
+photoresistors, and light-bulb filaments.
+
+<P>
+
+<H2><A ID="SECTION00012000000000000000"></A>
+<A ID="sec:serpar"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN> Resistors in Series and Parallel
+</H2>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:seriesparallel"></A><A ID="50"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 1:</STRONG>
+A pair of resistors connected (a) in series and (b) in
+      parallel.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img11.svg"
+ ALT="\includegraphics{seriesparallel.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+A pair of resistors can be connected either in <SPAN  CLASS="textbf">series</SPAN> or in
+<SPAN  CLASS="textbf">parallel</SPAN> as shown in Figure&nbsp;<A HREF="#fig:seriesparallel">1</A>.  Note
+that two wires emerge from each pair. The <SPAN  CLASS="textbf">equivalent
+  resistance</SPAN> <SPAN CLASS="MATH"><IMG STYLE="height: 2.42ex; vertical-align: -0.76ex; " SRC="img12.svg"
+ ALT="$R_\mathrm{eq}$"></SPAN> of a pair of resistors is the resistance
+between these two wires. The equivalent resistance of two or more
+resistors connected in series is given by
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+R_{eq} = R_1 + R_2 + R_3 + \ldots
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:Rseries"></A><IMG STYLE="height: 2.42ex; vertical-align: -0.76ex; " SRC="img13.svg"
+ ALT="$\displaystyle R_{eq} = R_1 + R_2 + R_3 + \ldots
+$"> 
+
+(<SPAN CLASS="arabic">3</SPAN>)
+</DIV>
+and that of two or more resistors connected in parallel is given by
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} +
+  \ldots
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:Rparallel"></A><IMG STYLE="height: 5.38ex; vertical-align: -2.30ex; " SRC="img14.svg"
+ ALT="$\displaystyle \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} +
+\ldots
+$"> 
+
+(<SPAN CLASS="arabic">4</SPAN>)
+</DIV>
+The notation <!-- MATH
+ $R_1||R_2||R_3...$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img15.svg"
+ ALT="$R_1\vert\vert R_2\vert\vert R_3...$"></SPAN> is sometimes used for the equivalent
+resistance of parallel resistors.
+
+<P>
+A pair of resistors connected in series as shown in panel (a) of
+Figure&nbsp;<A HREF="#fig:seriesparallel">1</A> is a <SPAN  CLASS="textbf">voltage divider</SPAN>. The two
+resistors share the total potential difference <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img6.svg"
+ ALT="$V$"></SPAN> across the
+pair according to
+<BR>
+<DIV ALIGN="CENTER"><A ID="eq:Vdiv"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nonumber
+  V_1 & = & \frac{R_1}{R_1 + R_2} V \\
+  V_2 & = & \frac{R_2}{R_1 + R_2} V
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img16.svg"
+ ALT="$\displaystyle V_1$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.15ex; vertical-align: -1.98ex; " SRC="img18.svg"
+ ALT="$\displaystyle \frac{R_1}{R_1 + R_2} V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img19.svg"
+ ALT="$\displaystyle V_2$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.15ex; vertical-align: -1.98ex; " SRC="img20.svg"
+ ALT="$\displaystyle \frac{R_2}{R_1 + R_2} V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+A pair of resistors connected in parallel as shown in panel (b) of
+Figure&nbsp;<A HREF="#fig:seriesparallel">1</A> is a <SPAN  CLASS="textbf">current divider</SPAN>. The two
+resistors share the total current <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img7.svg"
+ ALT="$I$"></SPAN> flowing into the pair according
+to
+<BR>
+<DIV ALIGN="CENTER"><A ID="eq:Idiv"></A>
+<!-- MATH
+ \begin{eqnarray}
+\nonumber I_1 & = & \frac{R_2}{R_1 + R_2} I \\I_2 & = &
+  \frac{R_1}{R_1 + R_2} I
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img21.svg"
+ ALT="$\displaystyle I_1$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.15ex; vertical-align: -1.98ex; " SRC="img22.svg"
+ ALT="$\displaystyle \frac{R_2}{R_1 + R_2} I$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img23.svg"
+ ALT="$\displaystyle I_2$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.15ex; vertical-align: -1.98ex; " SRC="img24.svg"
+ ALT="$\displaystyle \frac{R_1}{R_1 + R_2} I$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img25.svg"
+ ALT="$I_1$"></SPAN> is the current flowing through <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img26.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img27.svg"
+ ALT="$I_2$"></SPAN> is the
+current flowing through <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img28.svg"
+ ALT="$R_2$"></SPAN>.
+
+<P>
+These equivalent resistance, voltage division, and current division
+expressions can be proven using Kirchhoff's rules, introduced in
+Section&nbsp;<A HREF="#sec:kirchhoff">1.4</A>.
+
+<P>
+
+<H2><A ID="SECTION00013000000000000000"></A>
+<A ID="sec:rnetwork"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">3</SPAN> Resistor Network Analysis
+</H2>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:rnetwork"></A><A ID="98"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 2:</STRONG>
+A resistor network powered by a voltage source.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img29.svg"
+ ALT="\includegraphics{rnetwork.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+A <SPAN  CLASS="textbf">resistor network</SPAN> is a collection of resistors connected
+together as illustrated in Figure&nbsp;<A HREF="#fig:rnetwork">2</A>. Many resistor
+networks can be reduced to a single resistance between two points using
+Equations&nbsp;<A HREF="#eq:Rseries">3</A> and <A HREF="#eq:Rparallel">4</A>. If a network can
+be simplified in this way, the currents flowing through all of the
+resistors in the network can be calculated by working backward through
+the equivalent resistance calculation and applying the current
+division expression of Equation&nbsp;<A HREF="#eq:Idiv">6</A> at each step.
+
+<P>
+If a network includes one or more <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img30.svg"
+ ALT="$\Delta$"></SPAN> configurations &mdash; three
+resistors connected by junctions<A ID="tex2html3"
+  HREF="footnode.html#foot962"><SUP><SPAN CLASS="arabic">1</SPAN></SUP></A> &mdash; it
+cannot be simplified via series and parallel pairs. However, any
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img30.svg"
+ ALT="$\Delta$"></SPAN> configuration in a network can be replaced with an equivalent
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img31.svg"
+ ALT="$Y$"></SPAN>-shaped configuration via a <SPAN CLASS="MATH"><IMG STYLE="height: 1.95ex; vertical-align: -0.29ex; " SRC="img32.svg"
+ ALT="$\Delta-Y$"></SPAN> transformation. This is easy
+to look up. We won't concern ourselves with this situation.
+
+<P>
+<BR>
+<BR>
+
+<!-- MATH
+ $\fbox{\parbox{\linewidth-5\fboxsep}{
+    \textbf{Resistor Network Analysis}
+    \begin{enumerate}
+    \item Use the equivalent resistance expressions
+      (Equations~\ref{eq:Rseries} and \ref{eq:Rparallel}) to find the
+      equivalent resistance of the entire network.
+\par
+\item Use Ohm's law to calculate the current flowing through the
+      voltage source.
+\par
+\item Use the current division expressions
+      (Equations~\ref{eq:Idiv}) at each node to determine the currents
+      in the network.
+\par
+\item Use Ohm's law to determine the voltage drops across the
+      resistors and from these, the voltages of all of the nodes.
+    \end{enumerate}
+  }
+}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 31.85ex; vertical-align: -15.42ex; " SRC="img33.svg"
+ ALT="% latex2html id marker 1664
+\fbox{\parbox{\linewidth-5\fboxsep}{
+\textbf{Resis...
+...resistors and from these, the voltages of all of the nodes.
+\end{enumerate} }
+}"></SPAN>
+
+<P>
+
+<H2><A ID="SECTION00014000000000000000"></A>
+<A ID="sec:kirchhoff"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">4</SPAN> Kirchhoff's Rules
+</H2>
+
+<P>
+Kirchhoff's Rules are used in the analysis of DC circuits and AC
+circuits in the low-frequency limit &mdash; in which magnetic induction
+does not induce currents in the wires connecting elements in the
+circuit.
+
+<P>
+The first rule, the <SPAN  CLASS="textbf">loop rule</SPAN>, states that the total change
+in electric potential around a closed loop must be zero. This means
+that the sum of the potential differences across all of the devices in
+a closed loop must be zero,
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\sum_\mathrm{loop} V_i = 0
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:Loop"></A><IMG STYLE="height: 5.48ex; vertical-align: -3.19ex; " SRC="img34.svg"
+ ALT="$\displaystyle \sum_\mathrm{loop} V_i = 0
+$"> 
+
+(<SPAN CLASS="arabic">7</SPAN>)
+</DIV>
+Signs are assigned to the <SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img35.svg"
+ ALT="$V_i$"></SPAN> according to the conventions
+illustrated in Figure&nbsp;<A HREF="#fig:kirchhoffsigns">3</A>.
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:kirchhoffsigns"></A><A ID="127"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 3:</STRONG>
+Sign conventions for the potential differences in
+      Kirchhoff's loop rule equations. The blue arrows represent the
+      direction of current flow. The black dashed arrows represent
+      the direction the device is traversed in the process of
+      generating the equation and therefore does not represent a
+      physical quantity.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img36.svg"
+ ALT="\includegraphics{kirchhoffsigns.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The second rule, known as the <SPAN  CLASS="textbf">junction rule</SPAN>, applies to
+currents. This rule states that no net current enters or leaves a
+junction,
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\sum_\mathrm{junction} I_i = 0
+\end{equation}
+ -->
+ &nbsp;  <A ID="eq:junction"></A><IMG STYLE="height: 5.47ex; vertical-align: -3.18ex; " SRC="img37.svg"
+ ALT="$\displaystyle \sum_\mathrm{junction} I_i = 0
+$"> 
+
+(<SPAN CLASS="arabic">8</SPAN>)
+</DIV>
+In the usual sign convention, currents flowing into a junction are
+positive, and currents flowing out of a junction are negative. 
+
+<P>
+<BR>
+<BR>
+
+<!-- MATH
+ $\fbox{\parbox{\linewidth-5\fboxsep}{
+    \textbf{Circuit Analysis using Kirchhoff's Rules}
+    \begin{enumerate}
+    \item Draw the circuit with arrows and labels representing all of
+      the unique currents.
+\par
+\item Construct a set of loop-rule equations including every
+      device in the circuit at least once.
+\par
+\item Construct a set junction-rule equations including every
+      current in the circuit at least once.
+\par
+\item Given enough known quantities (usually the properties of the
+      devices in the circuit - - - resistances, capacitances, source
+      voltages, e.g.), these equations can be combined algebraically
+      to determine the unknown quantities (usually currents and
+      potential differences in the circuit).
+    \end{enumerate}
+  } }$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 29.63ex; vertical-align: -14.31ex; " SRC="img38.svg"
+ ALT="\fbox{\parbox{\linewidth-5\fboxsep}{
+\textbf{Circuit Analysis using Kirchhoff's...
+...sually currents and
+potential differences in the circuit).
+\end{enumerate} } }"></SPAN>
+
+<P>
+
+<H2><A ID="SECTION00015000000000000000"></A>
+<A ID="sec:thevenin"></A>
+<BR>
+<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">5</SPAN> Thévenin's Theorem
+</H2>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:thevenin"></A><A ID="966"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 4:</STRONG>
+Illustration of the Thévenin equivalent circuit (b) for a
+      circuit (a) designed to drive a load connected across terminals A
+      and B.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="img39.svg"
+ ALT="\includegraphics{thevenin.eps}">
+    
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Any DC circuit consisting solely of resistors and voltage and current
+sources can be replaced by a <SPAN  CLASS="textbf">Thévenin equivalent circuit</SPAN>
+consisting of a single DC voltage source in series with a resistor as
+illustrated in Figure&nbsp;<A HREF="#fig:thevenin">4</A>. The theorem also applies to
+the frequency response of AC circuits containing linear, passive
+devices &mdash; resistors, inductors, and capacitors.
+
+<P>
+<BR>
+<BR>
+
+<!-- MATH
+ $\fbox{\parbox{\linewidth-5\fboxsep}{
+    \textbf{Finding the Th\'{e}venin Equivalent of a Circuit}
+    \begin{enumerate}
+    \item The Th\'{e}venin equivalent voltage $V_{th}$\  is the voltage
+      across the output terminals $A$\  and $B$\  of the circuit with no
+      load attached.
+    \item The Th\'{e}venin equivalent resistance $R_{th}$\  is the
+      resistance of the circuit measured between the output terminals $A$
+      and $B$, with all voltage and current sources replaced with
+      their internal resistances. \textit{Ideal voltage sources have
+        zero resistance, and ideal current sources have infinite
+        resistance.}
+    \end{enumerate}
+  } }$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 25.39ex; vertical-align: -12.18ex; " SRC="img40.svg"
+ ALT="\fbox{\parbox{\linewidth-5\fboxsep}{
+\textbf{Finding the Th\'{e}venin Equivalen...
+...ance, and ideal current sources have infinite
+resistance.}
+\end{enumerate} } }"></SPAN>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<A
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   <BR>
+<B> Next:</B> <A
+ HREF="node2.html">2 AC Circuits</A>
+<B>Up:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<B> Previous:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+</DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Lew Riley <BR>
+2021-06-14</I>
+</ADDRESS>
+</BODY>
+</HTML>
