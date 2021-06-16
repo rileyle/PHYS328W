@@ -1,4 +1,4 @@
-# LaTeX2HTML 2019.2 (Released June 5, 2019)
+# LaTeX2HTML 2021 (Released January 1, 2021)
 # Associate internals original text with physical files.
 
 
@@ -35,7 +35,7 @@ $ref_files{$key} = "$dir".q|node2.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/eq:db/;
-$ref_files{$key} = "$dir".q|node6.html|; 
+$ref_files{$key} = "$dir".q|node10.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:deltatphi/;
@@ -206,6 +206,10 @@ $key = q/fig:opampmodel/;
 $ref_files{$key} = "$dir".q|node5.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/fig:rcolorcodes/;
+$ref_files{$key} = "$dir".q|node8.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/fig:rlccircuit/;
 $ref_files{$key} = "$dir".q|node2.html|; 
 $noresave{$key} = "$nosave";
@@ -220,6 +224,14 @@ $noresave{$key} = "$nosave";
 
 $key = q/fig:rnetwork/;
 $ref_files{$key} = "$dir".q|node1.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/fig:schematic_example/;
+$ref_files{$key} = "$dir".q|node6.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/fig:schematics/;
+$ref_files{$key} = "$dir".q|node6.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/fig:seriesparallel/;
@@ -263,7 +275,7 @@ $ref_files{$key} = "$dir".q|node4.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/sec:dB/;
-$ref_files{$key} = "$dir".q|node6.html|; 
+$ref_files{$key} = "$dir".q|node10.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/sec:differentialamp/;
@@ -312,6 +324,10 @@ $noresave{$key} = "$nosave";
 
 $key = q/sec:rnetwork/;
 $ref_files{$key} = "$dir".q|node1.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/sec:schematics/;
+$ref_files{$key} = "$dir".q|node6.html|; 
 $noresave{$key} = "$nosave";
 
 $key = q/sec:serpar/;

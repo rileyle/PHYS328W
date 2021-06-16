@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.091 8.576" version="1.2">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 11.091 9.576" version="1.2">
 <defs>
 <g>
 <symbol overflow="visible" id="glyph0-0">
@@ -9,15 +9,10 @@
 <path style="stroke:none;" d="M 5.03125 -7.5625 L 4.046875 -7.5625 L 0.453125 0 L 8.609375 0 Z M 3.28125 -4.234375 C 3.890625 -5.546875 4.28125 -6.375 4.421875 -6.8125 C 4.453125 -6.671875 4.53125 -6.453125 5.125 -5.171875 L 7.109375 -0.90625 L 1.71875 -0.90625 Z M 3.28125 -4.234375 "/>
 </symbol>
 </g>
-<clipPath id="clip1">
-  <path d="M 0 0 L 10 0 L 10 8.574219 L 0 8.574219 Z M 0 0 "/>
-</clipPath>
 </defs>
 <g id="surface1">
-<g clip-path="url(#clip1)" clip-rule="nonzero">
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-1" x="0.5" y="8.076"/>
-</g>
+  <use xlink:href="#glyph0-1" x="1" y="8.576"/>
 </g>
 </g>
 </svg>

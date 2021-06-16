@@ -1,3 +1,4 @@
+## PHYS328W: *Analog Electronics* 
 
 ### Jupyter Notebooks
 - [Lab 1](labs/PHYS328_Lab1.ipynb)

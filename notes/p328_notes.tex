@@ -1,12 +1,13 @@
 \documentclass[11pt]{article}
 
 \usepackage{graphics}
+\usepackage{html}
 
-\usepackage{xr-hyper}
+%\usepackage{xr-hyper}
 \usepackage{hyperref}
 \usepackage[usenames, dvipsnames]{color}
 \usepackage{colortbl}
-\usepackage{calc}
+%\usepackage{calc}
 
 % Sans fonts
 \usepackage{sfmath}
@@ -58,6 +59,7 @@ photoresistors, and light-bulb filaments.
 \label{sec:serpar}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{seriesparallel.eps}
     \caption{A pair of resistors connected (a) in series and (b) in
@@ -116,6 +118,7 @@ Section~\ref{sec:kirchhoff}.
 \label{sec:rnetwork}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{rnetwork.eps}
     \caption{A resistor network powered by a voltage source.}
@@ -133,35 +136,45 @@ the equivalent resistance calculation and applying the current
 division expression of Equation~\ref{eq:Idiv} at each step.
 
 If a network includes one or more $\Delta$ configurations --- three
-resistors connected by junctions\footnote{A \textbf{junction} is a
-  point in a circuit where three or more wires meet. Junctions are
-  marked with \textbullet's in schematics in these notes.} --- it
-cannot be simplified via series and parallel pairs. However, any
+resistors connected by junctions --- it cannot be simplified
+via series and parallel pairs. A \textbf{junction} is a point in a
+circuit where three or more wires meet. Junctions are marked with
+$\bullet$ symbols in the schematics in these notes. However, any
 $\Delta$ configuration in a network can be replaced with an equivalent
 $Y$-shaped configuration via a $\Delta-Y$ transformation. This is easy
 to look up. We won't concern ourselves with this situation.
 
-\vspace{12 pt}
-\noindent
-\fbox{\parbox{\linewidth-5\fboxsep}{
-    \textbf{Resistor Network Analysis}
-    \begin{enumerate}
-    \item Use the equivalent resistance expressions
-      (Equations~\ref{eq:Rseries} and \ref{eq:Rparallel}) to find the
-      equivalent resistance of the entire network.
+%\vspace{12 pt}
+%\noindent
+%\fbox{\parbox{\linewidth-5\fboxsep}{
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%\textbf{Resistor Network Analysis Summary}
+\subsubsection*{Resistor Network Analysis Summary}
+\begin{enumerate}
+\item Use the equivalent resistance expressions
+  (Equations~\ref{eq:Rseries} and \ref{eq:Rparallel}) to find the
+  equivalent resistance of the entire network.
 
-    \item Use Ohm's law to calculate the current flowing through the
-      voltage source.
+\item Use Ohm's law to calculate the current flowing through the
+  voltage source.
 
-    \item Use the current division expressions
-      (Equations~\ref{eq:Idiv}) at each node to determine the currents
-      in the network.
+\item Use the current division expressions
+  (Equations~\ref{eq:Idiv}) at each node to determine the currents
+  in the network.
 
-    \item Use Ohm's law to determine the voltage drops across the
-      resistors and from these, the voltages of all of the nodes.
-    \end{enumerate}
-  }
-}
+\item Use Ohm's law to determine the voltage drops across the
+  resistors and from these, the voltages of all of the nodes.
+\end{enumerate}
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%}}
   
 \subsection{Kirchhoff's Rules}
 \label{sec:kirchhoff}
@@ -184,6 +197,7 @@ illustrated in Figure~\ref{fig:kirchhoffsigns}.
 
 \begin{figure}[ht]
   \begin{center}
+    \htmlimage{align='center'}{}
     \includegraphics{kirchhoffsigns.eps}
     \caption{Sign conventions for the potential differences in
       Kirchhoff's loop rule equations. The blue arrows represent the
@@ -205,27 +219,38 @@ junction,
 In the usual sign convention, currents flowing into a junction are
 positive, and currents flowing out of a junction are negative. 
 
-\vspace{12 pt}
-\noindent
-\fbox{\parbox{\linewidth-5\fboxsep}{
-    \textbf{Circuit Analysis using Kirchhoff's Rules}
-    \begin{enumerate}
-    \item Draw the circuit with arrows and labels representing all of
-      the unique currents.
+%\vspace{12 pt}
+%\noindent
+%\fbox{\parbox{\linewidth-5\fboxsep}{
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%\textbf{Circuit Analysis using Kirchhoff's Rules}
+\subsubsection*{Circuit Analysis using Kirchhoff's Rules}
+\begin{enumerate}
+\item Draw the circuit with arrows and labels representing all of
+  the unique currents.
  
-    \item Construct a set of loop-rule equations including every
-      device in the circuit at least once.
+\item Construct a set of loop-rule equations including every
+  device in the circuit at least once.
 
-    \item Construct a set junction-rule equations including every
-      current in the circuit at least once.
+\item Construct a set junction-rule equations including every
+  current in the circuit at least once.
 
-    \item Given enough known quantities (usually the properties of the
-      devices in the circuit --- resistances, capacitances, source
-      voltages, e.g.), these equations can be combined algebraically
-      to determine the unknown quantities (usually currents and
-      potential differences in the circuit).
-    \end{enumerate}
-  } }
+\item Given enough known quantities (usually the properties of the
+  devices in the circuit --- resistances, capacitances, source
+  voltages, e.g.), these equations can be combined algebraically
+  to determine the unknown quantities (usually currents and
+  potential differences in the circuit).
+\end{enumerate}
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%  } }
 
 
 \subsection{Th\'{e}venin's Theorem}
@@ -233,6 +258,7 @@ positive, and currents flowing out of a junction are negative.
            
 \begin{figure}[ht]
   \begin{center}
+    \htmlimage{align='center'}{}
     \includegraphics{thevenin.eps}
     \caption{Illustration of the Th\'{e}venin equivalent circuit (b) for a
       circuit (a) designed to drive a load connected across terminals A
@@ -248,22 +274,34 @@ illustrated in Figure~\ref{fig:thevenin}. The theorem also applies to
 the frequency response of AC circuits containing linear, passive
 devices --- resistors, inductors, and capacitors.
 
-\vspace{12 pt}
-\noindent
-\fbox{\parbox{\linewidth-5\fboxsep}{
-    \textbf{Finding the Th\'{e}venin Equivalent of a Circuit}
-    \begin{enumerate}
-    \item The Th\'{e}venin equivalent voltage $V_{th}$ is the voltage
-      across the output terminals $A$ and $B$ of the circuit with no
-      load attached.
-    \item The Th\'{e}venin equivalent resistance $R_{th}$ is the
-      resistance of the circuit measured between the output terminals $A$
-      and $B$, with all voltage and current sources replaced with
-      their internal resistances. \textit{Ideal voltage sources have
-        zero resistance, and ideal current sources have infinite
-        resistance.}
-    \end{enumerate}
-  } }
+%\vspace{12 pt}
+%\noindent
+%\fbox{\parbox{\linewidth-5\fboxsep}{
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%\textbf{Finding the Th\'{e}venin Equivalent of a Circuit}
+\subsubsection*{Finding the Th\'{e}venin Equivalent of a Circuit}
+\begin{enumerate}
+\item The Th\'{e}venin equivalent voltage $V_{th}$ is the voltage
+  across the output terminals $A$ and $B$ of the circuit with no
+  load attached.
+
+\item The Th\'{e}venin equivalent resistance $R_{th}$ is the
+  resistance of the circuit measured between the output terminals $A$
+  and $B$, with all voltage and current sources replaced with
+  their internal resistances. \textit{Ideal voltage sources have
+    zero resistance, and ideal current sources have infinite
+    resistance.}
+\end{enumerate}
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%} }
 
 \newpage
 
@@ -285,20 +323,33 @@ potential differences across capacitors, inductors, and resistors are
 all sinusoidal as well, but with different, \textit{constant}, phase
 relationships to each other.
 
-\vspace{12 pt}
-\noindent
-\fbox{\parbox{\linewidth-5\fboxsep}{
-    \textbf{CIVIL}\\
+%\vspace{12 pt}
+%\noindent
+%\fbox{\parbox{\linewidth-5\fboxsep}{
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
 
-    The mnemonic CIVIL can be used to
-    remember that the voltage across a capacitor lags $\pi/2$ (half a
-    period of oscillation) behind the current (C\underline{IV}), and the
-    voltage across an inductor leads the current by $\pi/2$
-    (\underline{VI}L). The voltage across a resistor is always in phase
-    with the current.
-  }
-}
-\vspace{12 pt}
+\htmlrule
+\noindent
+\textbf{CIVIL}
+\begin{quote}
+The mnemonic CIVIL can be used to
+remember that the voltage across a capacitor lags $\pi/2$ (half a
+period of oscillation) behind the current (C\underline{IV}), and the
+voltage across an inductor leads the current by $\pi/2$
+(\underline{VI}L). The voltage across a resistor is always in phase
+with the current.
+\end{quote}
+\htmlrule
+
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+% }}
+%\vspace{12 pt}
 
 Ohm's law (Equation~\ref{eq:Ohm}) gives the full relationship between
 current and voltage for a resistor. Capacitors and inductors are also
@@ -399,23 +450,35 @@ possible if the impedance has no real part meaning there is no
 resistance present.
 
 
-\vspace{12 pt}
-\noindent
-\fbox{\parbox{\linewidth-5\fboxsep}{
-    \textbf{Phasor Analysis}
-    \begin{itemize}
-    \item Equivalent impedance calculations work the same way as
-      equivalent resistance calculations (Equations~\ref{eq:Rseries}
-      and \ref{eq:Rparallel}).
-    \item Kirchhoff's rules work for phasors $\mathbf{V}$ and
-      $\mathbf{I}$.
-    \item Th\'{e}venin's theorem applies to AC circuits containing
-      only linear components. The Th\'{e}venin voltage and impedance
-      are found via the process outlined in Section~\ref{sec:thevenin}
-      with impedance in place of resistance.
-    \end{itemize}
-  }
-}
+%\vspace{12 pt}
+%\noindent
+%\fbox{\parbox{\linewidth-5\fboxsep}{
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+% \textbf{Phasor Analysis}
+\subsubsection*{Phasor Analysis}
+\begin{itemize}
+\item Equivalent impedance calculations work the same way as
+  equivalent resistance calculations (Equations~\ref{eq:Rseries}
+  and \ref{eq:Rparallel}).
+
+\item Kirchhoff's rules work for phasors $\mathbf{V}$ and
+  $\mathbf{I}$.
+
+\item Th\'{e}venin's theorem applies to AC circuits containing
+  only linear components. The Th\'{e}venin voltage and impedance
+  are found via the process outlined in Section~\ref{sec:thevenin}
+  with impedance in place of resistance.
+\end{itemize}
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%  } }
 %\vspace{12 pt}
 
 \subsection{AC Voltage Dividers}
@@ -423,6 +486,7 @@ resistance present.
 
 \begin{figure}[ht]
   \begin{center}
+    \htmlimage{align='center'}{}
     \includegraphics{acvdivider.eps}
     \caption{AC voltage divider between two linear devices, or networks of
       linear devices, with complex impedances $Z_1$ and $Z_2$.}
@@ -501,6 +565,7 @@ Appendix~\ref{sec:dB}).
 
 \begin{figure}[ht]
   \begin{center}
+    \htmlimage{align='center'}{}
     \includegraphics{rlccircuit.eps}
     \caption{A series RLC circuit as an AC voltage divider.}
     \label{fig:rlccircuit}
@@ -549,6 +614,7 @@ panel (a) of the figure, as
 where $T$ is the period of oscillation of the input signal.
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \scalebox{0.45}{
       \includegraphics{rlcnr.eps}
@@ -568,6 +634,7 @@ where $T$ is the period of oscillation of the input signal.
 \end{figure}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \scalebox{0.45}{
       \includegraphics{rlc_vout.eps}
@@ -629,6 +696,7 @@ angle. \emph{Which of these situations is illustrated in panel (a) of
 \label{sec:diodes}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \scalebox{0.5}{
       \includegraphics{diodevi.eps}
@@ -685,6 +753,7 @@ $10^{-8}$~A.
 \label{sec:transistors}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{transistors.eps}
     \caption{Schematic symbols for (a) NPN and (b) PNP bipolar junction
@@ -740,6 +809,7 @@ negligible, giving a simple exponential dependence of $I_C$ on
 $V_{BE}$.
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{ebersmollcircuit.eps}
     \caption{Schematic of the circuit you will use in lab to
@@ -807,31 +877,45 @@ other devices in the circuit must limit the current, and we don't need
 to think about where we are on the exponential curve. The same is true
 for diodes.
 
-\vspace{12 pt}
-\noindent
-\fbox{\parbox{\linewidth-5\fboxsep}{
-    \textbf{Basic Transistor Behavior}
-    \begin{itemize}
-    \item In order for a transistor to function, make $V_C > V_E$, and
-      keep $I_B$, $I_C$, and $V_{CE}$ below the rated maximum
-      values of the transistor.
-    \item \textbf{On:} In saturation, $V_{BE} \approx 0.7$~V,
-      $V_{CE} \approx 0.25$~V, and $I_C = h_{FE} I_B$, where
-      $h_{FE} \approx 100$. 
-    \item \textbf{Off:} If $V_{BE} < 0.7$~V (significantly),
-      $I_C \approx 0$.
-    \item \textbf{Active Region:} $V_{BE}$ is between ``off'' and
-      saturation. The collector current is governed by the Ebers-Moll
-      equation (Equation~\ref{eq:ebersmoll}). The emitter resistance
-      at room temperature is $r_e = (25~\Omega)/I_C[\mathrm{mA}]$.
-    \end{itemize}
-  }
-}
+%\vspace{12 pt}
+%\noindent
+%\fbox{\parbox{\linewidth-5\fboxsep}{
+\htmlrule
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+%\textbf{Basic Transistor Behavior}
+\subsubsection*{Basic Transistor Behavior}
+\begin{itemize}
+\item In order for a transistor to function, make $V_C > V_E$, and
+  keep $I_B$, $I_C$, and $V_{CE}$ below the rated maximum
+  values of the transistor.
+
+\item \textbf{On:} In saturation, $V_{BE} \approx 0.7$~V,
+  $V_{CE} \approx 0.25$~V, and $I_C = h_{FE} I_B$, where
+  $h_{FE} \approx 100$. 
+
+\item \textbf{Off:} If $V_{BE} < 0.7$~V (significantly),
+  $I_C \approx 0$.
+
+\item \textbf{Active Region:} $V_{BE}$ is between ``off'' and
+  saturation. The collector current is governed by the Ebers-Moll
+  equation (Equation~\ref{eq:ebersmoll}). The emitter resistance
+  at room temperature is $r_e = (25~\Omega)/I_C[\mathrm{mA}]$.
+\end{itemize}
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+\htmlrule
+%}}
 
 \subsection{Application: Transistor Switch}
 \label{sec:transistorswitch}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{transistorswitch.eps}
     \caption{Schematic of a transistor switch circuit in which a small
@@ -887,6 +971,7 @@ to the load.
 \label{sec:emitterfollower}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{emitterfollower.eps}
     \caption{Schematic of an AC coupled emitter follower.}
@@ -934,6 +1019,7 @@ Figure~\ref{fig:emitterfollower}.
 \label{sec:commonemitter}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{commonemitter.eps}
     \caption{Schematic of an AC coupled common emitter amplifier.}
@@ -1004,6 +1090,7 @@ It has a voltage gain given by
 \label{sec:opamps}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \scalebox{0.7}{
       \includegraphics{opamp_model.eps}
@@ -1051,35 +1138,46 @@ connected directly to ground, the other input will be held very close
 to ground and can be considered grounded in circuit analysis. This is
 referred to as a \textbf{virtual ground}.
 
-\vspace{12 pt}
-\noindent
-\fbox{\parbox{\linewidth-5\fboxsep}{
-    \textbf{Basic Op Amp Behavior}
-    \begin{itemize}
-    \item $R_{in} = \infty,~A = \infty,~R_{out} = 0$
-    \item \textbf{Linear region:} $V_+ = V_-,~-V_S < V_{out} < V_S$
-    \item \textbf{Saturation:} $V_+ > V_-~~\Longrightarrow~~V_{out} = V_S$
-      ~~~or~~~ $V_+ < V_-~~\Longrightarrow~~V_{out} = -V_S$
-    \end{itemize}
-  }
-}
-\vspace{12 pt}
+%\vspace{12 pt}
+%\noindent
+%\fbox{\parbox{\linewidth-5\fboxsep}{
+\htmlrule
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+%\textbf{Basic Op Amp Behavior}
+\subsubsection*{Basic Op Amp Behavior}
+\begin{itemize}
+\item $R_{in} = \infty,~A = \infty,~R_{out} = 0$
+\item \textbf{Linear region:} $V_+ = V_-,~-V_S < V_{out} < V_S$
+\item \textbf{Saturation:} $V_+ > V_-~~\Longrightarrow~~V_{out} = V_S$
+  ~~~or~~~ $V_+ < V_-~~\Longrightarrow~~V_{out} = -V_S$
+\end{itemize}
+\htmlrule
+\begin{latexonly}
+  \noindent
+  \hrulefill
+\end{latexonly}
+%}}
+%\vspace{12 pt}
 
-We will use two operational amplifiers in our laboratory exercises,
-the \texttt{LM741}, a general purpose bipolar junction transistor
-(BJT) based amplifier with a typical input resistance of 2 M$\Omega $,
-and the \texttt{LF411}, with field effect transistors (FETs) at the
-inputs giving a much larger input resistance ($10^{12}~\Omega$).
-Data sheets for these devices are available on the Texas Instruments
-web site (\url{www.ti.com}). Of the two, the \texttt{LF411} comes
-closest to satisfying the assumptions associated with ideal op amp
-behavior. It costs more than the \texttt{LM741} (\$1.84 vs. \$0.94 as
-of fall 2021).
+We stock two operational amplifiers in the lab, the \texttt{LM741}, a
+general purpose bipolar junction transistor (BJT) based amplifier with
+a typical input resistance of 2 M$\Omega $, and the \texttt{LF411},
+with field effect transistors (FETs) at the inputs giving a much
+larger input resistance ($10^{12}~\Omega$). Data sheets for these
+devices are available on the Texas Instruments web site
+(\url{www.ti.com}). Of the two, the \texttt{LF411} comes closest to
+satisfying the assumptions associated with ideal op amp behavior. It
+costs more than the \texttt{LM741} (\$1.84 vs. \$0.94 as of fall
+2021).
 
 \subsection{Application: Inverting Amplifier}
 \label{sec:invertingamp}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{invertingamp.eps}
     \caption{Schematic of an op amp based inverting amplifier.}
@@ -1131,6 +1229,7 @@ of the op amp.
 \label{sec:noninvertingamp}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{noninvertingamp.eps}
     \caption{Schematic of an op amp based non-inverting amplifier.}
@@ -1179,6 +1278,7 @@ small output resistance of the op amp.
 \label{sec:vfollower}
 
 \begin{figure}[h!]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{vfollower.eps}
     \caption{Schematic of an op amp based voltage follower/buffer.}
@@ -1198,6 +1298,7 @@ deliver higher power.
 \label{sec:summingamp}
 
 \begin{figure}[h!]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{summingamp.eps}
     \caption{Schematic of an op amp based summing amplifier.}
@@ -1253,6 +1354,7 @@ resistance of the op amp.
 \label{sec:differentialamp}
 
 \begin{figure}[h!]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{differenceamp.eps}
     \caption{Schematic of an op amp based differential amplifier.}
@@ -1301,6 +1403,7 @@ with the assumption the $V_- = V_+$ gives the output voltage
 \label{sec:differentiator}
 
 \begin{figure}[h!]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{differentiator.eps}
     \caption{Schematic of an op amp based differentiator.}
@@ -1353,6 +1456,7 @@ yields
 \label{sec:integrator}
 
 \begin{figure}[h!]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{integrator.eps}
     \caption{Schematic of an op amp based integrator.}
@@ -1453,41 +1557,81 @@ Combining Eqs.~\ref{eq:integratorVout} and \ref{eq:integratorQ} yields
 \clearpage
 \appendix
 
-\section{Decibels}
-\label{sec:dB}
+\section{Reading Electronics Schematics}
+\label{sec:schematics}
 
-It is convenient, when comparing two quantities, call them $Thing_1$ 
-and $Thing_2$, that differ by several orders of magnitude, to use a
-logarithmic scale for the comparison. One such approach is the
-\textbf{decibel scale}.
-\begin{equation}
-  dB = 10 \log \left( \frac{\mathrm{Thing_2}}{\mathrm{Thing_1}} \right)
-  \label{eq:db}
-\end{equation}
-For example, if $\mathrm{Thing_2}$ is $10^8$ times larger than
-$\mathrm{Thing_1}$, we can say $\mathrm{Thing_2}$ is 80~dB above
-$\mathrm{Thing_1}$. Where $\mathrm{Thing_2}$ is the intensity
-of sound in an environment, and $\mathrm{Thing_1}$ is the threshold of
-human hearing ($10^{-12}$~W/m$^2$), this is called the
-\textbf{sound level}.
+\subsubsection*{Schematic Symbols}
 
-In the electronics context, we use decibels to compare signal
-amplitude and power. Often, the \textbf{3~dB point} is used to characterize 
-electronic filters. That is the frequency at which the power
-transmitted by the filter is reduced by a factor 2 relative to the
-incident power 
-\[
-10 \log \left( \frac{P_{out}}{P_{in}} \right)
-= 10 \log \left( \frac{1}{2} \right) = 10 (-0.3010) = -3.01
-\]
-The power is proportional to the square of the voltage, so the 3~dB
-point is the frequency (or frequencies) at which the voltage gain
-$|V_{in}|/|V_{out}|$ is $1/\sqrt{2}$. 
+\begin{figure}[ht]
+  \htmlimage{align='center'}{}
+  \begin{center}
+    \scalebox{0.8}{
+      \includegraphics{schematic.eps}
+    }
+   \end{center}
+  \caption{Schematic symbols.}
+  \label{fig:schematics}
+\end{figure}
+
+The schematic symbols used in these notes are shown in
+Figure~\ref{fig:schematics}. An adjustable component, like the
+variable capacitor in a tuner circuit, is represented with the
+standard symbol with an arrow through it: 
+\begin{center}
+  \includegraphics{var_capacitor.eps}
+\end{center}
+
+\subsubsection*{An Example}
+
+\begin{figure}[ht]
+  \htmlimage{align='center'}{}
+  \begin{center}
+    \scalebox{0.8}{
+      \includegraphics{schematic_example.eps}
+    }\\
+    \vspace{12 pt}
+    \scalebox{0.8}{
+      \includegraphics{schematic_example_image.eps}
+    }
+   \end{center}
+  \caption{(a) Example of an electronics schematic. (b) One way 
+    the circuit might really look.}
+  \label{fig:schematic_example}
+\end{figure}
+
+An electronics diagram or \textbf{schematic} is designed to
+communicate a specific way of connecting electronics components.
+Lines between components represent wires. Schematics usually have a
+rectangular layout, but this layout rarely represents how things are
+oriented in reality. Nothing is drawn to scale. Wires can follow
+curved three-dimensional paths. Components  can be oriented
+differently than they appear. All that really matters is the way
+components are wires are connected. For example, a circuit schematic is
+shown in Figure~\ref{fig:schematic_example}(a), and one way a real
+version of the circuit might look is shown in
+Figure~\ref{fig:schematic_example}(b). 
+
+\subsubsection*{Junctions and Branches}
+
+It is useful to pay attention to points in a circuit where three or
+more wires meet in a circuit. These are called
+\textbf{junctions}. They are important in circuit  
+analysis, because currents combine or divide at these points. They are
+marked with $\bullet$ symbols in the schematics in these notes.
+Junctions are connected by \textbf{branches}. A branch might
+contain multiple wires and components, but in carries a single
+current, because all of the components and wires in a branch are
+connected in series. In single-loop circuits, there are no junctions
+--- a single current flows through all components. There are two
+junctions and three branches in the example circuit in
+Figure~\ref{fig:schematic_example}. It follows from the latter that
+there are three unique currents flowing in the circuit.
 
 \section{The Breadboard}
 \label{sec:breadboard}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \scalebox{0.5}{
       \includegraphics{breadboard.eps}
@@ -1514,28 +1658,31 @@ terminal strip to allow for easy connections to other components.
 
 \section{Resistor Color Codes}
 
-\begin{table}
-\begin{center}
-\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|}\hline
-\bf color      & \color{white}\cellcolor{Black}black & \color{white}\cellcolor{Brown}brown & \cellcolor{Red}red & \cellcolor{Orange}orange & \cellcolor{Yellow}yellow & \cellcolor{Green}green & \cellcolor{Blue}blue &
-\cellcolor{Purple}violet & \cellcolor{Gray}gray & white \\\hline
-\bf digit      & 0     & 1     & 2   & 3      & 4      & 5     & 6    &
-7      & 8    & 9     \\\hline
-\bf multiplier & 1     & 10    & 100 & 1k     & 10k    & 100k  & 1M   &
-10M    & 100M & 1000M \\\hline
-\end{tabular}
-\begin{eqnarray*}
-  R = [\mathrm{band 1}][\mathrm{band 2}] 
-       \times 10^{[\mathrm{band 3}]} & \pm & 5\%~(\mathrm{gold})\\ 
-                                 & \pm & 10\%~(\mathrm{silver})\nonumber
-\end{eqnarray*}
-\caption{\label{tab:rcolorcodes} Guide to resistor color codes.}
-\end{center}
-\end{table}
+\begin{figure}[ht]
+  \htmlimage{align='center'}{}
+  \begin{center}
+    %% Latex2html doesn't recognize the colortabl package, so...
+    %%\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|c|}\hline
+    %%\bf color      & \color{white}\cellcolor{Black}black & \color{white}\cellcolor{Brown}brown & \cellcolor{Red}red & \cellcolor{Orange}orange & \cellcolor{Yellow}yellow & \cellcolor{Green}green & \cellcolor{Blue}blue &
+    %%\cellcolor{Purple}violet & \cellcolor{Gray}gray & white \\\hline
+    %%\bf digit      & 0     & 1     & 2   & 3      & 4      & 5     & 6    &
+    %%7      & 8    & 9     \\\hline
+    %%\bf multiplier & 1     & 10    & 100 & 1k     & 10k    & 100k  & 1M   &
+    %%10M    & 100M & 1000M \\\hline
+    %%\end{tabular}
+    \includegraphics{resistor_color_codes.eps}
+    \begin{eqnarray*}
+      R = [\mathrm{band 1}][\mathrm{band 2}] 
+      \times 10^{[\mathrm{band 3}]} & \pm & 5\%~(\mathrm{gold})\\ 
+      & \pm & 10\%~(\mathrm{silver})\nonumber
+    \end{eqnarray*}
+    \caption{\label{fig:rcolorcodes} Guide to resistor color codes.}
+  \end{center}
+\end{figure}
 
 Most resistors you will encounter are marked with a set of bands,
 according to a standard color code, summarized in
-Table~\ref{tab:rcolorcodes}, which you can use to determine their
+Figure~\ref{fig:rcolorcodes}, which you can use to determine their
 resistances. There are ten colors corresponding to numerical digits
 0-9 (See the table below.), and gold and silver bands indicating 5\%
 and 10\% accuracy in the coded resistance, respectively.  Starting at
@@ -1550,6 +1697,7 @@ tolerance of 5\%, or $\pm 320~\Omega$.
 \label{sec:dmm}
 
 \begin{figure}[ht]
+  \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{dmm.eps}
     
@@ -1625,6 +1773,37 @@ tolerance of 5\%, or $\pm 320~\Omega$.
   --- the one with the upper bound larger than, but closest to, the
   measured current.
 \end{itemize}
+
+\section{Decibels}
+\label{sec:dB}
+
+It is convenient, when comparing two quantities, call them $Thing_1$ 
+and $Thing_2$, that differ by several orders of magnitude, to use a
+logarithmic scale for the comparison. One such approach is the
+\textbf{decibel scale}.
+\begin{equation}
+  dB = 10 \log \left( \frac{\mathrm{Thing_2}}{\mathrm{Thing_1}} \right)
+  \label{eq:db}
+\end{equation}
+For example, if $\mathrm{Thing_2}$ is $10^8$ times larger than
+$\mathrm{Thing_1}$, we can say $\mathrm{Thing_2}$ is 80~dB above
+$\mathrm{Thing_1}$. Where $\mathrm{Thing_2}$ is the intensity
+of sound in an environment, and $\mathrm{Thing_1}$ is the threshold of
+human hearing ($10^{-12}$~W/m$^2$), this is called the
+\textbf{sound level}.
+
+In the electronics context, we use decibels to compare signal
+amplitude and power. Often, the \textbf{3~dB point} is used to characterize 
+electronic filters. That is the frequency at which the power
+transmitted by the filter is reduced by a factor 2 relative to the
+incident power 
+\[
+10 \log \left( \frac{P_{out}}{P_{in}} \right)
+= 10 \log \left( \frac{1}{2} \right) = 10 (-0.3010) = -3.01
+\]
+The power is proportional to the square of the voltage, so the 3~dB
+point is the frequency (or frequencies) at which the voltage gain
+$|V_{in}|/|V_{out}|$ is $1/\sqrt{2}$. 
 
 %% \section{OrCAD Capture}
 %% \label{sec:orcad}

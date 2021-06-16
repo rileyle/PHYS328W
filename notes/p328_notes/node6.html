@@ -1,28 +1,23 @@
 ---
-
 title: PHYS328 Notes
-
-layout: single
-
-style: single
-
+layout: single_latex2html
 ---
 <!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
-<HTML lang="EN">
+<!--Converted with LaTeX2HTML 2021 (Released January 1, 2021) -->
+<HTML lang="en">
 <HEAD>
-<TITLE>A. Decibels</TITLE>
-<META NAME="description" CONTENT="A. Decibels">
+<TITLE>A. Reading Electronics Schematics</TITLE>
+<META NAME="description" CONTENT="A. Reading Electronics Schematics">
 <META NAME="keywords" CONTENT="p328_notes">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
-<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2021">
 
-<LINK REL="STYLESHEET" HREF="../../assets/css/single.css">
+<LINK REL="STYLESHEET" HREF="p328_notes.css">
 
 <LINK REL="next" HREF="node7.html">
 <LINK REL="previous" HREF="node5.html">
@@ -46,110 +41,155 @@ style: single
 <B>Up:</B> <A
  HREF="p328_notes.html">PHYS328W Notes</A>
 <B> Previous:</B> <A
- HREF="node5.html">5 Operational Amplifiers (Op</A>
+ HREF="node5.html">5 Operational Amplifiers (Op Amps)</A>
 <BR> <P>
 </DIV>
 <!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><UL>
+<LI><A ID="tex2html127"
+  HREF="node6.html#SECTION00060100000000000000">Schematic Symbols</A>
+<LI><A ID="tex2html128"
+  HREF="node6.html#SECTION00060200000000000000">An Example</A>
+<LI><A ID="tex2html129"
+  HREF="node6.html#SECTION00060300000000000000">Junctions and Branches</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
 
 <H1><A ID="SECTION00060000000000000000"></A>
-<A ID="sec:dB"></A>
+<A ID="sec:schematics"></A>
 <BR>
-A. Decibels
+A. Reading Electronics Schematics
 </H1>
 
 <P>
-It is convenient, when comparing two quantities, call them <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img225.svg"
- ALT="$Thing_1$"></SPAN> 
-and <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img226.svg"
- ALT="$Thing_2$"></SPAN>, that differ by several orders of magnitude, to use a
-logarithmic scale for the comparison. One such approach is the
-<SPAN  CLASS="textbf">decibel scale</SPAN>.
 
-<DIV class="equation">
-
-<!-- MATH
- \begin{equation}
-dB = 10 \log \left( \frac{\mathrm{Thing_2}}{\mathrm{Thing_1}} \right)
-\end{equation}
- -->
- &nbsp;  <A ID="eq:db"></A><IMG STYLE="height: 5.25ex; vertical-align: -2.08ex; " SRC="img227.svg"
- ALT="$\displaystyle dB = 10 \log \left( \frac{\mathrm{Thing_2}}{\mathrm{Thing_1}} \right)
-$"> 
-
-(<SPAN CLASS="arabic">58</SPAN>)
-</DIV>
-For example, if <!-- MATH
- $\mathrm{Thing_2}$
- -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img228.svg"
- ALT="$\mathrm{Thing_2}$"></SPAN> is <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.10ex; " SRC="img229.svg"
- ALT="$10^8$"></SPAN> times larger than
-<!-- MATH
- $\mathrm{Thing_1}$
- -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img230.svg"
- ALT="$\mathrm{Thing_1}$"></SPAN>, we can say <!-- MATH
- $\mathrm{Thing_2}$
- -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img228.svg"
- ALT="$\mathrm{Thing_2}$"></SPAN> is 80&nbsp;dB above
-<!-- MATH
- $\mathrm{Thing_1}$
- -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img230.svg"
- ALT="$\mathrm{Thing_1}$"></SPAN>. Where <!-- MATH
- $\mathrm{Thing_2}$
- -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img228.svg"
- ALT="$\mathrm{Thing_2}$"></SPAN> is the intensity
-of sound in an environment, and <!-- MATH
- $\mathrm{Thing_1}$
- -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img230.svg"
- ALT="$\mathrm{Thing_1}$"></SPAN> is the threshold of
-human hearing (<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.10ex; " SRC="img231.svg"
- ALT="$10^{-12}$"></SPAN>&nbsp;W/m<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.10ex; " SRC="img232.svg"
- ALT="$^2$"></SPAN>), this is called the
-<SPAN  CLASS="textbf">sound level</SPAN>.
+<H3><A ID="SECTION00060100000000000000">
+Schematic Symbols</A>
+</H3>
 
 <P>
-In the electronics context, we use decibels to compare signal
-amplitude and power. Often, the <SPAN  CLASS="textbf">3&nbsp;dB point</SPAN> is used to characterize 
-electronic filters. That is the frequency at which the power
-transmitted by the filter is reduced by a factor 2 relative to the
-incident power 
-<BR><P></P>
-<DIV CLASS="mathdisplay">
-<!-- MATH
- \begin{displaymath}
-10 \log \left( \frac{P_{out}}{P_{in}} \right)
-= 10 \log \left( \frac{1}{2} \right) = 10 (-0.3010) = -3.01
-\end{displaymath}
- -->
 
-<IMG STYLE=""
- SRC="img233.svg"
- ALT="\begin{displaymath}
-10 \log \left( \frac{P_{out}}{P_{in}} \right)
-= 10 \log \left( \frac{1}{2} \right) = 10 (-0.3010) = -3.01
-\end{displaymath}">
+<DIV class="CENTER"><A ID="fig:schematics"></A><A ID="904"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 23:</STRONG>
+Schematic symbols.</CAPTION>
+<TR><TD><IMG
+ STYLE="'CENTER'"
+ SRC="img232.svg"
+ ALT="\begin{figure}{}
+\begin{center}
+\scalebox{0.8}{
+\includegraphics{schematic.eps}
+}
+\end{center}
+\end{figure}"></TD></TR>
+</TABLE>
 </DIV>
-<BR CLEAR="ALL">
-<P></P>
-The power is proportional to the square of the voltage, so the 3&nbsp;dB
-point is the frequency (or frequencies) at which the voltage gain
-<!-- MATH
- $|V_{in}|/|V_{out}|$
- -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img234.svg"
- ALT="$\vert V_{in}\vert/\vert V_{out}\vert$"></SPAN> is <SPAN CLASS="MATH"><IMG STYLE="height: 2.81ex; vertical-align: -0.67ex; " SRC="img235.svg"
- ALT="$1/\sqrt{2}$"></SPAN>. 
 
 <P>
-<BR> <HR>
+The schematic symbols used in these notes are shown in
+Figure&nbsp;<A HREF="#fig:schematics">23</A>. An adjustable component, like the
+variable capacitor in a tuner circuit, is represented with the
+standard symbol with an arrow through it: 
+<DIV class="CENTER">
+<IMG
+ STYLE="height: 3.08ex; vertical-align: -0.10ex; " SRC="img233.svg"
+ ALT="\includegraphics{var_capacitor.eps}">
+
+</DIV>
+
+<P>
+
+<H3><A ID="SECTION00060200000000000000">
+An Example</A>
+</H3>
+
+<P>
+
+<DIV class="CENTER"><A ID="fig:schematic_example"></A><A ID="922"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 24:</STRONG>
+(a) Example of an electronics schematic. (b) One way 
+    the circuit might really look.</CAPTION>
+<TR><TD><IMG
+ STYLE="'CENTER'"
+ SRC="img234.svg"
+ ALT="\begin{figure}{}
+\begin{center}
+\scalebox{0.8}{
+\includegraphics{schematic_ex...
+...}{
+\includegraphics{schematic_example_image.eps}
+}
+\end{center}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+An electronics diagram or <SPAN  CLASS="textbf">schematic</SPAN> is designed to
+communicate a specific way of connecting electronics components.
+Lines between components represent wires. Schematics usually have a
+rectangular layout, but this layout rarely represents how things are
+oriented in reality. Nothing is drawn to scale. Wires can follow
+curved three-dimensional paths. Components  can be oriented
+differently than they appear. All that really matters is the way
+components are wires are connected. For example, a circuit schematic is
+shown in Figure&nbsp;<A HREF="#fig:schematic_example">24</A>(a), and one way a real
+version of the circuit might look is shown in
+Figure&nbsp;<A HREF="#fig:schematic_example">24</A>(b). 
+
+<P>
+
+<H3><A ID="SECTION00060300000000000000">
+Junctions and Branches</A>
+</H3>
+
+<P>
+It is useful to pay attention to points in a circuit where three or
+more wires meet in a circuit. These are called
+<SPAN  CLASS="textbf">junctions</SPAN>. They are important in circuit  
+analysis, because currents combine or divide at these points. They are
+marked with <SPAN CLASS="MATH"><IMG
+ STYLE="height: 1.41ex; vertical-align: -0.10ex; " SRC="img31.svg"
+ ALT="$\bullet$"></SPAN> symbols in the schematics in these notes.
+Junctions are connected by <SPAN  CLASS="textbf">branches</SPAN>. A branch might
+contain multiple wires and components, but in carries a single
+current, because all of the components and wires in a branch are
+connected in series. In single-loop circuits, there are no junctions
+&mdash; a single current flows through all components. There are two
+junctions and three branches in the example circuit in
+Figure&nbsp;<A HREF="#fig:schematic_example">24</A>. It follows from the latter that
+there are three unique currents flowing in the circuit.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="p328_notes.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   <BR>
+<B> Next:</B> <A
+ HREF="node7.html">B. The Breadboard</A>
+<B>Up:</B> <A
+ HREF="p328_notes.html">PHYS328W Notes</A>
+<B> Previous:</B> <A
+ HREF="node5.html">5 Operational Amplifiers (Op Amps)</A>
+</DIV>
+<!--End of Navigation Panel-->
 <ADDRESS>
 <I>Lew Riley <BR>
-2021-06-14</I>
+2021-06-16</I>
 </ADDRESS>
 </BODY>
 </HTML>
