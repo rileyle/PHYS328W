@@ -19,6 +19,10 @@ p, ul, ol, table, pre, dl {
     margin:0 0 20px;
 }
 
+ol ol { list-style-type: lower-alpha; }
+
+ol ol ol { list-style-type: lower-roman; }
+
 h1, h2, h3 {
     line-height:1.1;
 }
