@@ -10,9 +10,10 @@ Tuesdays and Thursdays, 10:00 - 11:15 am Pfahler Hall 013
 
 ## Instructor
 
-[Dr. Lew Riley](https://www.ursinus.edu/live/profiles/189-lew-riley),
+[Dr. Lew Riley](https://www.ursinus.edu/live/profiles/189-lew-riley){:target="_blank"},
 [lriley@ursinus.edu](mailto:lriley@ursinus.edu), Pfahler Hall 112D,
-ext. 4307, [schedule](https://rileyle.github.io/schedule.html)
+ext. 4307, 
+[schedule](https://rileyle.github.io/schedule.html){:target="_blank"}
 
 ## Course Description
 
@@ -68,20 +69,21 @@ three hours of laboratory per week. Two semester hours.
 
 ## Text
 
-[These
-notes](https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html)
-will serve as our text. You may also find this [quick reference
-guide](https://rileyle.github.io/PHYS328W/ref/p328_ref.pdf) useful.
+
+<A HREF="https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html"
+target="_blank">These notes</A> 
+will serve as our text. You may also find this 
+<A HREF="https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html"
+target="_blank">quick reference guide </A> useful.
 
 ## Course Design
 
-[Canvas](https://ursinus.instructure.com) is the central
-organizational hub for this course. All assignments will be posted,
-collected, and graded in Canvas. The Modules page in Canvas shows an
-overview of the course, organized by experiment. This is the main
-landing page for the course site. The Canvas course stream at the
-bottom of the Syllabus and the Canvas Calendar are two
-additional ways of keeping track of assignments due.
+Canvas is the central organizational hub for this course. All
+assignments will be posted, collected, and graded in Canvas. The
+Modules page in Canvas shows an overview of the course, organized by
+experiment. This is the main landing page for the course site. The
+Canvas course stream at the bottom of the Syllabus and the Canvas
+Calendar are two additional ways of keeping track of assignments due.
 
 The course is divided into six lab assignments. A module in Canvas is
 dedicated to each lab assignment including a link to a Jupyter
@@ -92,17 +94,19 @@ usually due the night before we start the next lab assignment.
 
 ### Log Books (Jupyter Notebooks)
 
-You will use the [JupyterLab](https://jupyter.org/) environment
-for electronic log books for recording measurements and
-analysis. It is provided by the [Anaconda](https://www.anaconda.com/)
+You will use 
+<A HREF="https://jupyter.org" target="_blank">JupyterLab</A>
+for electronic log books in which you will record measurements and
+do your data analysis. It is provided by the 
+<A HREF="https://www.anaconda.com" target="_blank">Anaconda</A>
 distribution, available for free for Windows, macOS, and
 Linux. (Installation and configuration instructions are included in a
 very early assignment.) Bring your laptop with you whenever you come
 to lab.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Guidelines for Log Books** 
-[[PDF](https://rileyle.github.io/PHYS328W/guides/p328_log_guide.pdf)]
-[[HTML](https://rileyle.github.io/PHYS328W/guides/p328_log_guide.html)]
+[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_log_guide.pdf" target="_blank">PDF</A>]
+[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_log_guide.html" target="_blank">HTML</A>]
 
 ### Brief Reports and the Final Paper
 
@@ -120,22 +124,23 @@ L<SUP>A</SUP>T<SUB>E</SUB>X, a typesetting program commonly used by
 physicists, astronomers, mathematicians, computer scientists. You may
 use your preferred L<SUP>A</SUP>T<SUB>E</SUB>X environment. If you
 don't have one set up, I recommend the
-[Overleaf](https://www.overleaf.com) online
-L<SUP>A</SUP>T<SUB>E</SUB>X development environment.
+<A HREF="https://www.overleaf.com" target="_blank">Overleaf</A>
+online L<SUP>A</SUP>T<SUB>E</SUB>X development environment.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Guidelines for Brief Reports**
-[[PDF](https://rileyle.github.io/PHYS328W/guides/p328_report_guide.pdf)]
-[[HTML](https://rileyle.github.io/PHYS328W/guides/p328_report_guide.html)]
+[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_report_guide.pdf" target="_blank">PDF</A>]
+[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_report_guide.html" target="_blank">HTML</A>]
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Guidelines for Papers** 
-[[PDF](https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.pdf)]
-[[HTML](https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.html)]
+[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.pdf" target="_blank">PDF</A>]
+[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.html" target="_blank">HTML</A>]
 
 ## Assessment
 
 There is a growing body of evidence that grades do not facilitate
 --- and can actually shut down --- learning (see [Blum, Susan D., and
-Alfie Kohn. Ungrading, WVU Press, 2020](https://ursinuscollege.on.worldcat.org/search?sortKey=LIBRARY&databaseList=&queryString=au%3Ablum+ti%3AUngrading)). 
+Alfie Kohn. Ungrading, WVU Press, 2020](https://ursinuscollege.on.worldcat.org/search?sortKey=LIBRARY&databaseList=&queryString=au%3Ablum+ti%3AUngrading){:target="_blank"}). 
+
 While I will submit a final grade for this course to the Registrar
 at the end of the semester, *I will not grade individual assignments.*
 Instead, I will give you feedback in Canvas on your log books, 
