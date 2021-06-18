@@ -69,12 +69,10 @@ three hours of laboratory per week. Two semester hours.
 
 ## Text
 
-
-<A HREF="https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html"
-target="_blank">These notes</A> 
+[These notes](https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html){:target="_blank"}
 will serve as our text. You may also find this 
-<A HREF="https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html"
-target="_blank">quick reference guide </A> useful.
+[quick reference guide](https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html){:target="_blank"}
+useful.
 
 ## Course Design
 
@@ -95,18 +93,18 @@ usually due the night before we start the next lab assignment.
 ### Log Books (Jupyter Notebooks)
 
 You will use 
-<A HREF="https://jupyter.org" target="_blank">JupyterLab</A>
+[JupyterLab](https://jupyter.org){:target="_blank"}
 for electronic log books in which you will record measurements and
 do your data analysis. It is provided by the 
-<A HREF="https://www.anaconda.com" target="_blank">Anaconda</A>
+[Anaconda](https://www.anaconda.com){:target="_blank"}
 distribution, available for free for Windows, macOS, and
 Linux. (Installation and configuration instructions are included in a
 very early assignment.) Bring your laptop with you whenever you come
 to lab.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Guidelines for Log Books** 
-[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_log_guide.pdf" target="_blank">PDF</A>]
-[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_log_guide.html" target="_blank">HTML</A>]
+[[PDF](https://rileyle.github.io/PHYS328W/guides/p328_log_guide.pdf){:target="_blank"}]
+[[HTML](https://rileyle.github.io/PHYS328W/guides/p328_log_guide.html){:target="_blank"}]
 
 ### Brief Reports and the Final Paper
 
@@ -124,16 +122,16 @@ L<SUP>A</SUP>T<SUB>E</SUB>X, a typesetting program commonly used by
 physicists, astronomers, mathematicians, computer scientists. You may
 use your preferred L<SUP>A</SUP>T<SUB>E</SUB>X environment. If you
 don't have one set up, I recommend the
-<A HREF="https://www.overleaf.com" target="_blank">Overleaf</A>
+[Overleaf](https://www.overleaf.com){:target="_blank"}
 online L<SUP>A</SUP>T<SUB>E</SUB>X development environment.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Guidelines for Brief Reports**
-[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_report_guide.pdf" target="_blank">PDF</A>]
-[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_report_guide.html" target="_blank">HTML</A>]
+[[PDF](https://rileyle.github.io/PHYS328W/guides/p328_report_guide.pdf){:target="_blank"}]
+[[HTML](https://rileyle.github.io/PHYS328W/guides/p328_report_guide.html){:target="_blank"}]
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Guidelines for Papers** 
-[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.pdf" target="_blank">PDF</A>]
-[<A HREF="https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.html" target="_blank">HTML</A>]
+[[PDF](https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.pdf){:target="_blank"}]
+[[HTML](https://rileyle.github.io/PHYS328W/guides/p328_paper_guide.html){:target="_blank"}]
 
 ## Assessment
 
@@ -186,9 +184,9 @@ during an exam is cheating. If I believe that you have cheated,
 plagiarized, or committed any academic honesty violation, I will
 discuss the incident with you and consult with the Dean of the College
 regarding the consequences. (See the 
-[Student Handbook](https://www.ursinus.edu/student-life/handbook/) 
+[Student Handbook](https://www.ursinus.edu/student-life/handbook/){:target="_blank"} 
 for a detailed description of College policies related to 
-[Academic Honesty](https://www.ursinus.edu/student-life/handbook/section-ii-additional-expectations-resources/academic-honesty/).) 
+[Academic Honesty](https://www.ursinus.edu/student-life/handbook/section-ii-additional-expectations-resources/academic-honesty/){:target="_blank"}.) 
 
 ## Attendance
 
@@ -223,11 +221,11 @@ the Director of Disability Services, Dr. Dolly Singley to discuss
 supports and accommodations you may need. Dolly’s office is located in
 the Institute for Student Success in Lower Wismer. You can schedule a
 meeting with Dolly by using this link: 
-[https://dsingley.youcanbook.me](https://dsingley.youcanbook.me), by
+[https://dsingley.youcanbook.me](https://dsingley.youcanbook.me){:target="_blank"}, by
 emailing her at [dsingley@ursinus.edu](mailto:dsingley@ursinus.edu)
 or by calling her at 1-484-762-4329. Students can also review
 accessibility and disabilities services online at
-[https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/](https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/)
+[https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/](https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/){:target="_blank"}
 
 ## Statement of Inclusivity
 
@@ -253,7 +251,7 @@ please do not download, copy, or redistribute class recordings.
 The college recognizes that temporary financial hardships can impact
 students' access to course materials, as well as their access to
 opportunities on campus. The 
-[Bear2Bear fund](https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/) 
+[Bear2Bear fund](https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/){:target="_blank"}
 has been established by donors to the college and provides special
 grants for students who have exhausted other sources of funding. 
 
@@ -261,7 +259,7 @@ The Wellness Center has a virtual drop-in crisis hour at 2-3 pm each
 weekday, which is available for students in crisis who need to be seen
 immediately by a clinician. Their resources are confidential and free
 to all students. Please consult the 
-[Wellness Center web site](https://www.ursinus.edu/offices/wellness-center/) 
+[Wellness Center web site](https://www.ursinus.edu/offices/wellness-center/){:target="_blank"}
 for more information and the link to the virtual
 crisis hour. 
 

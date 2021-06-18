@@ -1,6 +1,8 @@
 ## PHYS328W: *Analog Electronics* 
 
-### <A HREF="syllabus.html" target="_blank">Syllabus</A>
+### [Syllabus](syllabus.html){:target="_blank"}
+
+### [Python/JupyterLab Setup](jupyter.html){:target="_blank"}
 
 ### Jupyter Notebooks
 - [Lab 1](labs/PHYS328_Lab1.ipynb)
@@ -10,11 +12,11 @@
 - [Lab 5](labs/PHYS328_Lab5.ipynb)
 - [Lab 6](labs/PHYS328_Lab6.ipynb)
 
-### Notes [[PDF](notes/p328_notes.pdf)][<A HREF="notes/p328_notes/p328_notes.html" target="_blank">HTML</A>]
+### Notes [[PDF](notes/p328_notes.pdf){:target="_blank"}][[HTML](notes/p328_notes/p328_notes.html){:target="_blank"}]
 
-### Reference Sheet [[PDF](ref/p328_ref.pdf)]
+### Reference Sheet [[PDF](ref/p328_ref.pdf){:target="_blank"}]
 
 ### Guidelines
-- **Log Books** [[PDF](guides/p328_log_guide.pdf)][<A HREF="guides/p328_log_guide.html" target="_blank">HTML</A>]
-- **Brief Reports** [[PDF](guides/p328_report_guide.pdf)][<A HREF="guides/p328_report_guide.html" target="_blank">HTML</A>]
-- **Paper** [[PDF](guides/p328_paper_guide.pdf)][<A HREF="guides/p328_paper_guide.html" target="_blank">HTML</A>]
+- **Log Books** [[PDF](guides/p328_log_guide.pdf){:target="_blank"}][[HTML](guides/p328_log_guide.html){:target="_blank"}]
+- **Brief Reports** [[PDF](guides/p328_report_guide.pdf){:target="_blank"}][[HTML](guides/p328_report_guide.html){:target="_blank"}]
+- **Paper** [[PDF](guides/p328_paper_guide.pdf){:target="_blank"}][[HTML](guides/p328_paper_guide.html){:target="_blank"}]
