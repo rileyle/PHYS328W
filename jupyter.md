@@ -28,7 +28,7 @@ The Anaconda package provides the Python language with lots of useful libraries,
   - Click the "Install" button under "CMD.exe Prompt".
   - Launch "CMD.exe Prompt"
     - Enter "conda install -c conda-forge jupyterlab=3" at the prompt and hit <Enter>.
-    - Once it is finished installing, typle "exit" <Enter> to close the window.
+    - Once it is finished installing, type "exit" <Enter> to close the window.
   - Click the "Refresh" button at the upper right of the Anaconda Navigator window, and you should see that there is a "Launch" button under JupyterLab 3.x.x.
 
 ### Alternative to Anaconda
@@ -38,8 +38,8 @@ Anaconda is the preferred method of using Jupyter Notebook for your electronic l
 ### Set up your log book for your first experiment
 
 - Run Anaconda Navigator, select the environment you set up for this course, and launch JupyterLab.  A JupyterLab console should open in a tab in your web browser.
-- Download the Log Book Tutorial  download, and upload it to JupyterLab:
+- Download the [JupyterLab Tutorial](labs/JupyterLabTutorial.ipynb), and upload it to JupyterLab:
   - Show the File Manager panel by clicking on the folder icon in the vertical button bar to the far left of the JupyterLab console. 
   - Click on the "Upload Files" button at the top of the file browser panel.
-- Double-click on the LogBookTutorial.ipynb link to open the notebook. 
+- Double-click on JupyterLabTutorial.ipynb to open the notebook. 
 - Helpful Hint: The "Table of Contents" button in the vertical button bar to the far left of the JupyterLab console shows a clickable list of the headers in the current notebook. This makes navigating long notebooks easier. 
