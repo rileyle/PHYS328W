@@ -71,7 +71,7 @@ three hours of laboratory per week. Two semester hours.
 
 [These notes](https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html){:target="_blank"}
 will serve as our text. You may also find this 
-[quick reference guide](https://rileyle.github.io/PHYS328W/notes/p328_notes/p328_notes.html){:target="_blank"}
+[quick reference guide](https://rileyle.github.io/PHYS328W/ref/p328_ref.pdf){:target="_blank"}
 useful.
 
 ## Course Design
