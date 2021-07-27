@@ -18,18 +18,12 @@ The Anaconda package provides the Python language with lots of useful libraries,
 - Click on "Environments" in the panel to the far left.
 - Click on "Create", select Python 3.8, and give your environment a name (like "Log Book").
 - At the top of the large panel on the right, select "Not installed", and click on "Update index ..." to populate the list of available packages.
-- Use the search bar to find and select the following packages:
+- Use the search bar to find and select the following packages (which may already be installed):
   - Search for "numpy", and select "numpy" and "numpy-base".
   - Search for "scipy", and select "scipy".
   - Search for "matplotlib", and select "matplotlib" and "matplotlib-base".
   - Search for "pandas", and select  "pandas".
   - Then, click Apply.
-- Click on "Home" in the panel to the far left, and ...
-  - Click the "Install" button under "CMD.exe Prompt".
-  - Launch "CMD.exe Prompt"
-    - Enter "conda install -c conda-forge jupyterlab=3" at the prompt and hit <Enter>.
-    - Once it is finished installing, type "exit" <Enter> to close the window.
-  - Click the "Refresh" button at the upper right of the Anaconda Navigator window, and you should see that there is a "Launch" button under JupyterLab 3.x.x.
 
 ### Alternative to Anaconda
 
