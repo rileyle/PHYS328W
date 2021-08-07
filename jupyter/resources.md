@@ -4,7 +4,7 @@ layout:     single
 ---
 ## JupyterLab
 
-- Start here: [JupyterLabTutorial.ipynb](/jupyter/JupyterLabTutorial.ipynb){:target="_blank"}
+- Start here: [JupyterLabTutorial.ipynb](JupyterLabTutorial.ipynb){:target="_blank"}
 
 - Command-Mode Keyboard Shortcuts
 
@@ -28,8 +28,8 @@ layout:     single
 
 - [The Python tutorial](https://docs.python.org/3/tutorial/index.html){:target="_blank"} at [docs.python.org](https://docs.python.org){:target="_blank"}
 - Plotting: [matplotlib Tutorials](https://matplotlib.org/stable/tutorials/index.html){:target="_blank"}
-- Tabular data with pandas: [Tabular.ipynb](/jupyter/Tabular.ipynb){:target="_blank"}, [TabularData.csv](/jupyter/TabularData.csv){:target="_blank"}
-- Fitting data: [FittingData.ipynb](/jupyter/FittingData.ipynb){:target="_blank"}
+- Tabular data with pandas: [Tabular.ipynb](Tabular.ipynb){:target="_blank"}, [TabularData.csv](TabularData.csv){:target="_blank"}
+- Fitting data: [FittingData.ipynb](FittingData.ipynb){:target="_blank"}
 
 ## Markdown
 
