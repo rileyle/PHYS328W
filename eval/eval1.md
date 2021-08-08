@@ -15,9 +15,9 @@ Periodic evaluations ...
 ## Prepare
 
 - To center in your mind what we are trying to do, review ...
-  - the course learning goals in the [Syllabus](syllabus.html){:target="_blank"},
-  - the guidelines for [log books](guides/p328_log_guide.html){:target="_blank"},
-  - the guidelines for [reports](guides/p328_report_guide.html){:target="_blank"},
+  - the course learning goals in the [Syllabus](https://rileyle.github.io/PHYS328W/syllabus.html){:target="_blank"},
+  - the guidelines for [log books](https://rileyle.github.io/PHYS328W/guides/p328_log_guide.html){:target="_blank"},
+  - the guidelines for [reports](https://rileyle.github.io/PHYS328W/guides/p328_report_guide.html){:target="_blank"},
   - and my feedback on your work. 
 
 - Reflect on your experience in the course so far.
