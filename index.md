@@ -18,3 +18,8 @@
 - [Lab 4](labs/PHYS328_Lab4.ipynb)
 - [Lab 5](labs/PHYS328_Lab5.ipynb)
 - [Lab 6](labs/PHYS328_Lab6.ipynb)
+
+### Evaluations
+- [Evaluation 1](eval/eval1.html){:target="_blank"}
+- [Evaulation 2](eval/eval2.html){:target="_blank"}
+- [Final Evaluation](eval/eval_final.html){:target="_blank"}
