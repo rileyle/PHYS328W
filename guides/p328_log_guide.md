@@ -14,8 +14,21 @@ am evaluating your log book). Your notes are clear and detailed enough
 that when you read them in a few weeks, as you're writing a paper on
 your work, you (and I) will be able to figure out what you did.
 
-Experimental Work and Raw Data
-------------------------------
+Experimental Work
+-----------------
+
+1.  Use the available equipment effectively.
+
+2.  Collect enough data of good enough quality to extract credible
+    results.
+
+3.  If things go wrong, make a reasonable effort to correct the
+    problems.
+
+Log Book Content
+----------------
+
+### Experiment
 
 1.  Entries include date and time and who was present.
 
@@ -31,8 +44,7 @@ Experimental Work and Raw Data
 
 6.  Include the units of all physical quantities.
 
-Analysis
---------
+### Analysis
 
 1.  Perform your entire analysis in the log book.
 

@@ -48,8 +48,8 @@ three hours of laboratory per week. Two semester hours.
   the behavior of the circuits you study, and compare these 
   predictions with your measurements. 
   
-- Understand, build, and test a relatively complex system (a working
-  AM radio receiver). 
+- Understand, build, and test a relatively complex system (an AM radio 
+  receiver). 
   
 - Practice keeping a digital log book for both measurements and data
   analysis that is useful to you and your collaborators. 
@@ -62,10 +62,10 @@ three hours of laboratory per week. Two semester hours.
 - Learn how to use a digital multimeters (DMM), a digital
   oscilloscope, a function generator, and a prototyping
   board/breadboard.
-  
-- Practice using L<SUP>A</SUP>T<SUB>E</SUB>X.
 
 - Practice using JupyterLab and Python.
+
+- Practice using L<SUP>A</SUP>T<SUB>E</SUB>X.
 
 ## Text
 
@@ -77,9 +77,9 @@ useful.
 ## Course Design
 
 Canvas is the central organizational hub for this course. All
-assignments will be posted, collected, and graded in Canvas. The
+assignments will be posted, collected, and evaluated in Canvas. The
 Modules page in Canvas shows an overview of the course, organized by
-experiment. This is the main landing page for the course site. The
+lab assignment. This is the main landing page for the course site. The
 Canvas course stream at the bottom of the Syllabus and the Canvas
 Calendar are two additional ways of keeping track of assignments due.
 
@@ -87,8 +87,11 @@ The course is divided into six lab assignments. A module in Canvas is
 dedicated to each lab assignment including a link to a Jupyter
 notebook which describes the assignment in detail and serves as a
 template for your log book for the lab. The products of each lab
-assignment should be uploaded to the corresponding Canvas assignment,
-usually due the night before we start the next lab assignment. 
+assignment are usually due the night before we start the next lab 
+assignment. 
+
+When you have questions outside of lab meetings, post them to the chat 
+of the Teams site for this course.
 
 ### Log Books (Jupyter Notebooks)
 
@@ -114,8 +117,8 @@ lab assignment will be a brief report. You will write one paper in
 journal-article format for the final lab assignment (the AM radio
 receiver). 
 
-*Although you may collaborate on experimental work and
-simulations, you will write your own reports and papers.*
+*Although you may collaborate on experimental work, you will 
+write your own reports and papers.*
 
 You will write your reports and papers using
 L<SUP>A</SUP>T<SUB>E</SUB>X, a typesetting program commonly used by
@@ -150,22 +153,23 @@ numerical status code:
 - **2**: Meets guidelines (resubmissions accepted)
 - **3**: Exceeds guidelines
 
-I will also collect periodic written reflections from you in Canvas on
-your learning and on how the course is going throughout the
+I will also collect three self evaluations from you addressing
+your learning and how the course is going throughout the
 semester. These will carry a "Complete/Incomplete" status (1/0)
-in Canvas. I will give you feedback on these reflections. If you are
-ever unclear as to how you are doing in the course, *let's talk*.
+in Canvas. I will give you feedback on these reflections, so that we 
+will be in regular conversation about how you are doing in the
+course. 
 
-*Note: The Canvas gradebook will report a raw numerical score based on the
-status codes for logs, reports, the paper, and reflections. This might serve
-as a very rough indicator of progress, but it is not your grade.*
+*Note: The Canvas grade book will report a raw numerical score 
+based on the status codes for logs, reports, the paper, and reflections. 
+This might serve as a very rough indicator of progress, but it is not 
+your grade.*
 
-Near the end of the semester, I will ask you to submit a final written
-reflection on your work in which you will propose a final grade. That
-will serve as a starting point for an individual meeting to 
-review my feedback and your reflections. I will determine your final
-grade in our meeting, with possible stipulations based on work not yet
-handed in.
+Near the end of the semester, you will write a final self evaluation of 
+your work in which you will propose a final grade. That will serve as 
+a starting point for an individual meeting to review my feedback and 
+your reflections. I will determine your final grade in our meeting, with 
+possible stipulations based on work not yet handed in.
 
 ## Collaboration, Acknowledgment, and Academic Honesty
 
@@ -239,14 +243,7 @@ to express your own ideas, but also to learn from the information and
 ideas shared by other students. Participation is crucial to the
 success of this classroom experience. Your insights, questions and
 comments will be useful not only to yourself and to your adviser, but
-to your fellow students. 
-
-In order to allow for equitable access to class for students who may
-be attending and participating remotely, I will record our class
-sessions. These recordings will only be available to students enrolled
-in this course. The Teams app will explicitly indicate when we are
-recording. Out of respect and privacy for me and all class members,
-please do not download, copy, or redistribute class recordings.
+to your fellow students.
 
 The college recognizes that temporary financial hardships can impact
 students' access to course materials, as well as their access to

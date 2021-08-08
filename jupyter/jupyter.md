@@ -38,7 +38,7 @@ I have shared a folder with you on OneDrive where you should keep all of your Ju
 - If OneDrive is not already installed on your laptop, install it or from the [Microsoft](https://www.microsoft.com/en-us/microsoft-365/onedrive/download){:target="_blank"} (Windows 10) or the [Mac App Store](https://apps.apple.com/us/app/onedrive/id823766827?mt=12){:target="_blank"} (MacBook).
 - Sign in to OneDrive in your favorite Web browser, and follow the "Shared" link in the panel on the left.
 - You should see a folder with a name starting with PHYS328W. Check the circular check box to the left of the folder, and click "Add Shortcut to My Files".
-- Open OneDrive in File Explorer (Windows) or Finder (MacOS) and verify that your PHYS328W shared folder shows up. Initially, it should contain empty subfolders for the JupyterLab Tutorial and each lab. If not, ask for help.
+- Open OneDrive in File Explorer (Windows) or Finder (macOS) and verify that your PHYS328W shared folder shows up. Initially, it should contain empty subfolders for the JupyterLab Tutorial and each lab. If not, ask for help.
 
 ### JupyterLab Tutorial
 
