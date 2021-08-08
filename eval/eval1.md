@@ -26,8 +26,8 @@ Periodic evaluations ...
 
 ... to the following prompts in the text entry box below. 
 
-How has your learning progressed so far?
-What have been your strengths and challenges in the course so far?
-What do you plan to do to address any challenges you have identified?
-What support do you need from me or your colleagues?
-What would you like to add that isn't addressed above?
+1. How has your learning progressed so far?
+2. What have been your strengths and challenges in the course so far?
+3. What do you plan to do to address any challenges you have identified?
+4. What support do you need from me or your colleagues?
+5. What would you like to add that isn't addressed above?
