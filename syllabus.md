@@ -146,12 +146,11 @@ While I will submit a final grade for this course to the Registrar
 at the end of the semester, *I will not grade individual assignments.*
 Instead, I will give you feedback in Canvas on your log books, 
 brief reports, and a draft(s) of your final paper, and I will assign a
-numerical status code:
+numerical status:
 
 - **0**: Missing/Unable to Assess
 - **1**: Needs Revision (resubmission strongly recommended)
-- **2**: Meets guidelines (resubmissions accepted)
-- **3**: Exceeds guidelines
+- **2**: Complete (resubmissions accepted)
 
 I will also collect three self evaluations from you addressing
 your learning and how the course is going throughout the
@@ -163,13 +162,14 @@ course.
 *Note: The Canvas grade book will report a raw numerical score 
 based on the status codes for logs, reports, the paper, and reflections. 
 This might serve as a very rough indicator of progress, but it is not 
-your grade.*
+your grade. I am happy to meet with you at any point to discuss how 
+you are doing.*
 
 Near the end of the semester, you will write a final self evaluation of 
-your work in which you will propose a final grade. That will serve as 
-a starting point for an individual meeting to review my feedback and 
-your reflections. I will determine your final grade in our meeting, with 
-possible stipulations based on work not yet handed in.
+your work in which you will propose a final grade.  I will then 
+determine your final grade based on your work for the course, my 
+feedback on your work, and your self evaluations and my feedback
+on those, with possible stipulations based on work not yet handed in.
 
 ## Collaboration, Acknowledgment, and Academic Honesty
 
