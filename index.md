@@ -20,6 +20,7 @@
 - [Lab 6](labs/PHYS328_Lab6.ipynb)
 
 ### Evaluations
+- [Evaluation 0](eval/eval0.html){:target="_blank"}
 - [Evaluation 1](eval/eval1.html){:target="_blank"}
 - [Evaulation 2](eval/eval2.html){:target="_blank"}
 - [Final Evaluation](eval/eval_final.html){:target="_blank"}

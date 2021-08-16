@@ -138,8 +138,8 @@ online L<SUP>A</SUP>T<SUB>E</SUB>X development environment.
 
 ## Assessment
 
-There is a growing body of evidence that grades do not facilitate
---- and can actually shut down --- learning (see [Blum, Susan D., and
+There is a growing body of evidence that grades do not facilitate learning
+--- and can actually shut it down (see [Blum, Susan D., and
 Alfie Kohn. Ungrading, WVU Press, 2020](https://ursinuscollege.on.worldcat.org/search?sortKey=LIBRARY&databaseList=&queryString=au%3Ablum+ti%3AUngrading){:target="_blank"}). 
 
 While I will submit a final grade for this course to the Registrar
@@ -152,7 +152,7 @@ numerical status:
 - **1**: Needs Revision (resubmission strongly recommended)
 - **2**: Complete (resubmissions accepted)
 
-I will also collect three self evaluations from you addressing
+I will also collect periodic self evaluations from you addressing
 your learning and how the course is going throughout the
 semester. These will carry a "Complete/Incomplete" status (1/0)
 in Canvas. I will give you feedback on these reflections, so that we 
