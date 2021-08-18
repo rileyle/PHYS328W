@@ -194,24 +194,11 @@ for a detailed description of College policies related to
 
 ## Attendance
 
-In keeping with a strong liberal arts tradition that encourages active
-learning and complete participation in the education process, the
-college expects students to attend class. Attendance in a laboratory
-course involving significant group work is crucial. 
+It is anticipated that all classes in Fall 2021 will take place in-person. Remote teaching will only be allowed in extenuating and short-term circumstances. The success of this laboratory course depends on your presence in the lab. Four or more unexcused absences may result in a grade of 'F' in the course.
 
-The Office of Academic Affairs, the Office of Student Affairs, and the
-Wellness Center do not provide excused absences from class for any
-reason (illness, family, personal, etc.). In the event that a student
-experiences a significant health problem or other issue that may
-prevent them from performing adequately in their academic work and/or
-attending class for a number of days, students should notify the
-Office of Student Affairs. The Student Affairs phone and email contact
-is Lynda Manz: [lmanz@ursinus.edu](mailto:lmanz@ursinus.edu) or 
-610-409-3590. In emergencies where faculty notification is not
-feasible, the Office of Student Affairs staff can assist students with
-faculty notifications. Upon students' return to class, it is their
-responsibility to talk to professors and to develop a plan for making
-up missed work.
+If you have exceptional circumstances that will affect your attendance, please discuss them with me. If you are unable to attend class due to quarantine, isolation, or Covid-like symptoms in advance of test results, contact me, and we will work out a plan to make up work you have missed. 
+
+The Institute for Student Success (ISS) can support students who are experiencing significant health problems or other issues that may prevent them from performing adequately in their academic work. If you require this support, please contact the ISS coordinator, Stephanie Stefanik (sstefanik@ursinus.edu; (610) 409 - 3400). Students who wish to discuss reasonable accommodations should contact Dr. Dolly Singley (dsingley@ursinus.edu).
 
 ## Disability Statement
 
