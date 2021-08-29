@@ -10,7 +10,7 @@ Tuesdays and Thursdays, 10:00 - 11:15 am Pfahler Hall 013
 
 ## Instructor
 
-[Dr. Lew Riley](https://www.ursinus.edu/live/profiles/189-lew-riley){:target="_blank"},
+[Dr. Lew Riley](https://www.ursinus.edu/live/profiles/189-lew-riley){:target="_blank"} (he|him),
 [lriley@ursinus.edu](mailto:lriley@ursinus.edu), Pfahler Hall 112D,
 ext. 4307, 
 [schedule](https://rileyle.github.io/schedule.html){:target="_blank"}
@@ -152,7 +152,7 @@ numerical status:
 - **1**: Needs Revision (resubmission strongly recommended)
 - **2**: Complete (resubmissions accepted)
 
-I will also collect periodic self evaluations from you addressing
+I will collect periodic self evaluations from you addressing
 your learning and how the course is going throughout the
 semester. These will carry a "Complete/Incomplete" status (1/0)
 in Canvas. I will give you feedback on these reflections, so that we 
