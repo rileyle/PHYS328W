@@ -22,8 +22,8 @@ circuits, including DC and AC circuits, transistors, and operational
 amplifiers with emphasis on laboratory techniques and the written
 communication of scientific results. Prerequisite: PHYS-122.
 
-This is a 2 semester hour course. One hour of lecture; an average of
-three hours of laboratory per week. Two semester hours.
+This is a 2 semester hour course. An average of three hours of
+laboratory per week.
 
 ## Learning Goals
 
