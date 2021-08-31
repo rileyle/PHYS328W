@@ -45,6 +45,6 @@ I have shared a folder with you on OneDrive where you should keep all of your Ju
 - Run Anaconda Navigator, select the environment you set up for this course, and launch JupyterLab.  A JupyterLab console should open in a tab in your web browser.
 - Download the [JupyterLab Tutorial](JupyterLabTutorial.ipynb) to the Tutorial subfolder of your shared PHYS328W_yourname folder, and open it in JupyterLab:
   - Show the File Manager panel by clicking on the folder icon in the vertical button bar to the far left of the JupyterLab console. 
-  - Navigate to PHYS328W_yourname/Tutorial.
+  - Navigate to your PHYS328W_yourname folder, and create a Tutorial subfolder.
   - Double-click on JupyterLabTutorial.ipynb to open the notebook. 
 - Helpful Hint: The "Table of Contents" button in the vertical button bar to the far left of the JupyterLab console shows a clickable list of the headers in the current notebook. This makes navigating long notebooks easier. 
