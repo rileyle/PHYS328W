@@ -1,36 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.58 10.485" version="1.2">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 7.455 6.848" version="1.2">
 <defs>
 <g>
 <symbol overflow="visible" id="glyph0-0">
 <path style="stroke:none;" d=""/>
 </symbol>
 <symbol overflow="visible" id="glyph0-1">
-<path style="stroke:none;" d="M 5.03125 -7.5625 L 4.046875 -7.5625 L 0.453125 0 L 8.609375 0 Z M 3.28125 -4.234375 C 3.890625 -5.546875 4.28125 -6.375 4.421875 -6.8125 C 4.453125 -6.671875 4.53125 -6.453125 5.125 -5.171875 L 7.109375 -0.90625 L 1.71875 -0.90625 Z M 3.28125 -4.234375 "/>
-</symbol>
-<symbol overflow="visible" id="glyph1-0">
-<path style="stroke:none;" d=""/>
-</symbol>
-<symbol overflow="visible" id="glyph1-1">
-<path style="stroke:none;" d="M 7.1875 -2.515625 C 7.375 -2.515625 7.5625 -2.515625 7.5625 -2.71875 C 7.5625 -2.9375 7.375 -2.9375 7.1875 -2.9375 L 1.28125 -2.9375 C 1.09375 -2.9375 0.90625 -2.9375 0.90625 -2.71875 C 0.90625 -2.515625 1.09375 -2.515625 1.28125 -2.515625 Z M 7.1875 -2.515625 "/>
-</symbol>
-<symbol overflow="visible" id="glyph2-0">
-<path style="stroke:none;" d=""/>
-</symbol>
-<symbol overflow="visible" id="glyph2-1">
-<path style="stroke:none;" d="M 8.84375 -7.5625 L 7.890625 -7.5625 L 5.5625 -5 C 5.203125 -4.609375 4.859375 -4.203125 4.53125 -3.78125 C 4.453125 -4 4.3125 -4.3125 4.1875 -4.5625 L 3.046875 -7.03125 L 2.78125 -7.5625 L 1.640625 -7.5625 L 3.8125 -3.03125 L 3.15625 0 L 4.09375 0 L 4.75 -3.03125 Z M 8.84375 -7.5625 "/>
+<path style="stroke:none;" d="M 4.84375 -2.71875 C 4.84375 -3.890625 3.875 -4.84375 2.71875 -4.84375 C 1.546875 -4.84375 0.59375 -3.875 0.59375 -2.71875 C 0.59375 -1.578125 1.546875 -0.609375 2.71875 -0.609375 C 3.875 -0.609375 4.84375 -1.5625 4.84375 -2.71875 Z M 4.84375 -2.71875 "/>
 </symbol>
 </g>
 </defs>
 <g id="surface1">
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-1" x="1" y="8.576"/>
-</g>
-<g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph1-1" x="12.515" y="8.576"/>
-</g>
-<g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph2-1" x="23.424" y="8.576"/>
+  <use xlink:href="#glyph0-1" x="1" y="5.848"/>
 </g>
 </g>
 </svg>
