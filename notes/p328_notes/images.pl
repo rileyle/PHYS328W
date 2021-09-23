@@ -1183,7 +1183,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}\begin{center}
 {}
 \includegraphics{acvdivider.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}center{htmlimage{align='center'}{}includegraphics{kirchhoffsigns.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1192,7 +1192,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}\begin{center}
 {}
 \includegraphics{kirchhoffsigns.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}center{htmlimage{align='center'}{}includegraphics{rlccircuit.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1201,7 +1201,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}\begin{center}
 {}
 \includegraphics{rlccircuit.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}center{htmlimage{align='center'}{}includegraphics{thevenin.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1210,7 +1210,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}\begin{center}
 {}
 \includegraphics{thevenin.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{commonemitter.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1219,7 +1219,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{commonemitter.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{differenceamp.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1228,7 +1228,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{differenceamp.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{differentiator.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1237,7 +1237,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{differentiator.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{dmm.eps}{par{{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1246,7 +1246,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{dmm.eps}
-\par\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\par\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{ebersmollcircuit.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1255,7 +1255,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{ebersmollcircuit.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{emitterfollower.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1264,7 +1264,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{emitterfollower.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{integrator.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1273,7 +1273,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{integrator.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{invertingamp.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1282,7 +1282,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{invertingamp.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{noninvertingamp.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1291,7 +1291,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{noninvertingamp.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{rnetwork.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1300,7 +1300,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{rnetwork.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{seriesparallel.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1309,7 +1309,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{seriesparallel.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{summingamp.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1318,7 +1318,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{summingamp.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{transistors.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1327,7 +1327,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{transistors.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{transistorswitch.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1336,7 +1336,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{transistorswitch.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{includegraphics{vfollower.eps}{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1345,7 +1345,7 @@ $cached_env_img{$key} = q|<IMG
  ALT="\begin{figure}{}
 \begin{center}
 \includegraphics{vfollower.eps}
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{{scalebox{0.5}{includegraphics{breadboard.eps}}{{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1356,7 +1356,7 @@ $cached_env_img{$key} = q|<IMG
 \scalebox{0.5}{
 \includegraphics{breadboard.eps}
 }
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{{scalebox{0.5}{includegraphics{diodevi.eps}}{{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1367,7 +1367,7 @@ $cached_env_img{$key} = q|<IMG
 \scalebox{0.5}{
 \includegraphics{diodevi.eps}
 }
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{{scalebox{0.7}{includegraphics{opamp_model.eps}}{{{center{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1378,7 +1378,7 @@ $cached_env_img{$key} = q|<IMG
 \scalebox{0.7}{
 \includegraphics{opamp_model.eps}
 }
-\end{center}\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{center}\end{figure}">|; 
 
 $key = q/{figure}htmlimage{align='center'}{}center{{scalebox{0.8}{includegraphics{schematic.eps}}{center{{{{figure};LFS=11;FSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
@@ -1390,12 +1390,12 @@ $cached_env_img{$key} = q|<IMG
 \includegraphics{schematic.eps}
 }
 \end{center}
-\end{figure}">;WIDTH="0" HEIGHT="0"|; 
+\end{figure}">|; 
 
-$key = q/|V_{in}|slash|V_{out}|;MSF=1.6;LFS=11;AAT/;
+$key = q/|V_{out}|slash|V_{in}|;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  STYLE="height: 2.65ex; vertical-align: -0.67ex; " SRC="|."$dir".q|img249.svg"
- ALT="$\vert V_{in}\vert/\vert V_{out}\vert$">|; 
+ ALT="$\vert V_{out}\vert/\vert V_{in}\vert$">|; 
 
 1;
 
