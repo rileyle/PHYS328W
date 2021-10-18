@@ -14,7 +14,7 @@
 ### Labs
 - [[Lab 1](labs/PHYS328_Lab1.ipynb)]
 - [[Lab 2](labs/PHYS328_Lab2.ipynb)]
-- [[Lab 3](labs/PHYS328_Lab3.ipynb)] [[Lab 3 Analysis (mp4)](labs/p328_Lab3_Analysis.mp4)]
+- [[Lab 3](labs/PHYS328_Lab3.ipynb)] [[Lab 3 Analysis (PDF)](labs/p328_Lab3_Analysis.pdf)] [[Lab 3 Analysis (mp4)](labs/p328_Lab3_Analysis.mp4)]
 - [[Lab 4](labs/PHYS328_Lab4.ipynb)]
 - [[Lab 5](labs/PHYS328_Lab5.ipynb)]
 - [[Lab 6](labs/PHYS328_Lab6.ipynb)]
