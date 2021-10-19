@@ -12,7 +12,7 @@
 ### Python/JupyterLab: [Setup](jupyter/jupyter.html){:target="_blank"}, [Resources](jupyter/resources.html){:target="_blank"}
 
 ### Labs
-- Lab 1: Kirchhoff's Rules and Equivalent Circuits [[Jupyter Notebook](labs/PHYS328_Lab1.ipynb)]
+- Lab 1: Kirchhoff's Rules and Equivalent Circuits [[Notebook](labs/PHYS328_Lab1.ipynb)]
 - Lab 2: RC Filters [[Notebook](labs/PHYS328_Lab2.ipynb)]
 - Lab 3: An RLC Filter [[Notebook](labs/PHYS328_Lab3.ipynb)] [[Analysis (PDF)](labs/p328_Lab3_Analysis.pdf){:target="_blank"}] [[Analysis (mp4)](labs/p328_Lab3_Analysis.mp4){:target="_blank"}]
 - Lab 4: Diode Circuits [[Notebook](labs/PHYS328_Lab4.ipynb)]
