@@ -4,6 +4,8 @@ title: PHYS328W Log Book Rubric
 
 layout: single
 
+tags:   assessment
+
 ---
 
 PHYS328W: Guidelines for Log Books

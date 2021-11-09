@@ -4,6 +4,8 @@ title: PHYS328W Paper Rubric
 
 layout: single
 
+tags:   assessment
+
 ---
 
 PHYS328W: Guidelines for Papers

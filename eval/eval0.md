@@ -1,6 +1,7 @@
 ---
 title:      Evaluation 1
 layout:     single
+tags:       assessment
 ---
 Periodic evaluations keep us focused on the goals of the course, help us identify and address challenges and other issues so that this can be a successful learning experience, and serve as an ongoing conversation that will eventually result in your final grade. *This is mainly a self evaluation, but please also address any issues with the course that impact your learning.*
 
