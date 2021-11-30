@@ -674,11 +674,12 @@ Figure~\ref{fig:rlcvphi} illustrates the frequency response of the
 circuit. The \textbf{voltage gain} $A_V = V_{out}/V_{in}$ is plotted
 in panel (a) and the phase angle $\phi$ is plotted in panel (b). This
 circuit acts as a \textbf{band pass filter}. It transmits the input
-signal in a range of frequencies. The phase angle plot shows that the
-impedance is dominated by the capacitor at low frequencies and by the
-inductor at high frequencies as we would expect based on the frequency
-dependence of the respective reactances (Equations~\ref{eq:xl} and 
-\ref{eq:xc}).
+signal in a range of frequencies. The \textbf{band width} of the
+filter is the difference between its 3~dB points. The phase angle plot
+shows that the impedance is dominated by the capacitor at low
+frequencies and by the inductor at high frequencies as we would expect
+based on the frequency dependence of the respective reactances
+(Equations~\ref{eq:xl} and \ref{eq:xc}).
 
 We can also make sense of the qualitative behavior of the phase angle
 using the CIVIL mnemonic. At low frequencies, where the capacitor
@@ -1804,7 +1805,10 @@ incident power
 \]
 The power is proportional to the square of the voltage, so the 3~dB
 point is the frequency (or frequencies) at which the voltage gain
-$|V_{out}|/|V_{in}|$ is $1/\sqrt{2}$. 
+$A_v = |V_{out}|/|V_{in}|$ is $1/\sqrt{2}$. Some circuits have a maximum
+voltage gain that is different than 1. In these cases, the 3~dB
+points are the frequencies at which $|A_v|/|A_{v_{max}}|$ is
+$1/\sqrt{2}$. 
 
 %% \section{OrCAD Capture}
 %% \label{sec:orcad}

@@ -101,6 +101,11 @@ $cached_env_img{$key} = q|<IMG
  STYLE="height: 3.64ex; vertical-align: -1.38ex; " SRC="|."$dir".q|img85.svg"
  ALT="$A_v = \frac{1}{\sqrt{2}}$">|; 
 
+$key = q/A_v=|V_{out}|slash|V_{in}|;MSF=1.6;LFS=11;AAT/;
+$cached_env_img{$key} = q|<IMG
+ STYLE="height: 2.65ex; vertical-align: -0.67ex; " SRC="|."$dir".q|img249.svg"
+ ALT="$A_v = \vert V_{out}\vert/\vert V_{in}\vert$">|; 
+
 $key = q/A_vapprox1;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
  STYLE="height: 2.30ex; vertical-align: -0.44ex; " SRC="|."$dir".q|img145.svg"
@@ -1392,10 +1397,10 @@ $cached_env_img{$key} = q|<IMG
 \end{center}
 \end{figure}">;WIDTH="0" HEIGHT="0"|; 
 
-$key = q/|V_{out}|slash|V_{in}|;MSF=1.6;LFS=11;AAT/;
+$key = q/|A_v|slash|A_{v_{max}}|;MSF=1.6;LFS=11;AAT/;
 $cached_env_img{$key} = q|<IMG
- STYLE="height: 2.65ex; vertical-align: -0.67ex; " SRC="|."$dir".q|img249.svg"
- ALT="$\vert V_{out}\vert/\vert V_{in}\vert$">|; 
+ STYLE="height: 2.65ex; vertical-align: -0.67ex; " SRC="|."$dir".q|img251.svg"
+ ALT="$\vert A_v\vert/\vert A_{v_{max}}\vert$">|; 
 
 1;
 
