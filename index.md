@@ -19,8 +19,8 @@
 - Lab 5: Transistor Circuits [[Notebook](labs/PHYS328_Lab5.ipynb)]
 - Lab 6: AM Radio Receiver [[Notebook](labs/PHYS328_Lab6.ipynb)]
 
-### Evaluations
-- [Evaluation 0](eval/eval0.html){:target="_blank"}
-- [Evaluation 1](eval/eval1.html){:target="_blank"}
-- [Evaulation 2](eval/eval2.html){:target="_blank"}
-- [Final Evaluation](eval/eval_final.html){:target="_blank"}
+### Reflections
+- [Reflection 0](reflect/reflect0.html){:target="_blank"}
+- [Reflection 1](reflect/reflect1.html){:target="_blank"}
+- [Reflection 2](reflect/reflect2.html){:target="_blank"}
+- [Final Reflection](reflect/reflect_final.html){:target="_blank"}
