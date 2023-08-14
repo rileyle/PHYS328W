@@ -35,10 +35,12 @@
 \pagestyle{myheadings}
 
 
-\title{PHYS328W Notes} \author{L.A. Riley} \date{Fall 2021}
+\title{PHYS328W Notes} \author{L.A. Riley} \date{Fall 2023}
 
 
 
+
+\usepackage[latin1]{inputenc}
 
 
 
@@ -64,6 +66,7 @@
 \addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
 \addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
 \addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{468pt}
 \setlength{\textheight}{504pt}
 \newwrite\lthtmlwrite
 \makeatletter
@@ -82,43 +85,39 @@
  \def\phantompar{\csname par\endcsname}\normalsize}%
 \def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
 \usepackage[tightpage,active]{preview}
-\PreviewBorder=1bp
 \newbox\lthtmlPageBox
 \newdimen\lthtmlCropMarkHeight
 \newdimen\lthtmlCropMarkDepth
-\long\def\lthtmlTightVBoxA#1{\def\lthtmllabel{#1}
-    \setbox\lthtmlPageBox\vbox\bgroup\catcode`\_=8 }%
-\long\def\lthtmlTightVBoxZ{\egroup
+\long\def\lthtmlTightVBox#1#2{%
+    \setbox\lthtmlPageBox\vbox{\hbox{\catcode`\_=8 #2}}%
     \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
     \lthtmlCropMarkDepth=\dp\lthtmlPageBox
-    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
-    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
     \begin{preview}\copy\lthtmlPageBox\end{preview}}%
-\long\def\lthtmlTightFBoxA#1{\def\lthtmllabel{#1}%
-    \adjustnormalsize\setbox\lthtmlPageBox=\vbox\bgroup\hbox\bgroup %
+\long\def\lthtmlTightFBox#1#2{%
+    \adjustnormalsize\setbox\lthtmlPageBox=\vbox\bgroup %
     \let\ifinner=\iffalse \let\)\liih@math %
-    \bgroup\catcode`\_=8 }%
-\long\def\lthtmlTightFBoxZ{\egroup\egroup
+    {\catcode`\_=8 #2}%
     \@next\next\@currlist{}{\def\next{\voidb@x}}%
     \expandafter\box\next\egroup %
     \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
     \lthtmlCropMarkDepth=\dp\lthtmlPageBox
-    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
-    \lthtmltypeout{^^J:\lthtmllabel:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
     \begin{preview}\copy\lthtmlPageBox\end{preview}}%
-    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBoxA{#1}{\hbox\bgroup#2\egroup}\lthtmlTightVBoxZ}
-    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBoxA{#1}{\hbox\bgroup#2\egroup}\lthtmlTightVBoxZ}
-    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBoxA{#1}{#2}\lthtmlTightVBoxZ}
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBox{#1}{#2}}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBox{#1}{#2}}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBox{#1}{#2}}
     \long\def\lthtmldisplayB#1#2\lthtmldisplayZ{\\edef\preveqno{(\theequation)}%
-        \lthtmlTightVBoxA{#1}{\let\@eqnnum\relax#2}\lthtmlTightVBoxZ}
-    \long\def\lthtmlfigureA#1{\let\@savefreelist\@freelist
-        \lthtmlTightFBoxA{#1}}
-    \long\def\lthtmlfigureZ{
-        \lthtmlTightFBoxZ\global\let\@freelist\@savefreelist}
-    \long\def\lthtmlpictureA#1{\let\@savefreelist\@freelist
-        \lthtmlTightVBoxA{#1}}
-    \long\def\lthtmlpictureZ{
-        \lthtmlTightVBoxZ\global\let\@freelist\@savefreelist}
+        \lthtmlTightVBox{#1}{\let\@eqnnum\relax#2}}
+    \long\def\lthtmlfigureA#1#2\lthtmlfigureZ{\let\@savefreelist\@freelist
+        \lthtmlTightFBox{#1}{#2}\global\let\@freelist\@savefreelist}
+    \long\def\lthtmlpictureA#1#2\lthtmlpictureZ{\let\@savefreelist\@freelist
+        \lthtmlTightVBox{#1}{#2}\global\let\@freelist\@savefreelist}
 \def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
   \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
   \else\expandafter\vss\fi}%
@@ -149,31 +148,31 @@
 % !!! IMAGES START HERE !!!
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline3330}%
+\lthtmlinlinemathA{tex2html_wrap_inline4502}%
 $Z_1$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline3332}%
+\lthtmlinlinemathA{tex2html_wrap_inline4504}%
 $Z_2$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline3336}%
+\lthtmlinlinemathA{tex2html_wrap_inline4508}%
 $\omega _o$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline3339}%
+\lthtmlinlinemathA{tex2html_wrap_inline4511}%
 $V_{out}/V_{in}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline3341}%
+\lthtmlinlinemathA{tex2html_wrap_inline4513}%
 $\phi $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
@@ -193,7 +192,7 @@ $I$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3350}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4522}%
 $\displaystyle V=IR
 $%
 \lthtmlindisplaymathZ
@@ -206,7 +205,7 @@ $R$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3353}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4525}%
 $\displaystyle P_\mathrm{diss} = I^2 R = \frac{V^2}{R}
 $%
 \lthtmlindisplaymathZ
@@ -231,14 +230,14 @@ $R_\mathrm{eq}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3360}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4532}%
 $\displaystyle R_{eq} = R_1 + R_2 + R_3 + \ldots
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3362}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4534}%
 $\displaystyle \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} +
   \ldots
 $%
@@ -252,55 +251,55 @@ $R_1||R_2||R_3...$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3366}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4538}%
 $\displaystyle V_1$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3367}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4539}%
 $\textstyle =$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3368}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4540}%
 $\displaystyle \frac{R_1}{R_1 + R_2} V$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3369}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4541}%
 $\displaystyle V_2$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3371}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4543}%
 $\displaystyle \frac{R_2}{R_1 + R_2} V$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3374}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4546}%
 $\displaystyle I_1$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3376}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4548}%
 $\displaystyle \frac{R_2}{R_1 + R_2} I$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3377}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4549}%
 $\displaystyle I_2$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3379}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4551}%
 $\displaystyle \frac{R_1}{R_1 + R_2} I$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
@@ -367,7 +366,7 @@ $\Delta-Y$%
 
 \stepcounter{subsection}
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3396}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4568}%
 $\displaystyle \sum_\mathrm{loop} V_i = 0
 $%
 \lthtmlindisplaymathZ
@@ -391,7 +390,7 @@ $V_i$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3402}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4574}%
 $\displaystyle \sum_\mathrm{junction} I_i = 0
 $%
 \lthtmlindisplaymathZ
@@ -442,7 +441,7 @@ $\pi/2$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3420}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4592}%
 $\displaystyle X_L = j \omega L
 $%
 \lthtmlindisplaymathZ
@@ -479,7 +478,7 @@ $i$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3427}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4599}%
 $\displaystyle X_C = -\frac{j}{\omega C}
 $%
 \lthtmlindisplaymathZ
@@ -499,25 +498,25 @@ $Z$%
 
 \stepcounter{subsection}
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3435}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4607}%
 $\displaystyle v(t)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3437}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4609}%
 $\displaystyle Re(V \, e^{\,j\omega t + \phi_v}) = V \cos(\omega t + \phi_v)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3438}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4610}%
 $\displaystyle i(t)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3440}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4612}%
 $\displaystyle Re(I \, e^{\,j\omega t + \phi_i}) = I \cos(\omega t + \phi_i)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
@@ -541,57 +540,57 @@ $e^{j \omega t}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3447}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4619}%
 $\displaystyle \mathbf{V}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3449}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4621}%
 $\displaystyle V \, e^{\,j \phi_v}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3450}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4622}%
 $\displaystyle \mathbf{I}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3452}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4624}%
 $\displaystyle I \, e^{\,j \phi_i}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3456}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4628}%
 $\displaystyle Re(\mathbf{V} \, e^{\,j\omega t})$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3459}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4631}%
 $\displaystyle Re(\mathbf{I} \, e^{\,j\omega t})$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3461}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4633}%
 $\displaystyle \mathbf{I} = \frac{\mathbf{V}}{Z}
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3463}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4635}%
 $\displaystyle \mathbf{P} = \mathbf{I^*V} = IV \, e^{\,j(\phi_v - \phi_i)}
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3465}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4637}%
 $\displaystyle \left< P \right> = \frac{IV}{2} \cos(\phi_v - \phi_i)
                    = \frac{V^2}{2Z} \cos(\phi_v - \phi_i)
 $%
@@ -641,21 +640,21 @@ $\mathbf{I}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3485}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4657}%
 $\displaystyle \mathbf{V_{in}} - \mathbf{I} Z_1 - \mathbf{I} Z_2 = 0
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3488}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4660}%
 $\displaystyle \mathbf{V_{out}} = \mathbf{I} Z_2
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3490}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4662}%
 $\displaystyle \mathbf{V_{out}} = \frac{Z_2}{Z_1 + Z_2} \mathbf{V_{in}}
 $%
 \lthtmlindisplaymathZ
@@ -668,7 +667,7 @@ $\mathbf{V_{out}}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3493}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4665}%
 $\displaystyle V_{out} = \sqrt{\mathbf{V_{out}^* V_{out}}}
 $%
 \lthtmlindisplaymathZ
@@ -681,7 +680,7 @@ $\mathbf{V_{in}}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3502}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4674}%
 $\displaystyle \tan \phi = \frac{ Im \left( \frac{Z_2}{Z_1 + Z_2} \right) }
                    { Re \left( \frac{Z_2}{Z_1 + Z_2} \right) }
 $%
@@ -695,7 +694,7 @@ $A_V$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3509}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4681}%
 $\displaystyle A_V = \frac{V_{out}}{V_{in}} = \frac{|\mathbf{V_{out}}|}{|\mathbf{V_{in}}|}
                              = \left| \frac{Z_2}{Z_1 + Z_2} \right|
                              = \sqrt{ \left( \frac{Z_2}{Z_1 + Z_2} \right)^*
@@ -734,14 +733,14 @@ $Z_2 = R$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3518}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4690}%
 $\displaystyle Z_1 = j \left( \omega L - \frac{1}{\omega C} \right)
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3520}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4692}%
 $\displaystyle \frac{V_{out}}{V_{in}} = \sqrt{\frac{R^2}{R^2 + (\omega L - 1/\omega C)^2}}
 $%
 \lthtmlindisplaymathZ
@@ -754,7 +753,7 @@ $a + jb$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3523}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4695}%
 $\displaystyle \frac{Z_2}{Z_1 + Z_2}
   = \frac{R}{R + j \left( \omega L - \frac{1}{\omega C} \right)}
   = \frac{R^2 - j R \left( \omega L - \frac{1}{\omega C} \right)}
@@ -764,7 +763,7 @@ $%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3525}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4697}%
 $\displaystyle \tan \phi = \frac{\frac{1}{\omega C} - \omega L}{R}
 $%
 \lthtmlindisplaymathZ
@@ -790,7 +789,7 @@ t_{V_{out}} - t_{V_{in}}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3531}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4703}%
 $\displaystyle \Delta t = \frac{\phi}{\omega} = \frac{\phi}{2 \pi f} = \frac{\phi}{2 \pi} T
 $%
 \lthtmlindisplaymathZ
@@ -855,7 +854,7 @@ $X_C$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3553}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4725}%
 $\displaystyle \omega_o = \frac{1}{\sqrt{LC}}
 $%
 \lthtmlindisplaymathZ
@@ -912,7 +911,7 @@ $10^{-8}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlpictureA{tex2html_wrap3569}%
+\lthtmlpictureA{tex2html_wrap4741}%
 \includegraphics{diode.eps}%
 \lthtmlpictureZ
 \lthtmlcheckvsize\clearpage}
@@ -943,7 +942,7 @@ $V_{BE}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3580}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4752}%
 $\displaystyle I_C = I_o \left( e^{\frac{V_{BE}}{kT/e}} - 1 \right)
 $%
 \lthtmlindisplaymathZ
@@ -992,7 +991,7 @@ $\Omega$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3599}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4771}%
 $\displaystyle r_e = \frac{d V_{BE}}{d I_C} = \frac{kT/e}{I_C}
 $%
 \lthtmlindisplaymathZ
@@ -1029,7 +1028,7 @@ $h_{FE}$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3609}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4781}%
 $\displaystyle I_C = h_{FE} I_B
 $%
 \lthtmlindisplaymathZ
@@ -1204,7 +1203,7 @@ $C_2$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3678}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4850}%
 $\displaystyle A_v = -\frac{R_C}{R_E}
 $%
 \lthtmlindisplaymathZ
@@ -1395,14 +1394,14 @@ $R_f$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3737}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4909}%
 $\displaystyle I = \frac{V_{in}}{R_1} = \frac{-V_{out}}{R_f}
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3739}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4911}%
 $\displaystyle A_v = -\frac{R_f}{R_1}
 $%
 \lthtmlindisplaymathZ
@@ -1439,14 +1438,14 @@ $R_f/R_1$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3757}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4929}%
 $\displaystyle V_{in} = \frac{R_1}{R_1 + R_f} V_{out}
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3759}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4931}%
 $\displaystyle A_v = 1 + \frac{R_f}{R_1}
 $%
 \lthtmlindisplaymathZ
@@ -1501,43 +1500,43 @@ $A_v = 1$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3783}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4955}%
 $\displaystyle \frac{V_1}{R_1}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3786}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4958}%
 $\displaystyle \frac{V_2}{R_2}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3787}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4959}%
 $\displaystyle I_3$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3789}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4961}%
 $\displaystyle \frac{V_3}{R_3}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3790}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4962}%
 $\displaystyle I_f$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3792}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4964}%
 $\displaystyle \frac{V_{out}}{R_f}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3794}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4966}%
 $\displaystyle
   I_1 + I_2 + I_3 = I_f
 $%
@@ -1545,7 +1544,7 @@ $%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3796}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4968}%
 $\displaystyle
   V_{out} = -\left( \frac{R_1}{R_f} V_1 + \frac{R_2}{R_f} V_2
                  + \frac{R_3}{R_f} V_3 \right)  
@@ -1572,44 +1571,44 @@ $R_1/R_f$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3808}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4980}%
 $\displaystyle I_1 + I_2 = I_3 + I_4
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3812}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4984}%
 $\displaystyle \frac{V_1 - V_-}{R_1}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3815}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4987}%
 $\displaystyle \frac{V_2 - V_+}{R_1}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3818}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4990}%
 $\displaystyle \frac{V_- - V_{out}}{R_2}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3819}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4991}%
 $\displaystyle I_4$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3821}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4993}%
 $\displaystyle \frac{V_+}{R_2}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3823}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4995}%
 $\displaystyle
   V_+ = \frac{R_2}{R_1 + R_2} V_2
 $%
@@ -1623,7 +1622,7 @@ $V_- = V_+$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3826}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay4998}%
 $\displaystyle V_{out} = - \frac{R_2}{R_1} \left(V_1 - V_2\right)
 $%
 \lthtmlindisplaymathZ
@@ -1667,7 +1666,7 @@ $C_f$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3840}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5012}%
 $\displaystyle
   V_{out} = - IR
 $%
@@ -1675,14 +1674,14 @@ $%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3842}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5014}%
 $\displaystyle V_{in} = \frac{Q}{C}
 $%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3845}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5017}%
 $\displaystyle
   I \equiv \frac{dQ}{dt}
 $%
@@ -1690,7 +1689,7 @@ $%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3847}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5019}%
 $\displaystyle
   V_{out} = - RC \frac{d V_{in}}{dt}
 $%
@@ -1716,7 +1715,7 @@ $RC$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3858}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5030}%
 $\displaystyle
   I = \frac{V_{in}}{R}
 $%
@@ -1724,7 +1723,7 @@ $%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3860}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5032}%
 $\displaystyle
   V_{out} = -\frac{Q}{C}
 $%
@@ -1738,7 +1737,7 @@ $I \equiv dQ/dt$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3863}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5035}%
 $\displaystyle
   Q = \int dQ = \frac{1}{R} \int V_{in} \, dt
 $%
@@ -1746,7 +1745,7 @@ $%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3865}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5037}%
 $\displaystyle
   V_{out} = - \frac{1}{RC} \int V_{in} \, dt
 $%
@@ -1769,7 +1768,7 @@ $%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlpictureA{tex2html_wrap3876}%
+\lthtmlpictureA{tex2html_wrap5048}%
 \includegraphics{var_capacitor.eps}%
 \lthtmlpictureZ
 \lthtmlcheckvsize\clearpage}
@@ -1810,8 +1809,8 @@ $%
 \lthtmlfigureA{figure948}%
 \begin{figure}  \htmlimage{align='center'}{}
   \begin{center}
-    %% Latex2html doesn't recognize the colortabl package, so...
-    \includegraphics{resistor_color_codes.eps}
+    %
+\includegraphics{resistor_color_codes.eps}
     \begin{eqnarray*}
       R = [\mathrm{band 1}][\mathrm{band 2}] 
       \times 10^{[\mathrm{band 3}]} & \pm & 5\%~(\mathrm{gold})\\
@@ -1866,7 +1865,7 @@ $Thing_2$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3906}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay5078}%
 $\displaystyle dB = 10 \log \left( \frac{\mathrm{Thing_2}}{\mathrm{Thing_1}} \right)
 $%
 \lthtmlindisplaymathZ
@@ -1903,11 +1902,12 @@ $^2$%
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay3917}%
-$\displaystyle 10 \log \left( \frac{P_{out}}{P_{in}} \right)
+\lthtmldisplayA{displaymath1098}%
+\begin{displaymath}
+10 \log \left( \frac{P_{out}}{P_{in}} \right)
 = 10 \log \left( \frac{1}{2} \right) = 10 (-0.3010) = -3.01
-$%
-\lthtmlindisplaymathZ
+\end{displaymath}%
+\lthtmldisplayZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
