@@ -98,9 +98,15 @@ I will collect periodic self evaluations from you addressing your learning and h
 
 Near the end of the semester, you will write a final self evaluation of your work in which you will propose a final grade.  I will then determine your final grade based on your work for the course, my feedback on your work, and your self evaluations and my feedback on those, with possible stipulations based on work not yet handed in.
 
+## On Due Dates
+
+While I expect you to do your best to hand in work on time, due dates are flexible, especially since I may sometimes ask you to revise your work. There is a firm deadline by which I must submit final grades for the course which will limit my ability to manage late work near the end of the semester.
+
 ## Collaboration, Acknowledgment, and Academic Honesty
 
 I encourage you to collaborate with each other on lab work. Not only can you get help when you need it, but you can help other people as well. Teaching is a very effective way to learn. While I encourage collaboration, it is also important that you understand your work and articulate your reasoning clearly. All of the writing in your reports and final paper must be your own. 
+
+Use of generative AI tools (ChatGPT, e.g.) to assist you with your writing for this course is off-limits for at least two reasons. First, developing your scientific writing skills is a goal of this course, and relying on someone or something else to do part or all of that work undermines your development as a writer and thinker. Second, the large language models on which generative AI writing tools are built are trained on the writing  of other people, and they offer no way to cite the sources of the writing they produce (see the next paragraph).
 
 Handing in someone else's writing or other work as your own is plagiarism, while receiving help which you acknowledge is not. Please clear up any questions you have about what constitutes plagiarism right away. Collaboration of any kind or copying someone else's work during an exam is cheating. If I believe that you have cheated, plagiarized, or committed any academic honesty violation, I will discuss the incident with you and consult with the Dean of the College regarding the consequences. (See the [Student Handbook](https://www.ursinus.edu/student-life/handbook/){:target="_blank"} for a detailed description of College policies related to [Academic Honesty](https://www.ursinus.edu/student-life/handbook/section-ii-additional-expectations-resources/academic-honesty/){:target="_blank"}.) 
 
