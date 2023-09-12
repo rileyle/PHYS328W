@@ -10,7 +10,7 @@ Tuesdays 9:00 - 11:50 am, Pfahler 013
 
 ## Instructor
 
-[Dr. Lew Riley](https://www.ursinus.edu/live/profiles/189-lew-riley){:target="_blank"} (he/him), [lriley@ursinus.edu](mailto:lriley@ursinus.edu), Pfahler Hall 112D, [schedule](https://rileyle.github.io/schedule.html){:target="_blank"}
+[Dr. Lew Riley](https://www.ursinus.edu/live/profiles/189-lew-riley){:target="_blank"} (he/him), [lriley@ursinus.edu](mailto:lriley@ursinus.edu), Pfahler Hall 112D, [schedule](https://rileyle.github.io/schedule.html){:target="_blank"}, [Bookings page](https://outlook.office365.com/owa/calendar/LewRileyOfficeHours@ursinuscollege365.onmicrosoft.com/bookings/){:target="_blank"}
 
 ## Course Description
 

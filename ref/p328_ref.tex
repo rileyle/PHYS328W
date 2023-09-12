@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage[usenames, dvipsnames]{color}
 \usepackage{colortbl}
+\usepackage{array}
 
 % Sans fonts
 \usepackage{sfmath}
@@ -47,12 +48,19 @@ $P_\mathrm{diss} = I^2 R = \frac{V^2}{R}$
 
 \subsubsection*{Kirchhoff's Rules}
 \begin{center}
-{\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{rl}
-\textbf{Loop Rule:}     & $\sum_\mathrm{loop} V_i = 0$\\
-\textbf{Junction Rule:} & $\sum_\mathrm{junction} I_i = 0$
-\end{tabular}
-}
+%{\renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{cc}
+    \begin{tabular}{rl}
+      \textbf{Loop:}     & $\sum_\mathrm{loop} V_i = 0$\\
+      & \\
+      \textbf{Junction:} & $\sum_\mathrm{junction} I_i = 0$\\
+    \end{tabular}
+    &
+    \raisebox{-0.5\height}{
+      \scalebox{0.7}{ \includegraphics{kirchhoffsigns.eps} }
+    }
+  \end{tabular}
+  %}
 \end{center}
 
 \subsubsection*{Phasor Analysis}
