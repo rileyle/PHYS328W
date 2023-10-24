@@ -341,7 +341,7 @@ remember that the voltage across a capacitor lags $\pi/2$ (half a
 period of oscillation) behind the current (C\underline{IV}), and the
 voltage across an inductor leads the current by $\pi/2$
 (\underline{VI}L). The voltage across a resistor is always in phase
-with the current.
+with the current. 
 \end{quote}
 \htmlrule
 
@@ -397,9 +397,11 @@ tool that simplifies the mathematics involved in circuit
 analysis. The real-valued observable voltage and current are obtained
 by  taking the real part of the complex voltage and current functions.
 \begin{eqnarray}
-  v(t) &=& Re(V \, e^{\,j\omega t + \phi_v}) = V \cos(\omega t + \phi_v)\\
+  v(t) &=& Re \left(V \, e^{\,j(\omega t + \phi_v}) \right)
+  = V \cos(\omega t + \phi_v)\\
   \nonumber
-  i(t) &=& Re(I \, e^{\,j\omega t + \phi_i}) = I \cos(\omega t + \phi_i)
+  i(t) &=& Re \left(I \, e^{\,j(\omega t + \phi_i)} \right)
+  = I \cos(\omega t + \phi_i)
 \end{eqnarray}
 In many cases, we are only interested in the amplitudes $V$ and
 $I$. In cases in which we do care about the phase, we typically
@@ -609,10 +611,15 @@ The phase angle $\phi$ is proportional to the time difference $\Delta t =
 t_{V_{out}} - t_{V_{in}}$ between the two signals, illustrated in
 panel (a) of the figure, as 
 \begin{equation}
-  \Delta t = \frac{\phi}{\omega} = \frac{\phi}{2 \pi f} = \frac{\phi}{2 \pi} T
+  \Delta t = \frac{\phi}{\omega} = -\frac{\phi}{2 \pi f} = -\frac{\phi}{2 \pi} T
   \label{eq:deltatphi}
 \end{equation}
-where $T$ is the period of oscillation of the input signal.
+where $T$ is the period of oscillation of the input signal. The minus
+sign in Eq.~\ref{eq:deltatphi} is due to the fact that a positive time
+difference corresponds to a $V_{out}$ that is delayed relative to
+$V_{in}$, corresponding to a negative (capacitive) phase
+angle. \textit{Warning: if you use the automated Phase measurement on a
+  digital oscilloscope, it will not account for this minus sign!}
 
 \begin{figure}[ht]
   \htmlimage{align='center'}{}
