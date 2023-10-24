@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.97 12.909" version="1.2">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.97 11.909" version="1.2">
 <defs>
 <g>
 <symbol overflow="visible" id="glyph0-0">
@@ -33,24 +33,34 @@
 <path style="stroke:none;" d="M 1.28125 2.71875 C 1.625 2.40625 2.359375 1.734375 2.859375 0.390625 C 3.296875 -0.78125 3.375 -1.9375 3.375 -2.71875 C 3.375 -6.25 1.796875 -7.703125 1.28125 -8.171875 L 0.609375 -8.171875 C 1.140625 -7.65625 2.515625 -6.25 2.515625 -2.71875 C 2.515625 -2.109375 2.484375 -0.84375 2.046875 0.453125 C 1.59375 1.71875 0.96875 2.359375 0.609375 2.71875 Z M 1.28125 2.71875 "/>
 </symbol>
 </g>
+<clipPath id="clip1">
+  <path d="M 19 0 L 22 0 L 22 11.910156 L 19 11.910156 Z M 19 0 "/>
+</clipPath>
+<clipPath id="clip2">
+  <path d="M 27 0 L 31 0 L 31 11.910156 L 27 11.910156 Z M 27 0 "/>
+</clipPath>
 </defs>
 <g id="surface1">
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-1" x="1" y="9.182"/>
+  <use xlink:href="#glyph0-1" x="0.5" y="8.682"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph1-1" x="6.03" y="10.818"/>
-  <use xlink:href="#glyph1-2" x="10.264514" y="10.818"/>
-  <use xlink:href="#glyph1-3" x="14.636911" y="10.818"/>
+  <use xlink:href="#glyph1-1" x="5.53" y="10.318"/>
+  <use xlink:href="#glyph1-2" x="9.764514" y="10.318"/>
+  <use xlink:href="#glyph1-3" x="14.136911" y="10.318"/>
+</g>
+<g clip-path="url(#clip1)" clip-rule="nonzero">
+<g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
+  <use xlink:href="#glyph2-1" x="18.258" y="8.682"/>
+</g>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph2-1" x="18.758" y="9.182"/>
+  <use xlink:href="#glyph0-2" x="22.5" y="8.682"/>
 </g>
+<g clip-path="url(#clip2)" clip-rule="nonzero">
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-2" x="23" y="9.182"/>
+  <use xlink:href="#glyph2-2" x="27.228" y="8.682"/>
 </g>
-<g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph2-2" x="27.728" y="9.182"/>
 </g>
 </g>
 </svg>

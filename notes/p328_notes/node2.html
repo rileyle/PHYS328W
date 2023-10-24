@@ -111,7 +111,7 @@ period of oscillation) behind the current (C<SPAN ID="txt169">IV</SPAN>), and th
 voltage across an inductor leads the current by <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img43.svg"
  ALT="$\pi/2$"></SPAN>
 (<SPAN ID="txt170">VI</SPAN>L). The voltage across a resistor is always in phase
-with the current.
+with the current. 
 
 </BLOCKQUOTE>
 <BR CLEAR="ALL">
@@ -205,9 +205,11 @@ by  taking the real part of the complex voltage and current functions.
 
 <!-- MATH
  \begin{eqnarray}
-v(t) &=& Re(V \, e^{\,j\omega t + \phi_v}) = V \cos(\omega t + \phi_v)\\
+v(t) &=& Re \left(V \, e^{\,j(\omega t + \phi_v}) \right)
+  = V \cos(\omega t + \phi_v)\\
   \nonumber
-  i(t) &=& Re(I \, e^{\,j\omega t + \phi_i}) = I \cos(\omega t + \phi_i)
+  i(t) &=& Re \left(I \, e^{\,j(\omega t + \phi_i)} \right)
+  = I \cos(\omega t + \phi_i)
 \end{eqnarray}
  -->
 <TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
@@ -215,16 +217,18 @@ v(t) &=& Re(V \, e^{\,j\omega t + \phi_v}) = V \cos(\omega t + \phi_v)\\
  ALT="$\displaystyle v(t)$"></TD>
 <TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
  ALT="$\textstyle =$"></TD>
-<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.83ex; vertical-align: -0.67ex; " SRC="img54.svg"
- ALT="$\displaystyle Re(V \, e^{\,j\omega t + \phi_v}) = V \cos(\omega t + \phi_v)$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 3.89ex; vertical-align: -1.39ex; " SRC="img54.svg"
+ ALT="$\displaystyle Re \left(V \, e^{\,j(\omega t + \phi_v}) \right)
+= V \cos(\omega t + \phi_v)$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 (<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
 <TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img55.svg"
  ALT="$\displaystyle i(t)$"></TD>
 <TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.03ex; vertical-align: -0.10ex; " SRC="img17.svg"
  ALT="$\textstyle =$"></TD>
-<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 2.83ex; vertical-align: -0.67ex; " SRC="img56.svg"
- ALT="$\displaystyle Re(I \, e^{\,j\omega t + \phi_i}) = I \cos(\omega t + \phi_i)$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 3.89ex; vertical-align: -1.39ex; " SRC="img56.svg"
+ ALT="$\displaystyle Re \left(I \, e^{\,j(\omega t + \phi_i)} \right)
+= I \cos(\omega t + \phi_i)$"></TD>
 <TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
 &nbsp;</TD></TR>
 </TABLE></DIV>
@@ -745,21 +749,28 @@ panel (a) of the figure, as
 
 <!-- MATH
  \begin{equation}
-\Delta t = \frac{\phi}{\omega} = \frac{\phi}{2 \pi f} = \frac{\phi}{2 \pi} T
+\Delta t = -\frac{\phi}{\omega} = -\frac{\phi}{2 \pi f} = -\frac{\phi}{2 \pi} T
 \end{equation}
  -->
  &nbsp;  <A ID="eq:deltatphi"></A><IMG STYLE="height: 4.82ex; vertical-align: -1.65ex; " SRC="img96.svg"
- ALT="$\displaystyle \Delta t = \frac{\phi}{\omega} = \frac{\phi}{2 \pi f} = \frac{\phi}{2 \pi} T
+ ALT="$\displaystyle \Delta t = -\frac{\phi}{\omega} = -\frac{\phi}{2 \pi f} = -\frac{\phi}{2 \pi} T
 $"> 
 
 (<SPAN CLASS="arabic">27</SPAN>)
 </DIV>
 where <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img97.svg"
- ALT="$T$"></SPAN> is the period of oscillation of the input signal.
+ ALT="$T$"></SPAN> is the period of oscillation of the input signal. The minus
+sign in Eq.&nbsp;<A HREF="#eq:deltatphi">27</A> is due to the fact that a positive time
+difference corresponds to a <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img98.svg"
+ ALT="$V_{out}$"></SPAN> that is delayed relative to
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img99.svg"
+ ALT="$V_{in}$"></SPAN>, corresponding to a negative (capacitive) phase
+angle. <SPAN  CLASS="textit">Warning: if you use the automated Phase measurement on a
+  digital oscilloscope, it will not account for this minus sign!</SPAN>
 
 <P>
 
-<DIV class="CENTER"><A ID="fig:rlcscope"></A><A ID="1061"></A>
+<DIV class="CENTER"><A ID="fig:rlcscope"></A><A ID="1065"></A>
 <TABLE>
 <CAPTION class="BOTTOM"><STRONG>Figure 7:</STRONG>
 Oscilloscope displays of the potential differences across the
@@ -770,7 +781,7 @@ Oscilloscope displays of the potential differences across the
       resonant frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.51ex; vertical-align: -0.44ex; " SRC="img3.svg"
  ALT="$\omega _o$"></SPAN> of the circuit.</CAPTION>
 <TR><TD><IMG STYLE="'CENTER'"
- SRC="img98.svg"
+ SRC="img100.svg"
  ALT="\begin{figure}{}
 \begin{center}
 \scalebox{0.45}{
@@ -786,7 +797,7 @@ Oscilloscope displays of the potential differences across the
 
 <P>
 
-<DIV class="CENTER"><A ID="fig:rlcvphi"></A><A ID="1064"></A>
+<DIV class="CENTER"><A ID="fig:rlcvphi"></A><A ID="1068"></A>
 <TABLE>
 <CAPTION class="BOTTOM"><STRONG>Figure 8:</STRONG>
 Frequency response &mdash; (a) gain <!-- MATH
@@ -799,7 +810,7 @@ Frequency response &mdash; (a) gain <!-- MATH
       Figure&nbsp;<A HREF="#fig:rlccircuit">6</A>. Note that frequency is on a log scale 
       in both plots.</CAPTION>
 <TR><TD><IMG STYLE="'CENTER'"
- SRC="img99.svg"
+ SRC="img101.svg"
  ALT="\begin{figure}{}
 \begin{center}
 \scalebox{0.45}{
@@ -822,13 +833,13 @@ current <SPAN CLASS="MATH"><IMG STYLE="height: 1.76ex; vertical-align: -0.10ex; 
  ALT="$I$"></SPAN> is maximal, <!-- MATH
  $V_{out} = V_{in}$
  -->
-<SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img100.svg"
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img102.svg"
  ALT="$V_{out} = V_{in}$"></SPAN> and the phase angle
 <SPAN CLASS="MATH"><IMG STYLE="height: 2.20ex; vertical-align: -0.54ex; " SRC="img5.svg"
  ALT="$\phi $"></SPAN> is zero. Combining Equations&nbsp;<A HREF="#eq:xl">9</A> and <A HREF="#eq:xc">10</A> to
 find the the frequency at which the capacitive and inductive
-reactances <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img101.svg"
- ALT="$X_L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img102.svg"
+reactances <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img103.svg"
+ ALT="$X_L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img104.svg"
  ALT="$X_C$"></SPAN> have equal magnitudes and cancel out,
 yields  
 
@@ -839,7 +850,7 @@ yields
 \omega_o = \frac{1}{\sqrt{LC}}
 \end{equation}
  -->
- &nbsp;  <A ID="eq:rlcomega"></A><IMG STYLE="height: 5.25ex; vertical-align: -2.17ex; " SRC="img103.svg"
+ &nbsp;  <A ID="eq:rlcomega"></A><IMG STYLE="height: 5.25ex; vertical-align: -2.17ex; " SRC="img105.svg"
  ALT="$\displaystyle \omega_o = \frac{1}{\sqrt{LC}}
 $"> 
 
@@ -849,9 +860,9 @@ Panels (c) and (d) of Figure&nbsp;<A HREF="#fig:rlcscope">7</A> illustrate the
 potential differences across the resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img93.svg"
  ALT="$v_{out}(t)$"></SPAN> and the AC
 source <SPAN CLASS="MATH"><IMG STYLE="height: 2.45ex; vertical-align: -0.67ex; " SRC="img94.svg"
- ALT="$v_{in}(t)$"></SPAN> at resonance. The plots show <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img104.svg"
+ ALT="$v_{in}(t)$"></SPAN> at resonance. The plots show <SPAN CLASS="MATH"><IMG STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img98.svg"
  ALT="$V_{out}$"></SPAN> slightly
-less than <SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img105.svg"
+less than <SPAN CLASS="MATH"><IMG STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img99.svg"
  ALT="$V_{in}$"></SPAN> at resonance due to the internal resistance of a
 non-ideal inductor.
 
@@ -876,12 +887,12 @@ based on the frequency dependence of the respective reactances
 We can also make sense of the qualitative behavior of the phase angle
 using the CIVIL mnemonic. At low frequencies, where the capacitor
 dominates, we expect the current to lead the voltage across the
-capacitor (C<SPAN ID="txt426">IV</SPAN>). In this circuit, <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.44ex; " SRC="img107.svg"
+capacitor (C<SPAN ID="txt430">IV</SPAN>). In this circuit, <SPAN CLASS="MATH"><IMG STYLE="height: 1.54ex; vertical-align: -0.44ex; " SRC="img107.svg"
  ALT="$v_{out}$"></SPAN> is the voltage
 across the resistor, which is in phase with the current, so we expect
 a positive phase angle at low frequencies. At high frequencies, the
 inductor dominates, and the current lags behind the voltage across the
-inductor (<SPAN ID="txt428">VI</SPAN>L). This gives a negative phase
+inductor (<SPAN ID="txt432">VI</SPAN>L). This gives a negative phase
 angle. <SPAN  CLASS="textit">Which of these situations is illustrated in panel (a) of
   Figure&nbsp;<A HREF="#fig:rlcscope">7</A>?</SPAN>
 
@@ -909,7 +920,7 @@ angle. <SPAN  CLASS="textit">Which of these situations is illustrated in panel (
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I> <BR>
-2023-08-13</I>
+2023-10-24</I>
 </ADDRESS>
 </BODY>
 </HTML>
