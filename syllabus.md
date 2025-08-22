@@ -43,6 +43,8 @@ This is a 2 semester hour course. An average of three hours of laboratory per we
 
 - Practice using JupyterLab and Python.
 
+- Practice using [SPICE](https://en.wikipedia.org/wiki/SPICE) circuit simulation software.
+
 - Practice using L<SUP>A</SUP>T<SUB>E</SUB>X.
 
 ## Text

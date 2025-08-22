@@ -11,6 +11,8 @@
 
 ### Python/JupyterLab: [Setup](jupyter/jupyter.html){:target="_blank"}, [Resources](jupyter/resources.html){:target="_blank"}
 
+### LTspice: [Installation](ltspice/ltspice.html){:target="_blank"}
+
 ### Labs
 - Lab 1: Kirchhoff's Rules and Equivalent Circuits [[Notebook](labs/PHYS328_Lab1.ipynb)]
 - Lab 2: RC Filters [[Notebook](labs/PHYS328_Lab2.ipynb)]
