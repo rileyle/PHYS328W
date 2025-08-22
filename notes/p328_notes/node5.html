@@ -107,8 +107,8 @@ layout: single_latex2html
 <DIV class="CENTER"><A ID="fig:opampmodel"></A><A ID="622"></A>
 <TABLE>
 <CAPTION class="BOTTOM"><STRONG>Figure 15:</STRONG>
-(a) Schematic symbol of an operational amplifier, and
-      (b) a circuit model of an op amp.</CAPTION>
+(a) Schematic symbol of an operational amplifier, and (b)
+      a circuit model of an op amp.</CAPTION>
 <TR><TD><IMG
  STYLE="'CENTER'"
  SRC="img164.svg"
@@ -124,19 +124,19 @@ layout: single_latex2html
 <P>
 We considered simple transistor amplifiers in
 Sections&nbsp;<A HREF="node4.html#sec:emitterfollower">4.3</A> and <A HREF="node4.html#sec:commonemitter">4.4</A>.
-Amplifier circuits with nice properties &mdash; high gain and 
-high input impedance, for example &mdash; packaged as integrated circuits
-(ICs), are called <SPAN  CLASS="textbf">operational amplifiers</SPAN> or op amps. They are
-called &ldquo;operational&rdquo; amplifiers, because they can be used to perform
+Amplifier circuits with nice properties &mdash; high gain and high input
+impedance, for example &mdash; packaged as integrated circuits (ICs), are
+called <SPAN  CLASS="textbf">operational amplifiers</SPAN> or op amps. They are called
+&ldquo;operational&rdquo; amplifiers, because they can be used to perform
 arithmetic operations like addition, subtraction, and multiplication
 with signals. In fact, op amps can also be used to integrate and
 differentiate signals.
 
 <P>
-The schematic symbol for an op amp is shown in panel (a)
-of Figure&nbsp;<A HREF="#fig:opampmodel">15</A>. A circuit model of an op amp is shown
-in panel (b) of Figure&nbsp;<A HREF="#fig:opampmodel">15</A>. The output voltage of the
-op amp is linearly proportional to the voltage difference between the
+The schematic symbol for an op amp is shown in panel (a) of
+Figure&nbsp;<A HREF="#fig:opampmodel">15</A>. A circuit model of an op amp is shown in
+panel (b) of Figure&nbsp;<A HREF="#fig:opampmodel">15</A>. The output voltage of the op
+amp is linearly proportional to the voltage difference between the
 inverting and non-inverting input terminals <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.27ex; vertical-align: -0.61ex; " SRC="img165.svg"
  ALT="$V_+ - V_-$"></SPAN> by a factor of
@@ -156,15 +156,16 @@ range <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img167.svg"
- ALT="$-V_S &lt; V_{out} &lt; V_S$"></SPAN> is often called the <SPAN  CLASS="textbf">linear region</SPAN>
-of the amplifier, and when the output swings to <SPAN CLASS="MATH"><IMG
+ ALT="$-V_S &lt; V_{out} &lt; V_S$"></SPAN> is often called the <SPAN  CLASS="textbf">linear
+  region</SPAN> of the amplifier, and when the output swings to <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img142.svg"
- ALT="$V_S$"></SPAN> or <SPAN CLASS="MATH"><IMG
+ ALT="$V_S$"></SPAN> or
+<SPAN CLASS="MATH"><IMG
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img168.svg"
- ALT="$-V_S$"></SPAN>, the
-op amp is said to be <SPAN  CLASS="textbf">saturated</SPAN>. The output voltages of the
-transistor amplifiers described in Sections&nbsp;<A HREF="node4.html#sec:emitterfollower">4.3</A> and
-<A HREF="node4.html#sec:commonemitter">4.4</A> are similarly limited by the supply voltage.
+ ALT="$-V_S$"></SPAN>, the op amp is said to be <SPAN  CLASS="textbf">saturated</SPAN>. The output
+voltages of the transistor amplifiers described in
+Sections&nbsp;<A HREF="node4.html#sec:emitterfollower">4.3</A> and <A HREF="node4.html#sec:commonemitter">4.4</A> are
+similarly limited by the supply voltage.
 
 <P>
 An ideal op amp has infinite gain (<SPAN CLASS="MATH"><IMG
@@ -175,31 +176,31 @@ resistance ( <!-- MATH
  -->
 <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.11ex; vertical-align: -0.45ex; " SRC="img170.svg"
- ALT="$R_{in} = \infty$"></SPAN>), and zero output resistance
-(<SPAN CLASS="MATH"><IMG
+ ALT="$R_{in} = \infty$"></SPAN>), and zero output resistance (<SPAN CLASS="MATH"><IMG
  STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img171.svg"
- ALT="$R_{out} = 0$"></SPAN>). You should use these assumptions to analyze op amp
-circuits. A consequence of the assumption of infinite gain is that, if
-the output voltage is within the finite linear region, we must have
-<SPAN CLASS="MATH"><IMG
+ ALT="$R_{out}
+= 0$"></SPAN>). You should use these assumptions to analyze op amp circuits. A
+consequence of the assumption of infinite gain is that, if the output
+voltage is within the finite linear region, we must have <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.27ex; vertical-align: -0.61ex; " SRC="img172.svg"
- ALT="$V_+ = V_-$"></SPAN>. A real op amp has a gain in the range <SPAN CLASS="MATH"><IMG
+ ALT="$V_+ =
+V_-$"></SPAN>. A real op amp has a gain in the range <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.09ex; vertical-align: -0.10ex; " SRC="img173.svg"
  ALT="$10^3$"></SPAN>-<SPAN CLASS="MATH"><IMG
  STYLE="height: 2.09ex; vertical-align: -0.10ex; " SRC="img174.svg"
- ALT="$10^5$"></SPAN>,
-depending on the type, and hence actually maintains a very small
-difference in input terminal voltages when operating in its linear
-region. For most applications, we can get away with assuming
-<!-- MATH
+ ALT="$10^5$"></SPAN>, depending
+on the type, and hence actually maintains a very small difference in
+input terminal voltages when operating in its linear region. For most
+applications, we can get away with assuming <!-- MATH
  $V_+ \approx V_-$
  -->
 <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.27ex; vertical-align: -0.61ex; " SRC="img175.svg"
- ALT="$V_+ \approx V_-$"></SPAN>. If the positive or negative input of an op amp is
-connected directly to ground, the other input will be held very close
-to ground and can be considered grounded in circuit analysis. This is
-referred to as a <SPAN  CLASS="textbf">virtual ground</SPAN>.
+ ALT="$V_+ \approx V_-$"></SPAN>. If the
+positive or negative input of an op amp is connected directly to
+ground, the other input will be held very close to ground and can be
+considered grounded in circuit analysis. This is referred to as a
+<SPAN  CLASS="textbf">virtual ground</SPAN>.
 
 <P>
 <BR CLEAR="ALL">
@@ -238,8 +239,7 @@ Basic Op Amp Behavior</A>
 </LI>
 </UL>
 <BR CLEAR="ALL">
-<HR>
-<P>
+<HR><P>
 We stock two operational amplifiers in the lab, the <SPAN  CLASS="texttt">LM741</SPAN>, a
 general purpose bipolar junction transistor (BJT) based amplifier with
 a typical input resistance of 2 M<SPAN CLASS="MATH"><IMG
@@ -293,11 +293,11 @@ circuit is based on two very good approximations.
 
 <P>
 </LI>
-<LI>The very large input impedance of the op amp means that it
-  draws negligible current. Therefore, the current <SPAN CLASS="MATH"><IMG
+<LI>The very large input impedance of the op amp means that it draws
+  negligible current. Therefore, the current <SPAN CLASS="MATH"><IMG
  STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img7.svg"
- ALT="$I$"></SPAN> flowing through
-  the input resistor <SPAN CLASS="MATH"><IMG
+ ALT="$I$"></SPAN> flowing through the
+  input resistor <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img26.svg"
  ALT="$R_1$"></SPAN> is the same as that flowing through the
   feedback resistor <SPAN CLASS="MATH"><IMG
@@ -352,9 +352,9 @@ of the op amp.
 
 <P>
 <SPAN  CLASS="textit">The inverting amplifier has the advantage of low noise due to
-  the lower input impedance, relative to a non-inverting amplifier. It
-  also has a relatively fast <SPAN  CLASS="textbf">slew rate</SPAN>, the maximum rate of
-  change of the signal.</SPAN>
+the lower input impedance, relative to a non-inverting amplifier. It
+also has a relatively fast <SPAN  CLASS="textbf">slew rate</SPAN>, the maximum rate of
+change of the signal.</SPAN>
 
 <P>
 
@@ -465,9 +465,9 @@ small output resistance of the op amp.
 
 <P>
 <SPAN  CLASS="textit">The non-inverting amplifier has the advantages of the op amp
-  itself, large input impedance and small output impedance. It has the
-  disadvantage that it is susceptible to positive feedback to the
-  non-inverting input from via <SPAN CLASS="MATH"><IMG
+itself, large input impedance and small output impedance. It has the
+disadvantage that it is susceptible to positive feedback to the
+non-inverting input from via <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img182.svg"
  ALT="$R_f$"></SPAN> which can lead to saturation.</SPAN>
 
@@ -489,14 +489,14 @@ Design</A>
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img182.svg"
  ALT="$R_f$"></SPAN> and <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img26.svg"
- ALT="$R_1$"></SPAN> are chosen to be large enough
-  that the amplifier does not draw too much power and low enough that
-  noise is not a problem. (The 10&nbsp;k<SPAN CLASS="MATH"><IMG
+ ALT="$R_1$"></SPAN> are chosen to be large
+  enough that the amplifier does not draw too much power and low
+  enough that noise is not a problem. (The 10&nbsp;k<SPAN CLASS="MATH"><IMG
  STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img121.svg"
- ALT="$\Omega$"></SPAN> - 500&nbsp;k<SPAN CLASS="MATH"><IMG
+ ALT="$\Omega$"></SPAN> -
+  500&nbsp;k<SPAN CLASS="MATH"><IMG
  STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img121.svg"
- ALT="$\Omega$"></SPAN> range is
-  reasonable.)
+ ALT="$\Omega$"></SPAN> range is reasonable.)
 </LI>
 </OL>
 
@@ -531,13 +531,12 @@ Section&nbsp;<A HREF="#sec:noninvertingamp">5.2</A> with <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img193.svg"
  ALT="$R_1 = \infty$"></SPAN> and <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img194.svg"
- ALT="$R_f = 0$"></SPAN>, 
+ ALT="$R_f = 0$"></SPAN>,
 giving a voltage gain of <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.10ex; vertical-align: -0.44ex; " SRC="img195.svg"
- ALT="$A_v = 1$"></SPAN>.
-This is useful for mirroring signals from low-power sources at the
-output of the op amp, which has very small output impedance and can
-deliver higher power.
+ ALT="$A_v = 1$"></SPAN>.  This is useful for mirroring
+signals from low-power sources at the output of the op amp, which has
+very small output impedance and can deliver higher power.
 
 <P>
 
@@ -574,10 +573,8 @@ expressions for the currents,
 <DIV CLASS="displaymath"><A ID="eq:sumampI1"></A>
 <!-- MATH
  \begin{eqnarray}
-I_1 &=& \frac{V_1}{R_1}\\
-  I_2 &=& \frac{V_2}{R_2}\\
-  I_3 &=& \frac{V_3}{R_3}\\
-  I_f &=& \frac{V_{out}}{R_f}
+I_1 &=& \frac{V_1}{R_1}\\I_2 &=& \frac{V_2}{R_2}\\I_3 &=&
+  \frac{V_3}{R_3}\\I_f &=& \frac{V_{out}}{R_f}
 \end{eqnarray}
  -->
 <TABLE CLASS="equation" >
@@ -618,8 +615,8 @@ I_1 &=& \frac{V_1}{R_1}\\
  STYLE="height: 5.18ex; vertical-align: -2.01ex; " SRC="img202.svg"
  ALT="$\displaystyle \frac{V_{out}}{R_f}$"></TD><TD class="rfill">(<SPAN CLASS="arabic">40</SPAN>)</TD></TR>
 </TABLE></DIV>
-which combine according to the junction rule at the inputs of
-the op amp
+which combine according to the junction rule at the inputs of the op
+amp
 
 <DIV CLASS="displaymath">
 
@@ -636,21 +633,21 @@ $"> <SPAN class="FLOATRIGHT">
 (<SPAN CLASS="arabic">41</SPAN>)</SPAN>
 </DIV>
 Combining Eqs.&nbsp;<A HREF="#eq:sumampI1">37</A> - <A HREF="#eq:sumampjunction">41</A> yields the
-output voltage 
+output voltage
 
 <DIV CLASS="displaymath">
 
 <!-- MATH
  \begin{equation}
-V_{out} = -\left( \frac{R_1}{R_f} V_1 + \frac{R_2}{R_f} V_2
-                 + \frac{R_3}{R_f} V_3 \right)
+V_{out} = -\left( \frac{R_1}{R_f} V_1 + \frac{R_2}{R_f} V_2 +
+  \frac{R_3}{R_f} V_3 \right)
 \end{equation}
  -->
  &nbsp;  <A ID="eq:summingampvout"></A><IMG
  STYLE="height: 5.18ex; vertical-align: -2.01ex; " SRC="img204.svg"
  ALT="$\displaystyle
-V_{out} = -\left( \frac{R_1}{R_f} V_1 + \frac{R_2}{R_f} V_2
-+ \frac{R_3}{R_f} V_3 \right)
+V_{out} = -\left( \frac{R_1}{R_f} V_1 + \frac{R_2}{R_f} V_2 +
+\frac{R_3}{R_f} V_3 \right)
 $"> <SPAN class="FLOATRIGHT">
 (<SPAN CLASS="arabic">42</SPAN>)</SPAN>
 </DIV>
@@ -685,7 +682,7 @@ Design</A>
 
 <P>
 </LI>
-<LI>The absolute values of the resistors are chosen to give 
+<LI>The absolute values of the resistors are chosen to give
   acceptable input resistances.
 
 <P>
@@ -719,8 +716,8 @@ Schematic of an op amp based differential amplifier.</CAPTION>
 <P>
 An op amp based differential amplifier is shown in
 Figure&nbsp;<A HREF="#fig:differenceamp">20</A>. The analysis of the circuit can be
-done using the junction rule for the virtual junction at the
-op-amp inputs
+done using the junction rule for the virtual junction at the op-amp
+inputs
 
 <DIV CLASS="displaymath">
 
@@ -740,10 +737,8 @@ where the four unique currents carried by the resistors are
 <DIV CLASS="displaymath"><A ID="eq:differentialI1"></A>
 <!-- MATH
  \begin{eqnarray}
-I_1 &=& \frac{V_1 - V_-}{R_1}\\
-  I_2 &=& \frac{V_2 - V_+}{R_1}\\
-  I_3 &=& \frac{V_- - V_{out}}{R_2}\\
-  I_4 &=& \frac{V_+}{R_2}
+I_1 &=& \frac{V_1 - V_-}{R_1}\\I_2 &=& \frac{V_2 - V_+}{R_1}\\I_3
+  &=& \frac{V_- - V_{out}}{R_2}\\I_4 &=& \frac{V_+}{R_2}
 \end{eqnarray}
  -->
 <TABLE CLASS="equation" >
@@ -803,7 +798,7 @@ $"> <SPAN class="FLOATRIGHT">
 Combining Eqs.&nbsp;<A HREF="#eq:differentialI1">44</A> - <A HREF="#eq:differentialVplus">48</A>
 with the assumption the <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.27ex; vertical-align: -0.61ex; " SRC="img214.svg"
- ALT="$V_- = V_+$"></SPAN> gives the output voltage 
+ ALT="$V_- = V_+$"></SPAN> gives the output voltage
 
 <DIV CLASS="displaymath">
 
@@ -885,7 +880,7 @@ analysis ignores <SPAN CLASS="MATH"><IMG
 
 <P>
 This circuit has a virtual ground at the op-amp inputs. It follows
-that 
+that
 
 <DIV CLASS="displaymath">
 
@@ -938,7 +933,7 @@ $"> <SPAN class="FLOATRIGHT">
 (<SPAN CLASS="arabic">52</SPAN>)</SPAN>
 </DIV>
 Combining Eqs.&nbsp;<A HREF="#eq:differentiatorvout">50</A> - <A HREF="#eq:differentiatorI">52</A>
-yields 
+yields
 
 <DIV CLASS="displaymath">
 
@@ -969,7 +964,7 @@ Design</A>
  ALT="$C$"></SPAN> are chosen to roughly match the
   desired time scale <SPAN CLASS="MATH"><IMG
  STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img225.svg"
- ALT="$RC$"></SPAN> of the differentiation. 
+ ALT="$RC$"></SPAN> of the differentiation.
 
 <P>
 </LI>
@@ -1011,7 +1006,7 @@ Figure&nbsp;<A HREF="#fig:integrator">22</A>. The optional feedback resistor <SP
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img182.svg"
  ALT="$R_f$"></SPAN> is
 needed to drain the feedback capacitor in order to prevent the
-saturation of the op amp. The feedback resistor is ignored in the 
+saturation of the op amp. The feedback resistor is ignored in the
 following analysis.
 
 <P>
@@ -1033,7 +1028,7 @@ I = \frac{V_{in}}{R}
 $"> <SPAN class="FLOATRIGHT">
 (<SPAN CLASS="arabic">54</SPAN>)</SPAN>
 </DIV>
-and the charge on the capacitor is related to the output voltage by 
+and the charge on the capacitor is related to the output voltage by
 
 <DIV CLASS="displaymath">
 
@@ -1072,7 +1067,7 @@ Q = \int dQ = \frac{1}{R} \int V_{in} \, dt + \mathrm{constant}
 $"> <SPAN class="FLOATRIGHT">
 (<SPAN CLASS="arabic">56</SPAN>)</SPAN>
 </DIV>
-Combining Eqs.&nbsp;<A HREF="#eq:integratorVout">55</A> and <A HREF="#eq:integratorQ">56</A> yields 
+Combining Eqs.&nbsp;<A HREF="#eq:integratorVout">55</A> and <A HREF="#eq:integratorQ">56</A> yields
 
 <DIV CLASS="displaymath">
 
@@ -1100,18 +1095,18 @@ Design</A>
  STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img9.svg"
  ALT="$R$"></SPAN> and <SPAN CLASS="MATH"><IMG
  STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img51.svg"
- ALT="$C$"></SPAN> are chosen to roughly match the
-  desired time scale <SPAN CLASS="MATH"><IMG
+ ALT="$C$"></SPAN> are chosen to give a time constant
+  <SPAN CLASS="MATH"><IMG
  STYLE="height: 1.76ex; vertical-align: -0.10ex; " SRC="img225.svg"
- ALT="$RC$"></SPAN> of the integration. 
+ ALT="$RC$"></SPAN> shorter than the period of the slowest signal to be integrated. 
 
 <P>
 </LI>
 <LI>The value of the feedback resistor <SPAN CLASS="MATH"><IMG
  STYLE="height: 2.13ex; vertical-align: -0.47ex; " SRC="img182.svg"
  ALT="$R_f$"></SPAN> is chosen to discharge
-  the feedback capacitor on an acceptable time scale without distorting
-  the output of the integrator.
+  the capacitor on an acceptable time scale without distorting the
+  output of the integrator.
 
 <P>
 </LI>
@@ -1140,7 +1135,7 @@ Design</A>
 <!--End of Navigation Panel-->
 <ADDRESS>
 <I> <BR>
-2025-08-18</I>
+2025-08-22</I>
 </ADDRESS>
 </BODY>
 </HTML>
