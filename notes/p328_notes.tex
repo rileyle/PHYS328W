@@ -1,28 +1,22 @@
 \documentclass[11pt]{article}
 
-\usepackage{graphics}
-\usepackage{html}
+\usepackage{graphics} \usepackage{html}
 
 %\usepackage{xr-hyper}
-\usepackage{hyperref}
-\usepackage[usenames, dvipsnames]{color}
+\usepackage{hyperref} \usepackage[usenames, dvipsnames]{color}
 \usepackage{colortbl}
 %\usepackage{calc}
 
 % Sans fonts
-\usepackage{sfmath}
-\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sfmath} \renewcommand{\familydefault}{\sfdefault}
 
 \markright{PHYS328 Notes}
 
-\setlength{\textwidth} {6.5 true in}
-\setlength{\textheight}{9 true in}
-\setlength{\hoffset} {-0.75 true in}
-\setlength{\voffset} {-0.75 true in}
-\setlength{\parindent} {12 pt}
-\pagestyle{myheadings}
+\setlength{\textwidth} {6.5 true in} \setlength{\textheight}{9 true
+  in} \setlength{\hoffset} {-0.75 true in} \setlength{\voffset} {-0.75
+  true in} \setlength{\parindent} {12 pt} \pagestyle{myheadings}
 
-\title{PHYS328W Notes} \author{L.A. Riley} \date{Fall 2023}
+\title{PHYS328W Notes} \author{L.A. Riley} \date{Fall 2025}
 
 \begin{document}
 
@@ -36,22 +30,22 @@
 \label{sec:ohm}
 
 The potential difference $V$ between the terminals of an \textbf{Ohmic
-device} is directly proportional to the current $I$ flowing through it,
+  device} is directly proportional to the current $I$ flowing through
+it,
 \begin{equation}
   V=IR
 \label{eq:Ohm}
 \end{equation}
 The constant of proportionality $R$ is called the \textbf{resistance}
-of the device. Equation~\ref{eq:Ohm} is known as \textbf{Ohm's
-  Law}.
+of the device. Equation~\ref{eq:Ohm} is known as \textbf{Ohm's Law}.
 \textbf{Non-ohmic} devices do not follow the linear voltage-current
 relationship of Ohm's law. Examples include diodes, thermistors,
 photoresistors, and light-bulb filaments.
 
-Ohmic devices called \textbf{resistors} are ubiquitous in
-electronic circuits. When current flows through a resistor, power is
-dissipated in the form of heat and light. The power dissipated in a
-resistor given by
+Ohmic devices called \textbf{resistors} are ubiquitous in electronic
+circuits. When current flows through a resistor, power is dissipated
+in the form of heat and light. The power dissipated in a resistor
+given by
 \begin{equation}
   P_\mathrm{diss} = I^2 R = \frac{V^2}{R}
 \end{equation}
@@ -90,12 +84,11 @@ resistance of parallel resistors.
 
 A pair of resistors connected in series as shown in panel (a) of
 Figure~\ref{fig:seriesparallel} is a \textbf{voltage divider}. The two
-resistors share the total potential difference $V$ across the
-pair according to
+resistors share the total potential difference $V$ across the pair
+according to
 \begin{eqnarray}
-  \nonumber
-  V_1 & = & \frac{R_1}{R_1 + R_2} V \\ 
-  V_2 & = & \frac{R_2}{R_1 + R_2} V
+  \nonumber V_1 & = & \frac{R_1}{R_1 + R_2} V \\ V_2 & = &
+  \frac{R_2}{R_1 + R_2} V
   \label{eq:Vdiv}
 \end{eqnarray}
 
@@ -129,19 +122,19 @@ Section~\ref{sec:kirchhoff}.
 
 A \textbf{resistor network} is a collection of resistors connected
 together as illustrated in Figure~\ref{fig:rnetwork}. Many resistor
-networks can be reduced to a single resistance between two points using
-Equations~\ref{eq:Rseries} and \ref{eq:Rparallel}. If a network can
-be simplified in this way, the currents flowing through all of the
+networks can be reduced to a single resistance between two points
+using Equations~\ref{eq:Rseries} and \ref{eq:Rparallel}. If a network
+can be simplified in this way, the currents flowing through all of the
 resistors in the network can be calculated by working backward through
 the equivalent resistance calculation and applying the current
 division expression of Equation~\ref{eq:Idiv} at each step.
 
 If a network includes one or more $\Delta$ configurations --- three
-resistors connected by junctions --- it cannot be simplified
-via series and parallel pairs. A \textbf{junction} is a point in a
-circuit where three or more wires meet. Junctions are marked with
-$\bullet$ symbols in the schematics in these notes. However, any
-$\Delta$ configuration in a network can be replaced with an equivalent
+resistors connected by junctions --- it cannot be simplified via
+series and parallel pairs. A \textbf{junction} is a point in a circuit
+where three or more wires meet. Junctions are marked with $\bullet$
+symbols in the schematics in these notes. However, any $\Delta$
+configuration in a network can be replaced with an equivalent
 $Y$-shaped configuration via a $\Delta-Y$ transformation. This is easy
 to look up. We won't concern ourselves with this situation.
 
@@ -163,9 +156,8 @@ to look up. We won't concern ourselves with this situation.
 \item Use Ohm's law to calculate the current flowing through the
   voltage source.
 
-\item Use the current division expressions
-  (Equations~\ref{eq:Idiv}) at each node to determine the currents
-  in the network.
+\item Use the current division expressions (Equations~\ref{eq:Idiv})
+  at each node to determine the currents in the network.
 
 \item Use Ohm's law to determine the voltage drops across the
   resistors and from these, the voltages of all of the nodes.
@@ -198,14 +190,13 @@ illustrated in Figure~\ref{fig:kirchhoffsigns}.
 
 \begin{figure}[ht]
   \begin{center}
-    \htmlimage{align='center'}{}
-    \includegraphics{kirchhoffsigns.eps}
+    \htmlimage{align='center'}{} \includegraphics{kirchhoffsigns.eps}
     \caption{Sign conventions for the potential differences in
       Kirchhoff's loop rule equations. The blue arrows represent the
-      direction of current flow. The black dashed arrows represent
-      the direction the device is traversed in the process of
-      generating the equation and therefore does not represent a
-      physical quantity.}
+      direction of current flow. The black dashed arrows represent the
+      direction the device is traversed in the process of generating
+      the equation and therefore does not represent a physical
+      quantity.}
     \label{fig:kirchhoffsigns}
   \end{center}
 \end{figure}
@@ -218,7 +209,7 @@ junction,
   \label{eq:junction}
 \end{equation}
 In the usual sign convention, currents flowing into a junction are
-positive, and currents flowing out of a junction are negative. 
+positive, and currents flowing out of a junction are negative.
 
 %\vspace{12 pt}
 %\noindent
@@ -231,20 +222,20 @@ positive, and currents flowing out of a junction are negative.
 %\textbf{Circuit Analysis using Kirchhoff's Rules}
 \subsubsection*{Circuit Analysis using Kirchhoff's Rules}
 \begin{enumerate}
-\item Draw the circuit with arrows and labels representing all of
-  the unique currents.
+\item Draw the circuit with arrows and labels representing all of the
+  unique currents.
  
-\item Construct a set of loop-rule equations including every
-  device in the circuit at least once.
+\item Construct a set of loop-rule equations including every device in
+  the circuit at least once.
 
-\item Construct a set junction-rule equations including every
-  current in the circuit at least once.
+\item Construct a set junction-rule equations including every current
+  in the circuit at least once.
 
 \item Given enough known quantities (usually the properties of the
   devices in the circuit --- resistances, capacitances, source
-  voltages, e.g.), these equations can be combined algebraically
-  to determine the unknown quantities (usually currents and
-  potential differences in the circuit).
+  voltages, e.g.), these equations can be combined algebraically to
+  determine the unknown quantities (usually currents and potential
+  differences in the circuit).
 \end{enumerate}
 \begin{latexonly}
   \noindent
@@ -259,11 +250,10 @@ positive, and currents flowing out of a junction are negative.
            
 \begin{figure}[ht]
   \begin{center}
-    \htmlimage{align='center'}{}
-    \includegraphics{thevenin.eps}
-    \caption{Illustration of the Th\'{e}venin equivalent circuit (b) for a
-      circuit (a) designed to drive a load connected across terminals A
-      and B.}
+    \htmlimage{align='center'}{} \includegraphics{thevenin.eps}
+    \caption{Illustration of the Th\'{e}venin equivalent circuit (b)
+      for a circuit (a) designed to drive a load connected across
+      terminals A and B.}
     \label{fig:thevenin}
   \end{center}
 \end{figure}
@@ -287,15 +277,14 @@ devices --- resistors, inductors, and capacitors.
 \subsubsection*{Finding the Th\'{e}venin Equivalent of a Circuit}
 \begin{enumerate}
 \item The Th\'{e}venin equivalent voltage $V_{th}$ is the voltage
-  across the output terminals $A$ and $B$ of the circuit with no
-  load attached.
+  across the output terminals $A$ and $B$ of the circuit with no load
+  attached.
 
 \item The Th\'{e}venin equivalent resistance $R_{th}$ is the
   resistance of the circuit measured between the output terminals $A$
-  and $B$, with all voltage and current sources replaced with
-  their internal resistances. \textit{Ideal voltage sources have
-    zero resistance, and ideal current sources have infinite
-    resistance.}
+  and $B$, with all voltage and current sources replaced with their
+  internal resistances. \textit{Ideal voltage sources have zero
+    resistance, and ideal current sources have infinite resistance.}
 \end{enumerate}
 \begin{latexonly}
   \noindent
@@ -336,12 +325,11 @@ relationships to each other.
 \noindent
 \textbf{CIVIL}
 \begin{quote}
-The mnemonic CIVIL can be used to
-remember that the voltage across a capacitor lags $\pi/2$ (half a
-period of oscillation) behind the current (C\underline{IV}), and the
-voltage across an inductor leads the current by $\pi/2$
-(\underline{VI}L). The voltage across a resistor is always in phase
-with the current. 
+The mnemonic CIVIL can be used to remember that the voltage across a
+capacitor lags $\pi/2$ (half a period of oscillation) behind the
+current (C\underline{IV}), and the voltage across an inductor leads
+the current by $\pi/2$ (\underline{VI}L). The voltage across a
+resistor is always in phase with the current.
 \end{quote}
 \htmlrule
 
@@ -354,20 +342,20 @@ with the current.
 
 Ohm's law (Equation~\ref{eq:Ohm}) gives the full relationship between
 current and voltage for a resistor. Capacitors and inductors are also
-linear devices, but they impede the flow of current in the circuit
-by temporarily storing energy in magnetic and electric fields instead
-of by dissipating energy. We refer to these non-dissipative devices as
-reactive devices, and we define quantities analogous to resistance
-and which play the same role as resistance in a generalized version of
+linear devices, but they impede the flow of current in the circuit by
+temporarily storing energy in magnetic and electric fields instead of
+by dissipating energy. We refer to these non-dissipative devices as
+reactive devices, and we define quantities analogous to resistance and
+which play the same role as resistance in a generalized version of
 Ohm's law. The \textbf{inductive reactance} is given by
 \begin{equation}
   X_L = j \omega L
   \label{eq:xl}
 \end{equation}
 where, $\omega = 2 \pi f$ is the driving frequency, and $L$ is the
-inductance. In an electronics context,  $j$ is typically used to
+inductance. In an electronics context, $j$ is typically used to
 represent $\sqrt{-1}$ instead of $i$ to avoid confusion with
-current. The \textbf{capacitive reactance} 
+current. The \textbf{capacitive reactance}
 \begin{equation}
   X_C = -\frac{j}{\omega C}
   \label{eq:xc}
@@ -379,11 +367,11 @@ positive and negative imaginary axes and the real axis of the complex
 plane map onto those between signals in inductors, capacitors, and
 resistors, respectively.
 
-Any network of linear devices ---  inductors, resistors, and
-capacitors --- present a \emph{complex} \textbf{impedance} $Z$ to the
-flow of current. The total impedance can be found by combining the
-\emph{real} resistances and \emph{imaginary} reactances in the circuit
-in the same way that we determined equivalent resistance in
+Any network of linear devices --- inductors, resistors, and capacitors
+--- present a \emph{complex} \textbf{impedance} $Z$ to the flow of
+current. The total impedance can be found by combining the \emph{real}
+resistances and \emph{imaginary} reactances in the circuit in the same
+way that we determined equivalent resistance in
 Section~\ref{sec:serpar}. The inductive and capacitive reactances and
 hence the total impedance $Z$ are frequency-dependent. In the
 low-frequency limit, capacitors dominate the impedance, while in the
@@ -392,16 +380,14 @@ high-frequency limit, inductors dominate.
 \subsection{Phasor Analysis}
 
 We use complex numbers to represent impedance $Z$ and complex
-functions to represent voltage and current as a bookkeeping
-tool that simplifies the mathematics involved in circuit
-analysis. The real-valued observable voltage and current are obtained
-by  taking the real part of the complex voltage and current functions.
+functions to represent voltage and current as a bookkeeping tool that
+simplifies the mathematics involved in circuit analysis. The
+real-valued observable voltage and current are obtained by taking the
+real part of the complex voltage and current functions.
 \begin{eqnarray}
-  v(t) &=& Re \left(V \, e^{\,j(\omega t + \phi_v}) \right)
-  = V \cos(\omega t + \phi_v)\\
-  \nonumber
-  i(t) &=& Re \left(I \, e^{\,j(\omega t + \phi_i)} \right)
-  = I \cos(\omega t + \phi_i)
+  v(t) &=& Re \left(V \, e^{\,j(\omega t + \phi_v}) \right) = V
+  \cos(\omega t + \phi_v)\\ \nonumber i(t) &=& Re \left(I \,
+  e^{\,j(\omega t + \phi_i)} \right) = I \cos(\omega t + \phi_i)
 \end{eqnarray}
 In many cases, we are only interested in the amplitudes $V$ and
 $I$. In cases in which we do care about the phase, we typically
@@ -409,20 +395,18 @@ consider either $\phi_i$ or $\phi_v$ to be zero and keep track of the
 relative phase.
 
 The complex voltage and current functions share an identical
-time-dependent factor $e^{j \omega t}$, which cancels out of
-equations that relate them. It is therefore convenient to analyze AC
-circuits using \textbf{phasors},
+time-dependent factor $e^{j \omega t}$, which cancels out of equations
+that relate them. It is therefore convenient to analyze AC circuits
+using \textbf{phasors},
 \begin{eqnarray}
-  \mathbf{V} &=& V \, e^{\,j \phi_v}\\
-  \nonumber
-  \mathbf{I} &=& I \, e^{\,j \phi_i}
+  \mathbf{V} &=& V \, e^{\,j \phi_v}\\ \nonumber \mathbf{I} &=& I \,
+  e^{\,j \phi_i}
 \end{eqnarray}
 We can express the real voltage and current functions in terms of
 phasors as
 \begin{eqnarray}
-  v(t) &=& Re(\mathbf{V} \, e^{\,j\omega t})\\
-  \nonumber
-  i(t) &=& Re(\mathbf{I} \, e^{\,j\omega t})
+  v(t) &=& Re(\mathbf{V} \, e^{\,j\omega t})\\ \nonumber i(t) &=&
+  Re(\mathbf{I} \, e^{\,j\omega t})
 \end{eqnarray}
 and the generalized version of Ohm's law becomes
 \begin{equation}
@@ -440,8 +424,8 @@ imaginary part is the \textbf{reactive power} stored in capacitors and
 inductors. Typically, we are interested in the average power
 dissipated
 \begin{equation}
-  \left< P \right> = \frac{IV}{2} \cos(\phi_v - \phi_i)
-                   = \frac{V^2}{2Z} \cos(\phi_v - \phi_i)
+  \left< P \right> = \frac{IV}{2} \cos(\phi_v - \phi_i) =
+  \frac{V^2}{2Z} \cos(\phi_v - \phi_i)
   \label{eq:rpower}
 \end{equation}
 The factor of 1/2 is the average value of $\cos^2(\omega t)$ ---
@@ -465,16 +449,16 @@ resistance present.
 \subsubsection*{Phasor Analysis}
 \begin{itemize}
 \item Equivalent impedance calculations work the same way as
-  equivalent resistance calculations (Equations~\ref{eq:Rseries}
-  and \ref{eq:Rparallel}).
+  equivalent resistance calculations (Equations~\ref{eq:Rseries} and
+  \ref{eq:Rparallel}).
 
 \item Kirchhoff's rules work for phasors $\mathbf{V}$ and
   $\mathbf{I}$.
 
-\item Th\'{e}venin's theorem applies to AC circuits containing
-  only linear components. The Th\'{e}venin voltage and impedance
-  are found via the process outlined in Section~\ref{sec:thevenin}
-  with impedance in place of resistance.
+\item Th\'{e}venin's theorem applies to AC circuits containing only
+  linear components. The Th\'{e}venin voltage and impedance are found
+  via the process outlined in Section~\ref{sec:thevenin} with
+  impedance in place of resistance.
 \end{itemize}
 \begin{latexonly}
   \noindent
@@ -489,10 +473,10 @@ resistance present.
 
 \begin{figure}[ht]
   \begin{center}
-    \htmlimage{align='center'}{}
-    \includegraphics{acvdivider.eps}
-    \caption{AC voltage divider between two linear devices, or networks of
-      linear devices, with complex impedances $Z_1$ and $Z_2$.}
+    \htmlimage{align='center'}{} \includegraphics{acvdivider.eps}
+    \caption{AC voltage divider between two linear devices, or
+      networks of linear devices, with complex impedances $Z_1$ and
+      $Z_2$.}
     \label{fig:acvdivider}
   \end{center}
 \end{figure}
@@ -517,8 +501,8 @@ combine to give
   \label{eq:vdivout}
 \end{equation}
 
-The real-valued amplitude of the output signal is the
-magnitude of the phasor $\mathbf{V_{out}}$,
+The real-valued amplitude of the output signal is the magnitude of the
+phasor $\mathbf{V_{out}}$,
 \begin{equation}
   V_{out} = \sqrt{\mathbf{V_{out}^* V_{out}}}
   \label{eq:vdivamp}
@@ -528,16 +512,16 @@ magnitude of the phasor $\mathbf{V_{out}}$,
 
 The phase difference $\phi$ between $\mathbf{V_{out}}$ and
 $\mathbf{V_{in}}$ is the \textbf{phase angle} between these complex
-numbers in the complex plane. Since we are only looking for the 
-\emph{difference}, we are free to set the complex phase of $\mathbf{V_{in}}$
-to zero. This makes it easier to see that the only contribution to the
-complex phase in Equation~\ref{eq:vdivout} comes from the impedances,
-and that the phase angle of $\mathbf{V_{out}}$ relative to
-$\mathbf{V_{in}}$ is determined by the real and imaginary parts of the
-impedance ratio,
+numbers in the complex plane. Since we are only looking for the
+\emph{difference}, we are free to set the complex phase of
+$\mathbf{V_{in}}$ to zero. This makes it easier to see that the only
+contribution to the complex phase in Equation~\ref{eq:vdivout} comes
+from the impedances, and that the phase angle of $\mathbf{V_{out}}$
+relative to $\mathbf{V_{in}}$ is determined by the real and imaginary
+parts of the impedance ratio,
 \begin{equation}
-  \tan \phi = \frac{ Im \left( \frac{Z_2}{Z_1 + Z_2} \right) }
-                   { Re \left( \frac{Z_2}{Z_1 + Z_2} \right) }
+  \tan \phi = \frac{ Im \left( \frac{Z_2}{Z_1 + Z_2} \right) } { Re
+    \left( \frac{Z_2}{Z_1 + Z_2} \right) }
   \label{eq:vdivphase}
 \end{equation}
 
@@ -553,10 +537,10 @@ impedance ratio,
 The \textbf{voltage gain} $A_V$ of the circuit is the ratio
 $V_{out}/V_{in}$. It follows from Equation~\ref{eq:vdivout}
 \begin{equation}
-  A_V = \frac{V_{out}}{V_{in}} = \frac{|\mathbf{V_{out}}|}{|\mathbf{V_{in}}|}
-                             = \left| \frac{Z_2}{Z_1 + Z_2} \right|
-                             = \sqrt{ \left( \frac{Z_2}{Z_1 + Z_2} \right)^*
-                                      \left( \frac{Z_2}{Z_1 + Z_2} \right) }
+  A_V = \frac{V_{out}}{V_{in}} =
+  \frac{|\mathbf{V_{out}}|}{|\mathbf{V_{in}}|} = \left| \frac{Z_2}{Z_1
+    + Z_2} \right| = \sqrt{ \left( \frac{Z_2}{Z_1 + Z_2} \right)^*
+    \left( \frac{Z_2}{Z_1 + Z_2} \right) }
   \label{eq:gain}
 \end{equation}
 We sometimes refer to the ``3~dB point(s)'' of a circuit. These are
@@ -568,8 +552,7 @@ Appendix~\ref{sec:dB}).
 
 \begin{figure}[ht]
   \begin{center}
-    \htmlimage{align='center'}{}
-    \includegraphics{rlccircuit.eps}
+    \htmlimage{align='center'}{} \includegraphics{rlccircuit.eps}
     \caption{A series RLC circuit as an AC voltage divider.}
     \label{fig:rlccircuit}
   \end{center}
@@ -587,56 +570,53 @@ series, so we combine their reactances as we would series resistances
 
 Equation~\ref{eq:gain} becomes
 \begin{equation}
-  \frac{V_{out}}{V_{in}} = \sqrt{\frac{R^2}{R^2 + (\omega L - 1/\omega C)^2}}
+  \frac{V_{out}}{V_{in}} = \sqrt{\frac{R^2}{R^2 + (\omega L - 1/\omega
+      C)^2}}
 \end{equation}
-To evaluate the phase angle, it is helpful to put the
-impedance ratio in Equation~\ref{eq:vdivamp} in $a + jb$ form by
-multiplying the numerator and denominator by the complex conjugate of
-the denominator
+To evaluate the phase angle, it is helpful to put the impedance ratio
+in Equation~\ref{eq:vdivamp} in $a + jb$ form by multiplying the
+numerator and denominator by the complex conjugate of the denominator
 \begin{equation}
-  \frac{Z_2}{Z_1 + Z_2}
-  = \frac{R}{R + j \left( \omega L - \frac{1}{\omega C} \right)}
-  = \frac{R^2 - j R \left( \omega L - \frac{1}{\omega C} \right)}
-         {R^2 + \left( \omega L - \frac{1}{\omega C} \right)^2}
+  \frac{Z_2}{Z_1 + Z_2} = \frac{R}{R + j \left( \omega L -
+    \frac{1}{\omega C} \right)} = \frac{R^2 - j R \left( \omega L -
+    \frac{1}{\omega C} \right)} {R^2 + \left( \omega L -
+    \frac{1}{\omega C} \right)^2}
 \end{equation}
 which, with Equation~\ref{eq:vdivphase}, gives
 \begin{equation}
   \tan \phi = \frac{\frac{1}{\omega C} - \omega L}{R}
 \end{equation}
 
-Figure~\ref{fig:rlcscope} illustrates the
-potential differences across the resistor $v_{out}(t)$ and the AC
-voltage source $v_{in}(t)$ as they would appear on an oscilloscope. 
-The phase angle $\phi$ is proportional to the time difference $\Delta t =
-t_{V_{out}} - t_{V_{in}}$ between the two signals, illustrated in
-panel (a) of the figure, as 
+Figure~\ref{fig:rlcscope} illustrates the potential differences across
+the resistor $v_{out}(t)$ and the AC voltage source $v_{in}(t)$ as
+they would appear on an oscilloscope.  The phase angle $\phi$ is
+proportional to the time difference $\Delta t = t_{V_{out}} -
+t_{V_{in}}$ between the two signals, illustrated in panel (a) of the
+figure, as
 \begin{equation}
-  \Delta t = -\frac{\phi}{\omega} = -\frac{\phi}{2 \pi f} = -\frac{\phi}{2 \pi} T
+  \Delta t = -\frac{\phi}{\omega} = -\frac{\phi}{2 \pi f} =
+  -\frac{\phi}{2 \pi} T
   \label{eq:deltatphi}
 \end{equation}
 where $T$ is the period of oscillation of the input signal. The minus
 sign in Eq.~\ref{eq:deltatphi} is due to the fact that a positive time
 difference corresponds to a $V_{out}$ that is delayed relative to
 $V_{in}$, corresponding to a negative (capacitive) phase
-angle. \textit{Warning: if you use the automated Phase measurement on a
-  digital oscilloscope, it will not account for this minus sign!}
+angle. \textit{Warning: if you use the automated Phase measurement on
+  a digital oscilloscope, it will not account for this minus sign!}
 
 \begin{figure}[ht]
   \htmlimage{align='center'}{}
   \begin{center}
-    \scalebox{0.45}{
-      \includegraphics{rlcnr.eps}
-    }
-    \vspace{12 pt}
-    \scalebox{0.45}{
-      \includegraphics{rlcres.eps}
-    }
-    \caption{Oscilloscope displays of the potential differences across the
-      resistor and AC power source in the series RLC voltage divider shown in 
-      Figure~\ref{fig:rlccircuit}. Panels (a) and (b) show the potential
-      vs. time and X-Y mode displays for the circuit at a non-resonant
-      driving frequency. Panels (c) and (d) show the same displays at the
-      resonant frequency $\omega_o$ of the circuit.}
+    \scalebox{0.45}{ \includegraphics{rlcnr.eps} }
+    \vspace{12 pt} \scalebox{0.45}{ \includegraphics{rlcres.eps} }
+    \caption{Oscilloscope displays of the potential differences across
+      the resistor and AC power source in the series RLC voltage
+      divider shown in Figure~\ref{fig:rlccircuit}. Panels (a) and (b)
+      show the potential vs. time and X-Y mode displays for the
+      circuit at a non-resonant driving frequency. Panels (c) and (d)
+      show the same displays at the resonant frequency $\omega_o$ of
+      the circuit.}
     \label{fig:rlcscope}
   \end{center}
 \end{figure}
@@ -644,29 +624,23 @@ angle. \textit{Warning: if you use the automated Phase measurement on a
 \begin{figure}[ht]
   \htmlimage{align='center'}{}
   \begin{center}
-    \scalebox{0.45}{
-      \includegraphics{rlc_vout.eps}
-    }
-    \hspace{12 pt}
-    \scalebox{0.45}{
-      \includegraphics{rlc_phi.eps}
-    }
+    \scalebox{0.45}{ \includegraphics{rlc_vout.eps} }
+    \hspace{12 pt} \scalebox{0.45}{ \includegraphics{rlc_phi.eps} }
     \caption{Frequency response --- (a) gain $V_{out}/V_{in}$ and (b)
-      phase angle $\phi$ --- of the series RLC voltage divider shown in 
-      Figure~\ref{fig:rlccircuit}. Note that frequency is on a log scale 
-      in both plots.}
+      phase angle $\phi$ --- of the series RLC voltage divider shown
+      in Figure~\ref{fig:rlccircuit}. Note that frequency is on a log
+      scale in both plots.}
     \label{fig:rlcvphi}
   \end{center}
 \end{figure}
 
 There is a special frequency, called the \textbf{resonant frequency}
-$\omega_o$ of the circuit, at which 
-the impedance $Z_1$ of the inductor-capacitor pair goes to zero, the
-current $I$ is maximal, $V_{out} = V_{in}$ and the phase angle
-$\phi$ is zero. Combining Equations~\ref{eq:xl} and \ref{eq:xc} to
-find the the frequency at which the capacitive and inductive
-reactances $X_L$ and $X_C$ have equal magnitudes and cancel out,
-yields  
+$\omega_o$ of the circuit, at which the impedance $Z_1$ of the
+inductor-capacitor pair goes to zero, the current $I$ is maximal,
+$V_{out} = V_{in}$ and the phase angle $\phi$ is zero. Combining
+Equations~\ref{eq:xl} and \ref{eq:xc} to find the the frequency at
+which the capacitive and inductive reactances $X_L$ and $X_C$ have
+equal magnitudes and cancel out, yields
 \begin{equation}
   \omega_o = \frac{1}{\sqrt{LC}}
   \label{eq:rlcomega}
@@ -697,7 +671,7 @@ a positive phase angle at low frequencies. At high frequencies, the
 inductor dominates, and the current lags behind the voltage across the
 inductor (\underline{VI}L). This gives a negative phase
 angle. \emph{Which of these situations is illustrated in panel (a) of
-  Figure~\ref{fig:rlcscope}?}
+Figure~\ref{fig:rlcscope}?}
 
 \newpage
 
@@ -707,12 +681,11 @@ angle. \emph{Which of these situations is illustrated in panel (a) of
 \begin{figure}[ht]
   \htmlimage{align='center'}{}
   \begin{center}
-    \scalebox{0.5}{
-      \includegraphics{diodevi.eps}
-    }
-    \caption{\emph{Qualitative} V-I curve for a standard diode. \emph{The
-        scale on the reverse-bias side of the graph is roughly two orders
-        of magnitude larger than the forward-bias side.}}
+    \scalebox{0.5}{ \includegraphics{diodevi.eps} }
+    \caption{\emph{Qualitative} V-I curve for a standard
+      diode. \emph{The scale on the reverse-bias side of the graph is
+      roughly two orders of magnitude larger than the forward-bias
+      side.}}
     \label{fig:diodevi}
   \end{center}
 \end{figure}
@@ -729,32 +702,31 @@ p-type region. The region of field is called the \textbf{depletion
 difference is applied to the device oriented to create an electric
 field in the ``uphill'' direction, toward the n-type region, the hill
 is reduced in height, and if the applied potential difference is
-larger than the height of the hill, called the \textbf{forward 
-  voltage drop}, current flows through the junction.  If
-a potential difference is applied creating an electric field in the
-``downhill'' direction, the height of the hill is increased, and the
-flow of current is blocked. There is a maximum ``downhill'' potential 
+larger than the height of the hill, called the \textbf{forward voltage
+  drop}, current flows through the junction.  If a potential
+difference is applied creating an electric field in the ``downhill''
+direction, the height of the hill is increased, and the flow of
+current is blocked. There is a maximum ``downhill'' potential
 difference called the \textbf{reverse breakdown voltage} beyond which
-current flows backward across the junction. This damages standard diodes.
-The $V$ vs. $I$ curve of a standard diode is sketched qualitatively in
-Figure~\ref{fig:diodevi}. The forward voltage drop and reverse
-breakdown voltage are labeled in the figure. The arrow in the
-schematic symbol for a diode (\includegraphics{diode.eps}) points in
-the ``forward'' direction. 
+current flows backward across the junction. This damages standard
+diodes.  The $V$ vs. $I$ curve of a standard diode is sketched
+qualitatively in Figure~\ref{fig:diodevi}. The forward voltage drop
+and reverse breakdown voltage are labeled in the figure. The arrow in
+the schematic symbol for a diode (\includegraphics{diode.eps}) points
+in the ``forward'' direction.
 
 Standard diodes are designed to operate between the reverse breakdown
 voltage and the forward bias voltage. At the forward bias voltage,
 also called the \textbf{diode drop}, a diode behaves essentially like
 a wire with a built-in voltage drop. If a bias voltage below the diode
-drop (and above the reverse breakdown voltage) is applied, an ideal diode
-behaves essentially like an open switch or an infinite
+drop (and above the reverse breakdown voltage) is applied, an ideal
+diode behaves essentially like an open switch or an infinite
 resistance. However, in a real diode, a tiny \textbf{leakage current}
 flows, as indicated by the shallow slope of the $V-I$ curve above
-breakdown in the reverse-bias region of
-Figure~\ref{fig:diodevi}. The standard silicon diodes you will encounter
-in lab have forward voltage drops of about 0.7~V, reverse
-breakdown voltages of 100-1000 V, and leakage currents on the order of
-$10^{-8}$~A.
+breakdown in the reverse-bias region of Figure~\ref{fig:diodevi}. The
+standard silicon diodes you will encounter in lab have forward voltage
+drops of about 0.7~V, reverse breakdown voltages of 100-1000 V, and
+leakage currents on the order of $10^{-8}$~A.
 
 \newpage
 
@@ -765,10 +737,10 @@ $10^{-8}$~A.
   \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{transistors.eps}
-    \caption{Schematic symbols for (a) NPN and (b) PNP bipolar junction
-      transistors with labels on the collector (C), base (B), and
-      emitter (E). (c) The plastic TO-92 transistor package we will use
-      in lab with pins labeled.}
+    \caption{Schematic symbols for (a) NPN and (b) PNP bipolar
+      junction transistors with labels on the collector (C), base (B),
+      and emitter (E). (c) The plastic TO-92 transistor package we
+      will use in lab with pins labeled.}
     \label{fig:transistors}
   \end{center}
 \end{figure}
@@ -776,14 +748,13 @@ $10^{-8}$~A.
 A \textbf{transistor} is an \textbf{active device}, meaning that it
 enables the control of a current by an input signal. There are several
 different types of transistors, each suited to different
-applications. Here, we will focus on
-\textbf{bipolar junction transistors} (BJTs).
-Transistors have three terminals called the \textbf{emitter}, the
-\textbf{collector}, and the \textbf{base}. A BJT consists of two
-p-type -- n-type junctions, like those in a diode. In an NPN
-transistor, the base is p-type semiconductor, and the emitter and
-collector are n-type. In a PNP transistor, the polarities are
-reversed. 
+applications. Here, we will focus on \textbf{bipolar junction
+  transistors} (BJTs).  Transistors have three terminals called the
+\textbf{emitter}, the \textbf{collector}, and the \textbf{base}. A BJT
+consists of two p-type -- n-type junctions, like those in a diode. In
+an NPN transistor, the base is p-type semiconductor, and the emitter
+and collector are n-type. In a PNP transistor, the polarities are
+reversed.
 
 Schematic symbols for BJTs and an illustration of the ordering of the
 pins on the transistors we will use in lab are shown in
@@ -803,14 +774,14 @@ stay in the the ``on'' state.
 
 The \textbf{Ebers-Moll equation} describes the relationship between
 the collector current $I_C$ and the voltage drop from base to emitter
-$V_{BE}$ by 
+$V_{BE}$ by
 \begin{equation}
   I_C = I_o \left( e^{\frac{V_{BE}}{kT/e}} - 1 \right)
   \label{eq:ebersmoll}
 \end{equation}
 where $I_o$ is the reverse leakage current from the emitter to the
-base, $e = 1.6 \times 10^{-19}$~C is the elementary unit of charge,
-$k = 1.38 \times 10^{-23}$~J/K is the Boltzmann constant, and $T$ is the
+base, $e = 1.6 \times 10^{-19}$~C is the elementary unit of charge, $k
+= 1.38 \times 10^{-23}$~J/K is the Boltzmann constant, and $T$ is the
 absolute temperature (in Kelvin). With typical doping levels, the
 leakage current arising from the ``intrinsic'' behavior of the pure
 semiconductor is very small, and the second term (-$I_o$) is
@@ -821,9 +792,8 @@ $V_{BE}$.
   \htmlimage{align='center'}{}
   \begin{center}
     \includegraphics{ebersmollcircuit.eps}
-    \caption{Schematic of the circuit you will use in lab to
-      test the Ebers-Moll equation in the active region of an NPN
-      BJT.}
+    \caption{Schematic of the circuit you will use in lab to test the
+      Ebers-Moll equation in the active region of an NPN BJT.}
     \label{fig:ebersmollcircuit}
   \end{center}
 \end{figure}
@@ -873,7 +843,7 @@ which is on the order of 100 and depends on temperature,
 When $V_{BE}$ is significantly below 0.7~V, the exponential in
 Equation~\ref{eq:ebersmoll} is orders of magnitude smaller than its
 saturation value, and the collector and emitter currents $I_C$ and
-$I_E$ are effectively turned off. 
+$I_E$ are effectively turned off.
 
 For a given transistor, there are maximum rated values of $I_C$,
 $I_B$, and $V_{CE}$. If these values are exceeded, the transistor will
@@ -898,20 +868,19 @@ for diodes.
 \subsubsection*{Basic Transistor Behavior}
 \begin{itemize}
 \item In order for a transistor to function, make $V_C > V_E$, and
-  keep $I_B$, $I_C$, and $V_{CE}$ below the rated maximum
-  values of the transistor.
+  keep $I_B$, $I_C$, and $V_{CE}$ below the rated maximum values of
+  the transistor.
 
-\item \textbf{On:} In saturation, $V_{BE} \approx 0.7$~V,
-  $V_{CE} \approx 0.25$~V, and $I_C = h_{FE} I_B$, where
-  $h_{FE} \approx 100$. 
+\item \textbf{On:} In saturation, $V_{BE} \approx 0.7$~V, $V_{CE}
+  \approx 0.25$~V, and $I_C = h_{FE} I_B$, where $h_{FE} \approx 100$.
 
-\item \textbf{Off:} If $V_{BE} < 0.7$~V (significantly),
-  $I_C \approx 0$.
+\item \textbf{Off:} If $V_{BE} < 0.7$~V (significantly), $I_C \approx
+  0$.
 
 \item \textbf{Active Region:} $V_{BE}$ is between ``off'' and
   saturation. The collector current is governed by the Ebers-Moll
-  equation (Equation~\ref{eq:ebersmoll}). The emitter resistance
-  at room temperature is $r_e = (25~\Omega)/I_C[\mathrm{mA}]$.
+  equation (Equation~\ref{eq:ebersmoll}). The emitter resistance at
+  room temperature is $r_e = (25~\Omega)/I_C[\mathrm{mA}]$.
 \end{itemize}
 \begin{latexonly}
   \noindent
@@ -939,18 +908,18 @@ resistance $R_L$.  Closing the mechanical switch drives a current from
 the base to the emitter.  With a proper choice of $R_B$, the base
 current is large enough to saturate the transistor, bringing the base
 voltage to $\approx0.7$~V.  The collector current produces a voltage
-drop across $R_L$ of $\approx V_S$. The collector voltage is very close to
-the emitter ($\approx 0.25$~V), and the right branch of the circuit
-behaves as if the collector is grounded. Opening the switch
+drop across $R_L$ of $\approx V_S$. The collector voltage is very
+close to the emitter ($\approx 0.25$~V), and the right branch of the
+circuit behaves as if the collector is grounded. Opening the switch
 brings $V_{BE}$ significantly below 0.7~V, and the transistor shuts
 off power to the load.
 
 What the point of this? Why not dispense with the transistor, and put
 the switch in series with the load, as is the case with household
 wiring? In applications in which the control switch is far away from a
-load that draws a large current, it is safer to run small 
-control currents over long distances and keep the large currents close
-to the load.
+load that draws a large current, it is safer to run small control
+currents over long distances and keep the large currents close to the
+load.
 
 \subsubsection*{Design}
 
@@ -965,15 +934,15 @@ to the load.
   
 \item Set the value of $R_B$ to keep the transistor in saturation
   while delivering the maximum desired current under all
-  circumstances. Given possible variations in $R_L$ and the range
-  of $h_{FE}$ among the make/model of transistor used (see the data
-  sheet from the manufacturer), it is generally good to use a generous
-  base current ($\approx 10~I_C/h_{fe}$).
+  circumstances. Given possible variations in $R_L$ and the range of
+  $h_{FE}$ among the make/model of transistor used (see the data sheet
+  from the manufacturer), it is generally good to use a generous base
+  current ($\approx 10~I_C/h_{fe}$).
 
   \emph{As long as the supply voltage $V_S$ is appropriate to the
-    load, the load resistance will limit the current, so it does no
-    harm to deliver a larger base current than is absolutely required,
-    as long as it does not exceed the rated maximum base current.}
+  load, the load resistance will limit the current, so it does no harm
+  to deliver a larger base current than is absolutely required, as
+  long as it does not exceed the rated maximum base current.}
 \end{enumerate}
 
 \subsection{Application: Emitter Follower}
@@ -988,12 +957,12 @@ to the load.
   \end{center}
 \end{figure}
 
-An \textbf{emitter follower} is a power amplifier. It has a
-voltage gain of $A_v \approx 1$ and a large current gain. It is useful
-in applications in which a load that draws high power is driven by a
-small signal --- audio amplifiers, for example.
-The schematic of an AC coupled emitter follower is shown in
-Figure~\ref{fig:emitterfollower}. 
+An \textbf{emitter follower} is a power amplifier. It has a voltage
+gain of $A_v \approx 1$ and a large current gain. It is useful in
+applications in which a load that draws high power is driven by a
+small signal --- audio amplifiers, for example.  The schematic of an
+AC coupled emitter follower is shown in
+Figure~\ref{fig:emitterfollower}.
 
 \subsubsection*{Design}
 
@@ -1001,10 +970,10 @@ Figure~\ref{fig:emitterfollower}.
 \item The emitter voltage $V_E$ is limited between ground and the
   source voltage $V_S$. Choose an emitter resistance $R_E$ to center
   the quiescent\footnote{The term \textbf{quiescent} refers to the
-    state of the circuit when the input signal is not varying.}
-  emitter voltage in this range, at the average current
-  drawn by the load. Centering $V_E$ allows the output signal vary in
-  a symmetrical range.
+  state of the circuit when the input signal is not varying.}  emitter
+  voltage in this range, at the average current drawn by the
+  load. Centering $V_E$ allows the output signal vary in a symmetrical
+  range.
 
 \item Once $V_E$ is established, set the values of the input bias
   resistors $R_1$ and $R_2$.
@@ -1013,13 +982,13 @@ Figure~\ref{fig:emitterfollower}.
     of the transistor ($V_B \approx V_E + 0.6~\mathrm{V}$).
 
   \item Their parallel resistance must be small compared with that
-    presented by the base-emitter junction so that they do not drag 
-    down the quiescent current $R_1 || R_2 \approx h_{FE} R_E/ 10$. 
+    presented by the base-emitter junction so that they do not drag
+    down the quiescent current $R_1 || R_2 \approx h_{FE} R_E/ 10$.
   \end{enumerate}
 
 \item The capacitors $C_1$ and $C_2$ are coupling capacitors that
   remove DC components from the input and output signals. They, along
-  with the resistors in the input and output stages, act as high-pass 
+  with the resistors in the input and output stages, act as high-pass
   filters. Their values are chosen such that they do not filter out
   frequencies of interest.
 \end{enumerate}
@@ -1038,8 +1007,8 @@ Figure~\ref{fig:emitterfollower}.
 
 A \textbf{common emitter amplifier} is an inverting voltage
 amplifier. The schematic of an AC coupled common emitter amplifier is
-shown in Figure~\ref{fig:commonemitter}.
-It has a voltage gain given by
+shown in Figure~\ref{fig:commonemitter}.  It has a voltage gain given
+by
 \begin{equation}
   A_v = -\frac{R_C}{R_E}
   \label{eq:commonemittergain}
@@ -1055,22 +1024,22 @@ It has a voltage gain given by
   gain (Equation~\ref{eq:commonemittergain}).
 
   \emph{Keep in mind that the emitter resistance $r_e$ in series with
-    $R_E$ acts to reduce the measured voltage gain relative to the
-    prediction of Equation~\ref{eq:commonemittergain}. The emitter
-    resistance can be estimated using
-    Equation~\ref{eq:emitterresistance} with the quiescent collector
-    current.}
+  $R_E$ acts to reduce the measured voltage gain relative to the
+  prediction of Equation~\ref{eq:commonemittergain}. The emitter
+  resistance can be estimated using
+  Equation~\ref{eq:emitterresistance} with the quiescent collector
+  current.}
 
 \item The bias resistor $R_b$ is set to place the quiescent emitter
   voltage at about 1~V.
 
   \emph{This greatly reduces the influence of the
-    temperature-dependent (and very small) emitter resistance $r_e$ on
-    the stability of the quiescent base-emitter voltage $V_{BE}$,
-    which must be kept in the active region of the transistor.}
+  temperature-dependent (and very small) emitter resistance $r_e$ on
+  the stability of the quiescent base-emitter voltage $V_{BE}$, which
+  must be kept in the active region of the transistor.}
 
 \item The bypass capacitor $C_b$ is chosen to give very small
-  capacitive reactance ($\approx \frac{R_b}{10}$ at the lowest signal 
+  capacitive reactance ($\approx \frac{R_b}{10}$ at the lowest signal
   frequency, thus shorting out the bias resistor so that only $R_E +
   r_e$ remain, yielding the desired voltage gain.
 
@@ -1081,16 +1050,16 @@ It has a voltage gain given by
     of the transistor ($V_B \approx V_E + 0.6~\mathrm{V}$).
 
   \item Their parallel resistance must be small compared with that
-    presented by the base-emitter junction so that they do not drag 
-    down the quiescent current
-    $R_1 || R_2 \approx h_{FE} (R_E + R_b)/10$.
+    presented by the base-emitter junction so that they do not drag
+    down the quiescent current $R_1 || R_2 \approx h_{FE} (R_E +
+    R_b)/10$.
   \end{enumerate}
 
 \item The values of the coupling capacitors $C_1$ and $C_2$ are chosen
   so that they allow frequencies of interest to pass through. The
-  input coupling capacitor $C_1$ and $R_1||R_2$ act as a
-  high-pass filter on the input. Similarly, $C_2$ and $R_C||(R_E +
-  R_b)$ act as a high-pass filter on the output. 
+  input coupling capacitor $C_1$ and $R_1||R_2$ act as a high-pass
+  filter on the input. Similarly, $C_2$ and $R_C||(R_E + R_b)$ act as
+  a high-pass filter on the output.
 \end{enumerate}
 
 \newpage
@@ -1101,51 +1070,50 @@ It has a voltage gain given by
 \begin{figure}[ht]
   \htmlimage{align='center'}{}
   \begin{center}
-    \scalebox{0.7}{
-      \includegraphics{opamp_model.eps}
-    }
-    \caption{(a) Schematic symbol of an operational amplifier, and
-      (b) a circuit model of an op amp.}
+    \scalebox{0.7}{ \includegraphics{opamp_model.eps} }
+    \caption{(a) Schematic symbol of an operational amplifier, and (b)
+      a circuit model of an op amp.}
     \label{fig:opampmodel}
   \end{center}
 \end{figure}
 
 We considered simple transistor amplifiers in
 Sections~\ref{sec:emitterfollower} and \ref{sec:commonemitter}.
-Amplifier circuits with nice properties --- high gain and 
-high input impedance, for example --- packaged as integrated circuits
-(ICs), are called \textbf{operational amplifiers} or op amps. They are
-called ``operational'' amplifiers, because they can be used to perform
+Amplifier circuits with nice properties --- high gain and high input
+impedance, for example --- packaged as integrated circuits (ICs), are
+called \textbf{operational amplifiers} or op amps. They are called
+``operational'' amplifiers, because they can be used to perform
 arithmetic operations like addition, subtraction, and multiplication
 with signals. In fact, op amps can also be used to integrate and
 differentiate signals.
 
-The schematic symbol for an op amp is shown in panel (a)
-of Figure~\ref{fig:opampmodel}. A circuit model of an op amp is shown
-in panel (b) of Figure~\ref{fig:opampmodel}. The output voltage of the
-op amp is linearly proportional to the voltage difference between the
+The schematic symbol for an op amp is shown in panel (a) of
+Figure~\ref{fig:opampmodel}. A circuit model of an op amp is shown in
+panel (b) of Figure~\ref{fig:opampmodel}. The output voltage of the op
+amp is linearly proportional to the voltage difference between the
 inverting and non-inverting input terminals $V_+ - V_-$ by a factor of
 the gain $A$. However, the output voltage is limited to the range
 $-V_S \leq V_{out} \leq V_S$, where $V_S$ is the supply voltage. The
-range $-V_S < V_{out} < V_S$ is often called the \textbf{linear region}
-of the amplifier, and when the output swings to $V_S$ or $-V_S$, the
-op amp is said to be \textbf{saturated}. The output voltages of the
-transistor amplifiers described in Sections~\ref{sec:emitterfollower} and
-\ref{sec:commonemitter} are similarly limited by the supply voltage.
+range $-V_S < V_{out} < V_S$ is often called the \textbf{linear
+  region} of the amplifier, and when the output swings to $V_S$ or
+$-V_S$, the op amp is said to be \textbf{saturated}. The output
+voltages of the transistor amplifiers described in
+Sections~\ref{sec:emitterfollower} and \ref{sec:commonemitter} are
+similarly limited by the supply voltage.
 
 An ideal op amp has infinite gain ($A = \infty$), infinite input
-resistance ( $R_{in} = \infty$), and zero output resistance
-($R_{out} = 0$). You should use these assumptions to analyze op amp
-circuits. A consequence of the assumption of infinite gain is that, if
-the output voltage is within the finite linear region, we must have
-$V_+ = V_-$. A real op amp has a gain in the range $10^3$-$10^5$,
-depending on the type, and hence actually maintains a very small
-difference in input terminal voltages when operating in its linear
-region. For most applications, we can get away with assuming
-$V_+ \approx V_-$. If the positive or negative input of an op amp is
-connected directly to ground, the other input will be held very close
-to ground and can be considered grounded in circuit analysis. This is
-referred to as a \textbf{virtual ground}.
+resistance ( $R_{in} = \infty$), and zero output resistance ($R_{out}
+= 0$). You should use these assumptions to analyze op amp circuits. A
+consequence of the assumption of infinite gain is that, if the output
+voltage is within the finite linear region, we must have $V_+ =
+V_-$. A real op amp has a gain in the range $10^3$-$10^5$, depending
+on the type, and hence actually maintains a very small difference in
+input terminal voltages when operating in its linear region. For most
+applications, we can get away with assuming $V_+ \approx V_-$. If the
+positive or negative input of an op amp is connected directly to
+ground, the other input will be held very close to ground and can be
+considered grounded in circuit analysis. This is referred to as a
+\textbf{virtual ground}.
 
 %\vspace{12 pt}
 %\noindent
@@ -1200,9 +1168,9 @@ circuit is based on two very good approximations.
 \begin{enumerate}
 \item There is a virtual ground at the inputs of the op-amp.
   
-\item The very large input impedance of the op amp means that it
-  draws negligible current. Therefore, the current $I$ flowing through
-  the input resistor $R_1$ is the same as that flowing through the
+\item The very large input impedance of the op amp means that it draws
+  negligible current. Therefore, the current $I$ flowing through the
+  input resistor $R_1$ is the same as that flowing through the
   feedback resistor $R_f$.
 \end{enumerate}
 It follows that
@@ -1221,9 +1189,9 @@ is $R_{oa}||R_f$, where $R_{oa}$ is the very small output resistance
 of the op amp.
 
 \emph{The inverting amplifier has the advantage of low noise due to
-  the lower input impedance, relative to a non-inverting amplifier. It
-  also has a relatively fast \textbf{slew rate}, the maximum rate of
-  change of the signal.}
+the lower input impedance, relative to a non-inverting amplifier. It
+also has a relatively fast \textbf{slew rate}, the maximum rate of
+change of the signal.}
 
 \subsubsection*{Design}
 \begin{enumerate}
@@ -1268,19 +1236,19 @@ output resistance is $R_{oa}||(R_1 + R_f)$, where $R_{oa}$ is the very
 small output resistance of the op amp.
 
 \emph{The non-inverting amplifier has the advantages of the op amp
-  itself, large input impedance and small output impedance. It has the
-  disadvantage that it is susceptible to positive feedback to the
-  non-inverting input from via $R_f$ which can lead to saturation.}
+itself, large input impedance and small output impedance. It has the
+disadvantage that it is susceptible to positive feedback to the
+non-inverting input from via $R_f$ which can lead to saturation.}
 
 \subsubsection*{Design}
 \begin{enumerate}
 \item The ratio $R_f/R_1$ is fixed by the desired voltage gain
   (Equation~\ref{eq:noninvampgain}).
 
-\item The absolute values of $R_f$ and $R_1$ are chosen to be large enough
-  that the amplifier does not draw too much power and low enough that
-  noise is not a problem. (The 10~k$\Omega$ - 500~k$\Omega$ range is
-  reasonable.)
+\item The absolute values of $R_f$ and $R_1$ are chosen to be large
+  enough that the amplifier does not draw too much power and low
+  enough that noise is not a problem. (The 10~k$\Omega$ -
+  500~k$\Omega$ range is reasonable.)
 \end{enumerate}
 
 \subsection{Application: Voltage Follower/Buffer}
@@ -1297,11 +1265,10 @@ small output resistance of the op amp.
 
 The voltage follower or buffer, shown in Figure~\ref{fig:vfollower},
 is a special case of the non-inverting amplifier of
-Section~\ref{sec:noninvertingamp} with $R_1 = \infty$ and $R_f = 0$, 
-giving a voltage gain of $A_v = 1$.
-This is useful for mirroring signals from low-power sources at the
-output of the op amp, which has very small output impedance and can
-deliver higher power.
+Section~\ref{sec:noninvertingamp} with $R_1 = \infty$ and $R_f = 0$,
+giving a voltage gain of $A_v = 1$.  This is useful for mirroring
+signals from low-power sources at the output of the op amp, which has
+very small output impedance and can deliver higher power.
 
 \subsection{Application: Summing Amplifier}
 \label{sec:summingamp}
@@ -1323,23 +1290,21 @@ multiple inputs. The virtual ground at the op-amp inputs gives simple
 expressions for the currents,
 \begin{eqnarray}
   \label{eq:sumampI1}
-  I_1 &=& \frac{V_1}{R_1}\\
-  I_2 &=& \frac{V_2}{R_2}\\
-  I_3 &=& \frac{V_3}{R_3}\\
-  I_f &=& \frac{V_{out}}{R_f}
+  I_1 &=& \frac{V_1}{R_1}\\ I_2 &=& \frac{V_2}{R_2}\\ I_3 &=&
+  \frac{V_3}{R_3}\\ I_f &=& \frac{V_{out}}{R_f}
 \end{eqnarray}
-which combine according to the junction rule at the inputs of
-the op amp
+which combine according to the junction rule at the inputs of the op
+amp
 \begin{equation}
   \label{eq:sumampjunction}
   I_1 + I_2 + I_3 = I_f
 \end{equation}
 Combining Eqs.~\ref{eq:sumampI1} - \ref{eq:sumampjunction} yields the
-output voltage 
+output voltage
 \begin{equation}
   \label{eq:summingampvout}
-  V_{out} = -\left( \frac{R_1}{R_f} V_1 + \frac{R_2}{R_f} V_2
-                 + \frac{R_3}{R_f} V_3 \right)  
+  V_{out} = -\left( \frac{R_1}{R_f} V_1 + \frac{R_2}{R_f} V_2 +
+  \frac{R_3}{R_f} V_3 \right)
 \end{equation}
 
 As we would expect based on the analysis of the inverting amplifier in
@@ -1354,7 +1319,7 @@ resistance of the op amp.
   the desired coefficients of the output sum
   (Eq.~\ref{eq:summingampvout}).
 
-\item The absolute values of the resistors are chosen to give 
+\item The absolute values of the resistors are chosen to give
   acceptable input resistances.
 
 \end{itemize}
@@ -1373,18 +1338,16 @@ resistance of the op amp.
 
 An op amp based differential amplifier is shown in
 Figure~\ref{fig:differenceamp}. The analysis of the circuit can be
-done using the junction rule for the virtual junction at the
-op-amp inputs
+done using the junction rule for the virtual junction at the op-amp
+inputs
 \begin{equation}
   I_1 + I_2 = I_3 + I_4
 \end{equation}
 where the four unique currents carried by the resistors are
 \begin{eqnarray}
   \label{eq:differentialI1}
-  I_1 &=& \frac{V_1 - V_-}{R_1}\\
-  I_2 &=& \frac{V_2 - V_+}{R_1}\\
-  I_3 &=& \frac{V_- - V_{out}}{R_2}\\
-  I_4 &=& \frac{V_+}{R_2}
+  I_1 &=& \frac{V_1 - V_-}{R_1}\\ I_2 &=& \frac{V_2 - V_+}{R_1}\\ I_3
+  &=& \frac{V_- - V_{out}}{R_2}\\ I_4 &=& \frac{V_+}{R_2}
 \end{eqnarray}
 combined with the voltage division expression for the positive input,
 \begin{equation}
@@ -1392,7 +1355,7 @@ combined with the voltage division expression for the positive input,
   V_+ = \frac{R_2}{R_1 + R_2} V_2
 \end{equation}
 Combining Eqs.~\ref{eq:differentialI1} - \ref{eq:differentialVplus}
-with the assumption the $V_- = V_+$ gives the output voltage 
+with the assumption the $V_- = V_+$ gives the output voltage
 \begin{equation}
   V_{out} = - \frac{R_2}{R_1} \left(V_1 - V_2\right)
 \end{equation}
@@ -1426,7 +1389,7 @@ Figure~\ref{fig:differentiator}. The optional feedback capacitor $C_f
 analysis ignores $C_f$.
 
 This circuit has a virtual ground at the op-amp inputs. It follows
-that 
+that
 \begin{equation}
   \label{eq:differentiatorvout}
   V_{out} = - IR
@@ -1444,7 +1407,7 @@ the charge on the capacitor via the definition of current
   I \equiv \frac{dQ}{dt}
 \end{equation}
 Combining Eqs.~\ref{eq:differentiatorvout} - \ref{eq:differentiatorI}
-yields 
+yields
 \begin{equation}
   \label{eq:opampdiff}
   V_{out} = - RC \frac{d V_{in}}{dt}
@@ -1453,7 +1416,7 @@ yields
 \subsubsection*{Design}
 \begin{itemize}
 \item The values of $R$ and $C$ are chosen to roughly match the
-  desired time scale $RC$ of the differentiation. 
+  desired time scale $RC$ of the differentiation.
 
 \item If high-frequency oscillation is observed in the output, the
   feedback capacitor is needed. Its value is set to damp the
@@ -1476,7 +1439,7 @@ yields
 An op amp based integrator circuit is shown in
 Figure~\ref{fig:integrator}. The optional feedback resistor $R_f$ is
 needed to drain the feedback capacitor in order to prevent the
-saturation of the op amp. The feedback resistor is ignored in the 
+saturation of the op amp. The feedback resistor is ignored in the
 following analysis.
 
 This circuit has a virtual ground at the op-amp inputs. It follows
@@ -1486,7 +1449,7 @@ input voltage by
   \label{eq:integratorI}
   I = \frac{V_{in}}{R}
 \end{equation}
-and the charge on the capacitor is related to the output voltage by 
+and the charge on the capacitor is related to the output voltage by
 \begin{equation}
   \label{eq:integratorVout}
   V_{out} = -\frac{Q}{C}
@@ -1496,22 +1459,22 @@ Eq.~\ref{eq:integratorI} can be integrated to find the charge on the
 capacitor.
 \begin{equation}
   \label{eq:integratorQ}
-  Q = \int dQ = \frac{1}{R} \int V_{in} \, dt
+  Q = \int dQ = \frac{1}{R} \int V_{in} \, dt + \mathrm{constant}
 \end{equation}
-Combining Eqs.~\ref{eq:integratorVout} and \ref{eq:integratorQ} yields 
+Combining Eqs.~\ref{eq:integratorVout} and \ref{eq:integratorQ} yields
 \begin{equation}
   \label{eq:opampint}
-  V_{out} = - \frac{1}{RC} \int V_{in} \, dt
+  V_{out} = - \frac{1}{RC} \int V_{in} \, dt + C
 \end{equation}
 
 \subsubsection*{Design}
 \begin{itemize}
-\item The values of $R$ and $C$ are chosen to roughly match the
-  desired time scale $RC$ of the integration. 
+\item The values of $R$ and $C$ are chosen to give a time constant
+  $RC$ shorter than the period of the slowest signal to be integrated. 
 
 \item The value of the feedback resistor $R_f$ is chosen to discharge
-  the feedback capacitor on an acceptable time scale without distorting
-  the output of the integrator.
+  the capacitor on an acceptable time scale without distorting the
+  output of the integrator.
   
 \end{itemize}
 

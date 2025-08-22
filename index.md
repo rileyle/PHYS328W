@@ -17,7 +17,7 @@
 - Lab 3: An RLC Filter [[Notebook](labs/PHYS328_Lab3.ipynb)] [[Analysis (PDF)](labs/p328_Lab3_Analysis.pdf){:target="_blank"}] [[Analysis (mp4)](labs/p328_Lab3_Analysis.mp4){:target="_blank"}]
 - Lab 4: Diode Circuits [[Notebook](labs/PHYS328_Lab4.ipynb)]
 - Lab 5: Transistor Circuits [[Notebook](labs/PHYS328_Lab5.ipynb)]
-- Lab 6: AM Radio Receiver [[Notebook](labs/PHYS328_Lab6.ipynb)]
+- Lab 6: Operational Amplifiers [[Notebook](labs/PHYS328_Lab6.ipynb)]
 
 ### Reflections
 - [Reflection 0](reflect/reflect0.html){:target="_blank"}
