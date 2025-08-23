@@ -392,11 +392,14 @@ functions to represent voltage and current as a bookkeeping tool that
 simplifies the mathematics involved in circuit analysis. The
 real-valued observable voltage and current are obtained by taking the
 real part of the complex voltage and current functions.
-\begin{eqnarray}
-  v(t) &=& Re \left(V \, e^{\,j(\omega t + \phi_v}) \right) = V
-  \cos(\omega t + \phi_v)\\ \nonumber i(t) &=& Re \left(I \,
-  e^{\,j(\omega t + \phi_i)} \right) = I \cos(\omega t + \phi_i)
-\end{eqnarray}
+\begin{equation}
+  v(t) = Re \left(V \, e^{\,j(\omega t + \phi_v}) \right)
+  = V \cos(\omega t + \phi_v)
+\end{equation}
+\begin{equation}
+  i(t) = Re \left(I \, e^{\,j(\omega t + \phi_i)} \right)
+  = I \cos(\omega t + \phi_i)
+\end{equation}
 In many cases, we are only interested in the amplitudes $V$ and
 $I$. In cases in which we do care about the phase, we typically
 consider either $\phi_i$ or $\phi_v$ to be zero and keep track of the
@@ -406,16 +409,20 @@ The complex voltage and current functions share an identical
 time-dependent factor $e^{j \omega t}$, which cancels out of equations
 that relate them. It is therefore convenient to analyze AC circuits
 using \textbf{phasors},
-\begin{eqnarray}
-  \mathbf{V} &=& V \, e^{\,j \phi_v}\\ \nonumber \mathbf{I} &=& I \,
-  e^{\,j \phi_i}
-\end{eqnarray}
+\begin{equation}
+  \mathbf{V} = V \, e^{\,j \phi_v}
+\end{equation}
+\begin{equation}
+  \mathbf{I} = I \, e^{\,j \phi_i}
+\end{equation}
 We can express the real voltage and current functions in terms of
 phasors as
-\begin{eqnarray}
-  v(t) &=& Re(\mathbf{V} \, e^{\,j\omega t})\\ \nonumber i(t) &=&
-  Re(\mathbf{I} \, e^{\,j\omega t})
-\end{eqnarray}
+\begin{equation}
+  v(t) = Re(\mathbf{V} \, e^{\,j\omega t})
+\end{equation}
+\begin{equation}
+  i(t) = Re(\mathbf{I} \, e^{\,j\omega t})
+\end{equation}
 and the generalized version of Ohm's law becomes
 \begin{equation}
   \mathbf{I} = \frac{\mathbf{V}}{Z}
@@ -1296,11 +1303,19 @@ similar to that of the inverting amplifier in
 Section~\ref{sec:invertingamp}, with the additional complexity of
 multiple inputs. The virtual ground at the op-amp inputs gives simple
 expressions for the currents,
-\begin{eqnarray}
+\begin{equation}
   \label{eq:sumampI1}
-  I_1 &=& \frac{V_1}{R_1}\\ I_2 &=& \frac{V_2}{R_2}\\ I_3 &=&
-  \frac{V_3}{R_3}\\ I_f &=& \frac{V_{out}}{R_f}
-\end{eqnarray}
+  I_1 = \frac{V_1}{R_1}
+\end{equation}
+\begin{equation}
+  I_2 = \frac{V_2}{R_2}
+\end{equation}
+\begin{equation}
+  I_3 = \frac{V_3}{R_3}
+\end{equation}
+\begin{equation}
+  I_f = \frac{V_{out}}{R_f}
+\end{equation}
 which combine according to the junction rule at the inputs of the op
 amp
 \begin{equation}
@@ -1352,11 +1367,19 @@ inputs
   I_1 + I_2 = I_3 + I_4
 \end{equation}
 where the four unique currents carried by the resistors are
-\begin{eqnarray}
+\begin{equation}
   \label{eq:differentialI1}
-  I_1 &=& \frac{V_1 - V_-}{R_1}\\ I_2 &=& \frac{V_2 - V_+}{R_1}\\ I_3
-  &=& \frac{V_- - V_{out}}{R_2}\\ I_4 &=& \frac{V_+}{R_2}
-\end{eqnarray}
+  I_1 = \frac{V_1 - V_-}{R_1}
+\end{equation}
+\begin{equation}
+  I_2 = \frac{V_2 - V_+}{R_1}
+\end{equation}
+\begin{equation}
+  I_3 = \frac{V_- - V_{out}}{R_2}
+\end{equation}
+\begin{equation}
+  I_4 = \frac{V_+}{R_2}
+\end{equation}
 combined with the voltage division expression for the positive input,
 \begin{equation}
   \label{eq:differentialVplus}
