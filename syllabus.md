@@ -69,7 +69,7 @@ You will use [JupyterLab](https://jupyter.org){:target="_blank"} for electronic 
 
 ### Brief Reports and the Final Paper
 
-One of the primary goals of this course is to help you develop your scientific writing skills. The final product of each of the first five lab assignment will be a brief report. You will write one paper in journal-article format for the final lab assignment (the AM radio receiver). 
+One of the primary goals of this course is to help you develop your scientific writing skills. The final product of most lab assignments will be a brief report. You will write one paper in journal-article format for lab assignment 5 (Transistor Circuits). 
 
 *Although you may collaborate on experimental work, you will write your own reports and papers.*
 
