@@ -41,7 +41,7 @@
 <clipPath id="clip-0">
 <path clip-rule="nonzero" d="M 297 21 L 306.5 21 L 306.5 31 L 297 31 Z M 297 21 "/>
 </clipPath>
-<image id="source-52" x="0" y="0" width="85" height="89" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABZCAAAAABqXDf9AAAAAmJLR0QA/4ePzL8AAAGASURBVFiF7ZnJDoMwDETtqP//y+mhZUu8jE2IhBTfgJmH6ywUw0SV3ODzAaAvviQRi7qob6KydLJdPRy6rFCrK/EUCQug6T0I1FN1pmpfxoStDYaaUnN4TaglZlAXwxqrwIXqCv3Z4UN1B/uSBLYoglTsBK2uYKqK7jib+f2aT841ABVjp6arKs0ivh4KQj9677wnTLSqvf5PvT9Xt6gnqn1rLzpHOW4wKCrNG63MCmg9hWhsAQ7q2KgCNbcFNK43/Xsr9MBgdbne3VmJiOqwClyzedtoLeqiLurz1OyuePUVGrP7nYNfXdeHqLnhalyFaPRw8by6ZkrQen7UkSVgEisQT7ZzPNvPmvC+FauBoN6oo8aLL1T39mpIWuVNHs9dtLFzPQXVZxZWBEWldnOgbDWH+dUi1HvTOk9BrCF22sA611R+rGx+Zr/x24XdKZVkwLD7vWIsvF5xCuv3tRNYpAcfxmLfC2JciYDPR5wZaN2H3KE1CXuDfXbQF++JI54vm31Qkqqid18AAAAASUVORK5CYII="/>
+<image id="source-52" x="0" y="0" width="85" height="89" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABZCAAAAABqXDf9AAAAAmJLR0QA/4ePzL8AAAF+SURBVFiF7ZnbEoMwCEQh///P6UMvagLsQqMzzsibdfcYIYkVVaQLDN0fEPqGJYV4qA/1TlS1fhxXj6ZOO1ToggKD2qECamYPA0UqcHcOEwlHGw0NpWF5Q2gkVlKXwwarAEJ9hf/swFDfoVhSwDZHUIofwcsrOVRHt/1auX/PZ481ATXjRy1n1ZpFejw0hDhm73VPmGxWZ/2H+v9c/UbfUeNLo5gcbbvAouhyXbUqK2D0NJG1Cdioa6Mb1NoWMLju9O+tyQnFmsb6784qItKXZeA4mrtV66E+1Id6PrW6Kx59TdbsfvvQW+f1JGqtXIOriawul16X10oKRs+bujIFKmYG8oOdHOf2sy5438rlwFB/qavqpQcqvLwbltZ5k+fHbtoUnC9B/ZnFJcFRud0carSeI/xqkeq9eZ2nJDYQx9SAO0n9PiGYfLQs7pRaMqLsuFfMBeoVl7C4r13AMj34NJb7XpDjWgR+PvLMROs+5U6tSdqb7LOTvnxPnPG8AKYPUJCD/neeAAAAAElFTkSuQmCC"/>
 <mask id="mask-0">
 <use xlink:href="#source-52"/>
 </mask>
