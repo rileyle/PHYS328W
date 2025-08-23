@@ -6,6 +6,10 @@ $key = q/eq:Idiv/;
 $ref_files{$key} = "$dir".q|node1.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/eq:Idiv2/;
+$ref_files{$key} = "$dir".q|node1.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/eq:Loop/;
 $ref_files{$key} = "$dir".q|node1.html|; 
 $noresave{$key} = "$nosave";
@@ -23,6 +27,10 @@ $ref_files{$key} = "$dir".q|node1.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/eq:Vdiv/;
+$ref_files{$key} = "$dir".q|node1.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:Vdiv2/;
 $ref_files{$key} = "$dir".q|node1.html|; 
 $noresave{$key} = "$nosave";
 

@@ -6,6 +6,10 @@ $key = q/eq:Idiv/;
 $external_labels{$key} = "$URL/" . q|node1.html|; 
 $noresave{$key} = "$nosave";
 
+$key = q/eq:Idiv2/;
+$external_labels{$key} = "$URL/" . q|node1.html|; 
+$noresave{$key} = "$nosave";
+
 $key = q/eq:Loop/;
 $external_labels{$key} = "$URL/" . q|node1.html|; 
 $noresave{$key} = "$nosave";
@@ -23,6 +27,10 @@ $external_labels{$key} = "$URL/" . q|node1.html|;
 $noresave{$key} = "$nosave";
 
 $key = q/eq:Vdiv/;
+$external_labels{$key} = "$URL/" . q|node1.html|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:Vdiv2/;
 $external_labels{$key} = "$URL/" . q|node1.html|; 
 $noresave{$key} = "$nosave";
 
@@ -362,11 +370,15 @@ $noresave{$key} = "$nosave";
 
 
 $key = q/eq:Idiv/;
-$external_latex_labels{$key} = q|6 Resistors in Series and Parallel|; 
+$external_latex_labels{$key} = q|7 Resistors in Series and Parallel|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:Idiv2/;
+$external_latex_labels{$key} = q|8 Resistors in Series and Parallel|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:Loop/;
-$external_latex_labels{$key} = q|7 Kirchhoff's Rules|; 
+$external_latex_labels{$key} = q|9 Kirchhoff's Rules|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:Ohm/;
@@ -385,128 +397,132 @@ $key = q/eq:Vdiv/;
 $external_latex_labels{$key} = q|5 Resistors in Series and Parallel|; 
 $noresave{$key} = "$nosave";
 
+$key = q/eq:Vdiv2/;
+$external_latex_labels{$key} = q|6 Resistors in Series and Parallel|; 
+$noresave{$key} = "$nosave";
+
 $key = q/eq:commonemittergain/;
-$external_latex_labels{$key} = q|32 Application: Common Emitter Amplifier|; 
+$external_latex_labels{$key} = q|34 Application: Common Emitter Amplifier|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:complexpower/;
-$external_latex_labels{$key} = q|15 Phasor Analysis|; 
+$external_latex_labels{$key} = q|17 Phasor Analysis|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:db/;
-$external_latex_labels{$key} = q|58 Decibels|; 
+$external_latex_labels{$key} = q|60 Decibels|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:deltatphi/;
-$external_latex_labels{$key} = q|27 Example: Series RLC Circuit|; 
+$external_latex_labels{$key} = q|29 Example: Series RLC Circuit|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:differentialI1/;
-$external_latex_labels{$key} = q|44 Application: Differential Amplifier|; 
+$external_latex_labels{$key} = q|46 Application: Differential Amplifier|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:differentialVplus/;
-$external_latex_labels{$key} = q|48 Application: Differential Amplifier|; 
+$external_latex_labels{$key} = q|50 Application: Differential Amplifier|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:differentiatorI/;
-$external_latex_labels{$key} = q|52 Application: Differentiator|; 
+$external_latex_labels{$key} = q|54 Application: Differentiator|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:differentiatorvout/;
-$external_latex_labels{$key} = q|50 Application: Differentiator|; 
+$external_latex_labels{$key} = q|52 Application: Differentiator|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:ebersmoll/;
-$external_latex_labels{$key} = q|29 Active Region|; 
+$external_latex_labels{$key} = q|31 Active Region|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:emitterresistance/;
-$external_latex_labels{$key} = q|30 Active Region|; 
+$external_latex_labels{$key} = q|32 Active Region|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:gain/;
-$external_latex_labels{$key} = q|22 Voltage Gain|; 
+$external_latex_labels{$key} = q|24 Voltage Gain|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:genohmphasor/;
-$external_latex_labels{$key} = q|14 Phasor Analysis|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:hfe/;
-$external_latex_labels{$key} = q|31 Transistor On (Saturation)|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:integratorI/;
-$external_latex_labels{$key} = q|54 Application: Integrator|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:integratorQ/;
-$external_latex_labels{$key} = q|56 Application: Integrator|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:integratorVout/;
-$external_latex_labels{$key} = q|55 Application: Integrator|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:invampgain/;
-$external_latex_labels{$key} = q|34 Application: Inverting Amplifier|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:junction/;
-$external_latex_labels{$key} = q|8 Kirchhoff's Rules|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:noninvampgain/;
-$external_latex_labels{$key} = q|36 Application: Non-inverting Amplifier|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:opampdiff/;
-$external_latex_labels{$key} = q|53 Application: Differentiator|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:opampint/;
-$external_latex_labels{$key} = q|57 Application: Integrator|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:rlcomega/;
-$external_latex_labels{$key} = q|28 Example: Series RLC Circuit|; 
-$noresave{$key} = "$nosave";
-
-$key = q/eq:rpower/;
 $external_latex_labels{$key} = q|16 Phasor Analysis|; 
 $noresave{$key} = "$nosave";
 
+$key = q/eq:hfe/;
+$external_latex_labels{$key} = q|33 Transistor On (Saturation)|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:integratorI/;
+$external_latex_labels{$key} = q|56 Application: Integrator|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:integratorQ/;
+$external_latex_labels{$key} = q|58 Application: Integrator|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:integratorVout/;
+$external_latex_labels{$key} = q|57 Application: Integrator|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:invampgain/;
+$external_latex_labels{$key} = q|36 Application: Inverting Amplifier|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:junction/;
+$external_latex_labels{$key} = q|10 Kirchhoff's Rules|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:noninvampgain/;
+$external_latex_labels{$key} = q|38 Application: Non-inverting Amplifier|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:opampdiff/;
+$external_latex_labels{$key} = q|55 Application: Differentiator|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:opampint/;
+$external_latex_labels{$key} = q|59 Application: Integrator|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:rlcomega/;
+$external_latex_labels{$key} = q|30 Example: Series RLC Circuit|; 
+$noresave{$key} = "$nosave";
+
+$key = q/eq:rpower/;
+$external_latex_labels{$key} = q|18 Phasor Analysis|; 
+$noresave{$key} = "$nosave";
+
 $key = q/eq:sumampI1/;
-$external_latex_labels{$key} = q|37 Application: Summing Amplifier|; 
+$external_latex_labels{$key} = q|39 Application: Summing Amplifier|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:sumampjunction/;
-$external_latex_labels{$key} = q|41 Application: Summing Amplifier|; 
+$external_latex_labels{$key} = q|43 Application: Summing Amplifier|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:summingampvout/;
-$external_latex_labels{$key} = q|42 Application: Summing Amplifier|; 
+$external_latex_labels{$key} = q|44 Application: Summing Amplifier|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:vdivamp/;
-$external_latex_labels{$key} = q|20 AC Voltage Dividers|; 
+$external_latex_labels{$key} = q|22 AC Voltage Dividers|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:vdivout/;
-$external_latex_labels{$key} = q|19 AC Voltage Dividers|; 
+$external_latex_labels{$key} = q|21 AC Voltage Dividers|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:vdivphase/;
-$external_latex_labels{$key} = q|21 Phase Angle|; 
+$external_latex_labels{$key} = q|23 Phase Angle|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:xc/;
-$external_latex_labels{$key} = q|10 Resistance, Reactance, and Impedance: the Complex Number Representation|; 
+$external_latex_labels{$key} = q|12 Resistance, Reactance, and Impedance: the Complex Number Representation|; 
 $noresave{$key} = "$nosave";
 
 $key = q/eq:xl/;
-$external_latex_labels{$key} = q|9 Resistance, Reactance, and Impedance: the Complex Number Representation|; 
+$external_latex_labels{$key} = q|11 Resistance, Reactance, and Impedance: the Complex Number Representation|; 
 $noresave{$key} = "$nosave";
 
 $key = q/fig:acvdivider/;
